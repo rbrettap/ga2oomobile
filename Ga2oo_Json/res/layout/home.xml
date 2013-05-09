@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:orientation="vertical"
+  android:id="@+id/llhomeroot"
+  android:layout_height="wrap_content">
+  
+  	<LinearLayout
+  		  android:layout_height="wrap_content"
+		  android:layout_width="fill_parent"
+		  android:layout_marginTop ="10dip"
+  		  android:layout_marginBottom ="5dip"
+  		  android:layout_marginLeft ="10dip"
+  		  android:layout_marginRight ="10dip">
+	 
+	  <RelativeLayout
+	  		android:layout_width="75dip"
+	  		android:layout_height="70dip"
+	  		android:id="@+id/rlUserImage"
+	  		android:background="@drawable/roundbackground_itembg"
+	  	 	android:gravity="center">
+	  	    <ProgressBar
+    		  android:id="@+id/user_image_progressBar"
+		      android:layout_width="wrap_content" 
+		      android:layout_height="wrap_content"
+		      android:indeterminate="true" 
+		      android:layout_centerInParent="true"/>	
+	  		
+	  		<ImageView android:layout_width="65dip"	
+	  				   android:layout_height="65dip"
+	  				   android:id="@+id/ivUserImage"
+	  				   android:layout_centerInParent="true"/>
+		</RelativeLayout>
+		
+	  		<LinearLayout android:layout_width="wrap_content"
+	  					  android:layout_height="wrap_content"
+	  					  android:layout_weight="1"
+	  					  android:layout_marginLeft="10dip"
+	  					  android:orientation="vertical">
+	  				<TextView android:layout_width="fill_parent"
+	  						  android:layout_height="wrap_content"
+	  						  android:textStyle="bold"
+	  						  android:textSize="16dip"
+	  						  android:id="@+id/tvName"
+	  						  android:textColor="@color/text_color_light"
+	  						  />
+	  				<TextView android:layout_width="fill_parent"
+	  						  android:layout_height="wrap_content"
+	  						  android:id="@+id/tvLocation"
+	  						  android:layout_marginTop="7dip"
+	  						  android:textSize="11dip"
+	  						  android:textColor="@color/text_color_light"
+	  						   />
+	  				<Button android:layout_width="wrap_content"
+	  						android:layout_height="wrap_content"
+	  						android:layout_marginTop="10dip"
+	  						android:id="@+id/btnAddLocation"
+	  						android:background="@drawable/addlocation_click"/>
+	  		</LinearLayout>
+	  		
+	  		<Button android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="0"
+					android:text="0 Event        "
+					android:id="@+id/btnNoOfEvents"
+					android:visibility="gone"
+					android:background="@drawable/events_dropdown" />
+  	</LinearLayout>
+  	
+  	<TextView android:layout_width="wrap_content"
+  			  android:layout_height="wrap_content"
+  			  android:paddingLeft="30dip"
+  			  android:gravity="center_vertical"
+  			  android:layout_gravity="center_horizontal"
+  			  android:layout_marginBottom="5dip"
+  			  android:textSize="15sp"
+  			  android:id="@+id/tvQuickSearch"
+  			  android:background="@drawable/quick_search" 
+  			  android:singleLine="true" 
+  			  android:hint="Quick Search"
+  			  android:editable="false"
+  			  android:imeOptions="actionDone"/>
+  	  					<TextView android:layout_width="fill_parent"
+  							  android:layout_height="wrap_content"
+  							  android:id="@+id/tvFeatured"
+  							  	android:layout_marginLeft ="10dip"
+  								android:layout_marginRight ="10dip"
+  							  android:textSize="16dip"
+  							  android:textStyle="bold"
+	  						  android:textColor="@color/heading_color_dark"
+	  						  android:text="Featured Events" />
+	  				<View android:layout_width="fill_parent"
+	  				      android:layout_height="1dip"
+	  				      android:layout_marginTop="5dip"
+	  				      android:background="@drawable/seperator" />
+  	<ScrollView android:layout_width="fill_parent"
+  				android:layout_height="fill_parent"
+  				android:layout_marginTop ="5dip"
+  				android:layout_marginBottom ="5dip"
+  				android:layout_marginLeft ="10dip"
+  				android:layout_marginRight ="10dip"
+  				android:scrollbars="none"
+  				android:fadingEdgeLength="0dip"
+  				android:isScrollContainer="false"
+  				android:id="@+id/svEvents" >
+  			
+  			<LinearLayout android:layout_width="fill_parent"
+  						  android:layout_height="fill_parent"
+  						  android:id="@+id/llEvetsMain"
+  						  android:orientation="vertical">
+  					
+	  				      <LinearLayout 
+	  				      	android:layout_width="fill_parent"
+	  				      	android:layout_height="wrap_content"
+	  				      	android:id="@+id/llFeatured"
+	  				      	android:isScrollContainer="false"
+	  				      >
+	  				      
+	  				      </LinearLayout>
+	  							  
+	  				<TextView android:layout_width="fill_parent"
+  							  android:layout_height="wrap_content"
+  							  android:id="@+id/tvUpcoming"
+  							  android:textSize="16dip"
+  							  android:textStyle="bold"
+	  						  android:textColor="@color/heading_color_dark"
+	  						  android:layout_marginTop="5dip"
+	  						  android:text="Upcoming Events" />
+	  				<View android:layout_width="fill_parent"
+	  				      android:layout_height="wrap_content"
+	  				      android:layout_marginTop="5dip"
+	  				      android:background="@drawable/seperator" />
+	  				      <LinearLayout 
+	  				      	android:layout_width="fill_parent"
+	  				      	android:layout_height="wrap_content"
+	  				      	android:id="@+id/llUpcoming"
+	  				      	android:isScrollContainer="false"
+	  				      >
+	  				      
+	  				      </LinearLayout>
+  			</LinearLayout>
+  	</ScrollView>
+</LinearLayout>

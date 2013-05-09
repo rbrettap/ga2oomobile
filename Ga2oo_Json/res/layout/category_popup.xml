@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="250dip"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  android:padding="5dip"
+  android:background="@drawable/upcoming_hdg_bg"
+  android:orientation="vertical"
+  android:id="@+id/llCategory">
+  
+	  <TextView
+	    android:id="@+id/add_favorite_text"
+	    android:layout_width="fill_parent"
+	  	android:layout_height="wrap_content"
+	  	android:gravity="center"
+	  	android:textSize="16sp"
+	  	android:layout_marginTop="10dip"
+	  	android:layout_marginLeft="5dip"
+	  	android:layout_marginRight="5dip"
+	  	android:layout_marginBottom="10dip"
+	  	android:textColor="#ffffff"/>
+	  
+	  <LinearLayout
+	  		android:layout_width="fill_parent"
+	  		android:gravity="center"
+	  		android:layout_height="wrap_content">
+			   <Button
+			  		android:layout_width="100dip"
+			  		android:layout_height="35dip"
+			  		android:text="Company"
+			  		android:textColor="#FFFFFF"
+			  		android:layout_marginLeft="5dip"
+			  		android:background="@drawable/dlgblackblue"
+			  		android:id="@+id/btnCompany"/>
+			  	<Button
+			  		android:layout_width="100dip"
+			  		android:layout_height="35dip"
+			  		android:layout_marginLeft="10dip"
+			  		android:layout_marginRight="5dip"
+			  		android:textColor="#FFFFFF"
+			  		android:background="@drawable/dlgblackblue"
+			  		android:text="Event"
+			  		android:id="@+id/btnEvent"/>
+	  </LinearLayout>
+</LinearLayout>

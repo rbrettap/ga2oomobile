@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:orientation="vertical"
+  android:layout_height="fill_parent">
+  <RelativeLayout  
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/btnbg"
+		     android:id="@+id/rlFindUpcoming">
+		    
+		     <EditText  
+		     	  android:id="@+id/etSearchUpcoming"
+		          android:layout_width="240dip"
+		          android:layout_height="wrap_content"
+		          android:background="@drawable/search_editbg"
+		          android:textColor="#000000"
+		          android:textSize="13dip"
+		          android:layout_alignParentLeft="true"
+		          android:layout_centerVertical="true"
+		          android:layout_marginLeft="10dip"
+		          android:paddingLeft="30dip" 
+		          android:gravity="left|center_vertical"
+		          android:hint="Search Notifications" 
+		          android:paddingRight="40dip"
+		          android:singleLine="true" 
+		          android:imeOptions="actionSearch"/>
+		           <ImageView  android:id="@+id/ivSave" 
+		 					   android:layout_width="wrap_content"
+		      				   android:layout_height="wrap_content"
+							      android:src="@drawable/editsave"
+							      android:layout_marginLeft="210dip"
+							      android:layout_centerVertical="true"
+		     />  
+		          
+		      <Button   
+		      	   android:id="@+id/btn_cancel"
+		           android:layout_width="wrap_content"
+		     	   android:layout_height="wrap_content"
+		     	   android:layout_centerVertical="true"
+		     	   android:layout_toRightOf="@id/etSearchUpcoming"
+		     	   android:layout_marginLeft="9dip"
+		     	   android:background="@drawable/cancel_btn_click"/>
+		   </RelativeLayout>
+  	<LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_margin="10dip"
+		  android:layout_weight="0"
+		  android:layout_height="wrap_content">
+	  		
+	  		<Button android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/btnAll"
+					android:background="@drawable/all_btn_hover" />
+			<Button android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/btnRecommendations"
+					android:background="@drawable/recommen_btn" />
+	  		
+	  		<Button android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/btnNotifications"
+					android:background="@drawable/notifications_btn" />
+  	</LinearLayout>
+  	
+  					<TextView
+					android:layout_height="30px"
+					android:id="@+id/tvtitle"
+					android:textStyle="bold"
+					android:textSize="16dip"
+					android:layout_marginLeft ="10dip"
+					android:gravity="center_vertical" 
+					android:textColor="@color/heading_color_dark" 
+					android:layout_width="fill_parent"/>
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.5dip"
+			        android:background="@drawable/seperator"			        
+			        />
+  	<ScrollView android:layout_width="fill_parent"
+  				android:layout_height="fill_parent"
+  				android:fadingEdge="none"
+  				android:fadingEdgeLength="0dip"
+  				android:scrollbars="none"
+  				android:layout_weight="1"
+  				android:id="@+id/svEvents" >
+  				
+  			<LinearLayout 
+  				  android:layout_width="fill_parent"
+				  android:layout_height="fill_parent"
+				  android:orientation="vertical"
+				  >
+				  
+	  			<LinearLayout 
+	  				android:layout_width="fill_parent"
+				  	android:layout_height="fill_parent"
+				  	android:orientation="vertical"
+				  	android:id="@+id/llRecommendationEvents" >
+				  	<TextView 
+ 						  			android:layout_width="fill_parent"
+ 						  			android:layout_height="fill_parent"
+ 						  			android:textColor="@color/heading_color_dark"
+ 						  			android:textSize="16dip"
+ 						  			android:layout_gravity="center"
+ 						  			android:text="No any recommendation"
+ 						  			android:visibility="gone"
+ 						  			android:id="@+id/tvNoanyRecommendation"
+ 						  	
+ 						  	/>
+	     </LinearLayout>
+	     		<LinearLayout 
+	  					 android:layout_width="fill_parent"
+ 						 android:layout_height="fill_parent"
+ 						 android:orientation="vertical"
+ 						 android:id="@+id/llAllEvents"/>
+			   <LinearLayout 
+			   			  android:layout_width="fill_parent"
+ 						  android:layout_height="fill_parent"
+ 						  android:orientation="vertical"
+ 						  android:id="@+id/llNotification">
+ 						  	<TextView 
+ 						  			android:layout_width="fill_parent"
+ 						  			android:layout_height="fill_parent"
+ 						  			android:textColor="@color/heading_color_dark"
+ 						  			android:textSize="16dip"
+ 						  			android:layout_gravity="center"
+ 						  			android:text="No any notification"
+ 						  			android:visibility="gone"
+ 						  			android:id="@+id/tvNoanyNotification"
+ 						  	
+ 						  	/>
+ 						  </LinearLayout>
+	 	</LinearLayout>
+
+  	</ScrollView>
+  	<LinearLayout 	
+ 			   	android:layout_width="fill_parent" 
+ 			   	android:id="@+id/llDeleteClearall"
+ 			    android:layout_height="wrap_content"  
+ 			    android:layout_weight="0"
+ 			    android:gravity="center"
+ 			    android:background="#2C3032"
+ 			    android:visibility="gone"
+ 			    android:padding="10dip">
+ 			                            	
+        <Button	 android:layout_width="wrap_content"
+     			android:layout_height= "wrap_content"    				        			
+     			android:gravity="center" 	
+     			android:background="@drawable/delete"	        			    			
+     			android:id="@+id/btnDelete"
+     			android:layout_marginRight="150dip"/> 	
+       
+		 <Button android:layout_width="wrap_content"
+       			android:layout_height= "wrap_content"
+				android:gravity="center"	
+				android:background="@drawable/clearall"	        		 
+       			android:id="@+id/btnCancel"/> 
+		    
+		
+</LinearLayout>
+</LinearLayout>

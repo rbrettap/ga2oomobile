@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+	  		android:layout_width="fill_parent"
+	  		android:layout_height="wrap_content"
+	  		android:layout_marginTop="10dip"
+	  		android:layout_marginBottom="15dip"
+	  		android:id="@+id/llFriend"
+	  		android:gravity="center_vertical"
+	  		>
+	  		  <RelativeLayout
+				  		android:layout_width="wrap_content"
+				  		android:layout_height="wrap_content"
+				  	 	android:gravity="center">
+				  	    <ProgressBar
+					    		  android:id="@+id/eventdetail_frieds_progress_bar"
+							      android:layout_width="wrap_content" 
+							      android:layout_height="wrap_content"
+							      android:indeterminate="true" 
+							      android:layout_centerInParent="true"/>	
+				  		
+				  		<ImageView 	android:layout_width="40dip"
+		  							android:layout_height="35dip"
+				  				   	android:id="@+id/userImage"
+				  				   	android:layout_centerInParent="true"/>
+		</RelativeLayout>
+	  			 <TextView
+			  		android:layout_width="wrap_content"
+			  		android:layout_height="wrap_content"
+			  		android:text="Milena Markova"
+			  		android:textStyle="bold"
+			  		android:layout_weight="1"
+			  		android:textSize="18dip"
+			  		android:textColor="#000000"
+			  		android:padding="5dip"
+			  		android:id="@+id/txtUserName"
+			  		android:layout_marginLeft="5dip"
+			  		android:layout_marginRight="5dip"/> 
+	  			<ImageButton
+		  			android:layout_width="wrap_content"
+		  			android:layout_height="wrap_content"
+		  			android:layout_weight="0"
+		  			android:background="@drawable/arrow" 
+		  			android:layout_marginRight="10dip"/>
+	</LinearLayout>	

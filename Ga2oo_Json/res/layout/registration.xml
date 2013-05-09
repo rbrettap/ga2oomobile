@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical" android:background="@drawable/mainbg">
+  
+  			<RelativeLayout
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+  				android:background="@drawable/top_bar_empty" android:gravity="center_vertical">
+  				<Button
+					android:id="@+id/btnBack"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/back"
+					android:visibility="visible"
+					android:layout_marginLeft="5dip">
+				</Button>
+  				<TextView android:layout_height="wrap_content"
+			  			  
+			  			  android:gravity="center"
+			  			  android:textSize="21dip"
+			  			  android:textStyle="bold"
+			  			  android:textColor="#ffffff" android:layout_weight="1" android:text="Registration" android:layout_width="fill_parent" android:paddingLeft="10dip"/>
+			</RelativeLayout>
+  				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Account Type"
+					android:textColor="#4C566C"
+					android:layout_marginLeft="15dip"
+					android:textStyle="bold"
+					android:textSize="18dip"
+					android:layout_marginTop="10dip"
+					android:layout_marginBottom="5dip"/>
+  <RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/list_bg_one"
+				android:gravity="center_vertical"
+				android:layout_marginLeft="10dip"
+				android:layout_marginRight="10dip" android:id="@+id/rlBusiness">
+				
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_margin="10px"
+							android:textColor="#000000" 
+							android:textStyle="bold" android:textSize="17dip" android:text="Business"/>
+							
+						<LinearLayout
+							android:layout_width="30px"
+							android:layout_height="40px"
+							android:layout_alignParentRight="true"
+							android:gravity="center_vertical">
+							
+								<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="20px"
+									android:src="@drawable/arrow"/>
+						</LinearLayout>
+						</RelativeLayout>
+						<RelativeLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/list_bg_three"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip" android:id="@+id/rlPersonal">
+							
+								<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_margin="10px"
+									android:textColor="#000000" 
+									android:textStyle="bold" android:textSize="17dip" android:text="Personal"/>
+									
+								<LinearLayout
+									android:layout_width="30px"
+									android:layout_height="40px"
+									android:layout_alignParentRight="true"
+									android:gravity="center_vertical">
+									
+										<ImageView
+											android:layout_width="wrap_content"
+											android:layout_height="20px"
+											android:src="@drawable/arrow"/>
+								</LinearLayout>
+						</RelativeLayout>			
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:id ="@+id/layoutSettings"
+  android:orientation="vertical"
+  android:gravity="center">
+	<RelativeLayout  
+	     android:id="@+id/rlTitle"
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"
+	     android:background="@drawable/btnbg">
+	    
+	     <EditText  android:id="@+id/etSearchList"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:background="@drawable/search_editbg"
+	          android:textColor="#000000"
+	          android:textSize="13dip"
+	          android:layout_alignParentLeft="true"
+	          android:layout_centerVertical="true"
+	          android:layout_marginLeft="10dip"
+	          android:paddingLeft="30dip" 
+	          android:gravity="left|center_vertical"
+	          android:hint="Search" 
+	          android:singleLine="true" android:imeOptions="actionDone"/>
+	          
+	      
+		     
+		   <ImageView  android:id="@+id/ivSave" 
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:src="@drawable/editsave"
+		      android:layout_marginLeft="210dip"
+		      android:layout_centerVertical="true"
+		     />  
+	      
+	      <Button   android:id="@+id/btn_cancel"
+	          android:layout_width="wrap_content"
+	     	  android:layout_height="wrap_content"
+	     	  android:layout_centerVertical="true"
+	     	   android:layout_toRightOf="@id/etSearchList"
+	     	  android:layout_marginRight="10dip"
+	     	  android:layout_marginLeft="10dip"
+	     	  android:background="@drawable/cancel_btn_click"/>
+	   </RelativeLayout>
+
+			 		<TextView 
+			 			android:layout_width="fill_parent"
+			 			android:layout_height="wrap_content"
+			 			android:text="Favorite Business"
+			 			android:textSize="16dip"
+	  				    android:textColor="@color/heading_color_dark"
+	  				    android:textStyle="bold"
+	  				    android:id="@+id/tvFBusiness"
+	  				    android:layout_marginLeft="10dip"
+	  					/>
+	  					<View
+	  						android:layout_width="fill_parent"
+	  						android:layout_height="1.5dip"
+	  						android:background="@drawable/seperator"
+	  						android:id="@+id/vSeprator"
+	  						android:layout_marginBottom="10dip"
+	  						android:layout_marginTop="3dip"
+	  					/>
+					<LinearLayout 
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:id="@+id/llFavoriteBusiness"
+					>
+						<TextView 
+							android:layout_width="fill_parent"
+							android:layout_height="fill_parent"
+							android:text="No Search Result"
+							android:textSize="16dip"
+							android:textColor="@color/heading_color_dark"
+							android:gravity="center"
+							android:id="@+id/tvNotification"
+						/>
+						<ListView
+							android:layout_width="fill_parent"
+							android:layout_height="fill_parent"
+							android:id="@+id/lvFavoriteBusiness"
+							android:divider="#ffffff"
+							android:dividerHeight="1dip"
+							android:isScrollContainer="false"						
+						 >
+						
+						</ListView>
+					</LinearLayout>
+
+  			
+</LinearLayout>

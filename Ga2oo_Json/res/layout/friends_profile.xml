@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:orientation="vertical"
+  android:layout_height="wrap_content">
+  
+  	<LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_margin="10dip"
+		  android:layout_height="wrap_content">
+	  <RelativeLayout
+	  		android:layout_width="107dip"
+	  		android:layout_height="82dip"
+	  		android:id="@+id/rlFriendImage"
+	  		android:background="@drawable/roundbackground_itembg"
+	  		android:gravity="center">
+	  	    <ProgressBar
+    		  android:id="@+id/friend_profile_progress_bar"
+		      android:layout_width="20dip" 
+		      android:layout_height="20dip"
+		      android:layout_gravity="center"
+		      android:indeterminate="true" 
+		      android:layout_centerInParent="true"/>	
+	  		<ImageView android:layout_width="100dip"	
+	  				   android:layout_height="75dip"
+	  				   android:id="@+id/ivUserImage"
+	  				   android:layout_centerInParent="true"/>
+		</RelativeLayout>
+	  		<LinearLayout android:layout_width="wrap_content"
+	  					  android:layout_height="wrap_content"
+	  					  android:layout_weight="1"
+	  					  android:layout_marginLeft="10dip"
+	  					  android:orientation="vertical">
+	  				<TextView android:layout_width="fill_parent"
+	  						  android:layout_height="wrap_content"
+	  						  android:textSize="26dip"
+	  						  android:textStyle="bold"
+	  						  android:id="@+id/tvFName"
+	  						  android:textColor="@color/heading_color_dark"
+	  						  />
+	  				<TextView android:layout_width="fill_parent"
+	  						  android:layout_height="wrap_content"
+	  						  android:textSize="26dip"
+	  						  android:textStyle="bold"
+	  						  android:id="@+id/tvLName"
+	  						  android:textColor="@color/heading_color_dark"
+	  						  />
+	  				<TextView android:layout_width="fill_parent"
+	  						  android:layout_height="wrap_content"
+	  						  android:id="@+id/tvLocation"
+	  						  android:layout_marginTop="5dip"
+	  						  android:textSize="14dip"
+	  						  android:textStyle="bold"
+	  						  android:textColor="@color/heading_color_dark"
+	  						  />
+	  			
+	  		</LinearLayout>
+	  		
+	  		
+  	</LinearLayout>
+  	
+  	<LinearLayout android:layout_width="fill_parent"
+  				  android:layout_height="wrap_content"
+  				  android:gravity="center"
+  				  android:id="@+id/llFriendButtons">
+  			<Button android:layout_width="wrap_content"
+  					android:layout_height="wrap_content"
+  					android:background="@drawable/send_mess_btn"
+  					android:id="@+id/btnSendMessage" />
+  			<Button android:layout_width="106dip"
+  					android:layout_height="31dip"
+  					android:background="@drawable/see_pal"
+  					android:layout_marginLeft="30dip"
+  					android:id="@+id/btnSeeCalendar" />
+  	</LinearLayout>
+					<LinearLayout android:layout_width="fill_parent"
+			  							  android:layout_height="wrap_content"
+			  							  android:id="@+id/llUpcomingHeading"
+			  							  android:layout_margin="10dip">
+				  				<TextView android:layout_width="wrap_content"
+			  							  android:layout_height="wrap_content"
+			  							  android:id="@+id/tvUpcoming"
+			  							  android:textSize="16dip"
+			  							  android:layout_weight="1"
+			  							  android:textStyle="bold"
+				  						  android:textColor="@color/heading_color_dark"
+				  						  android:text="Upcoming Events" />
+				  				<ImageView android:layout_width="wrap_content"
+						  				   android:layout_height="wrap_content"
+							  			   android:id="@+id/ivImage"
+							  			   android:layout_weight="0"
+							  			   android:src="@drawable/cal" />
+			  				</LinearLayout>
+	  				
+			  				<View android:layout_width="fill_parent"
+			  				      android:layout_height="1dip"
+			  				      android:background="@drawable/seperator" />
+  	<ScrollView android:layout_width="fill_parent"
+  				android:layout_height="fill_parent"
+  				android:layout_marginLeft = "10dip"
+  				android:layout_marginRight = "10dip"
+  				android:layout_marginBottom = "10dip"
+  				android:fadingEdge="none"
+  				android:fadingEdgeLength="0dip"
+  				android:scrollbars="none"
+  				android:id="@+id/svEvents" >
+	  				      
+	  				<LinearLayout android:layout_width="fill_parent"
+	  							  android:layout_height="wrap_content"
+	  							  android:orientation="vertical"
+	  							  android:id="@+id/llUpcoming" >
+  			</LinearLayout>
+  	</ScrollView>
+</LinearLayout>

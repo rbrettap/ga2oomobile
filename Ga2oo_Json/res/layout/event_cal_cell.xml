@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:gravity="center_vertical"
+  android:layout_height="wrap_content">
+  		  <RelativeLayout
+			  		android:layout_width="wrap_content"
+			  		android:layout_height="wrap_content"
+			  	 	android:gravity="center">
+			  	    <ProgressBar
+		    		   android:layout_width="30dip"
+	  				   android:layout_height="30dip"
+	  				   android:id="@+id/calEventProgressBar"
+					   android:indeterminate="true" 
+					   android:layout_centerInParent="true"/>	
+			  		
+			  		<ImageView	android:layout_width="40dip"
+			  				    android:layout_height="35dip"
+			  				    android:id="@+id/ivCalEventIcon"
+			  				    android:layout_centerInParent="true"/>
+		 </RelativeLayout>
+  		 <TextView android:layout_width="fill_parent"
+  				   android:layout_height="wrap_content"
+  				   android:layout_marginLeft="10dip"
+  				   android:singleLine="true"
+  				   android:id="@+id/tvCalEventName"
+  				   android:textColor="#000000"
+  				   android:textSize="18dip"
+  				   android:textStyle="bold" />
+</LinearLayout>

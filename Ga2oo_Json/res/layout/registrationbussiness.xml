@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical" android:background="@drawable/mainbg">
+  
+  
+  			<RelativeLayout
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+  				android:background="@drawable/top_bar_empty" android:gravity="center_vertical">
+  				<Button
+					android:id="@+id/btnBack"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/back"
+					android:visibility="visible"
+					android:layout_marginLeft="5dip">
+				</Button>
+  				<TextView android:layout_height="wrap_content"
+			  			  android:gravity="center"
+			  			  android:textSize="21dip"
+			  			  android:textStyle="bold"
+			  			  android:textColor="#ffffff" android:layout_weight="1" android:text="Registration" android:layout_width="fill_parent" android:paddingLeft="10dip"/>
+			</RelativeLayout>
+		<ScrollView
+				android:layout_width="wrap_content"
+			  	android:layout_height="wrap_content" android:scrollbars="none">
+			  	<LinearLayout
+			  		android:layout_width="wrap_content"
+			  		android:layout_height="wrap_content"
+			  		android:orientation="vertical">
+  			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Business/Organization"
+					android:textColor="#4C566C"
+					android:layout_marginLeft="15dip"
+					android:textStyle="bold"
+					android:textSize="18dip"
+					android:layout_marginTop="10dip"
+					android:layout_marginBottom="5dip"/>
+			<RelativeLayout
+							android:id="@+id/rlBusinessType"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/list_bg_one"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip">
+							
+								<TextView
+									android:layout_width="100px"
+									android:layout_height="wrap_content"
+									android:textColor="#000000" 
+									android:textStyle="bold"
+									android:id="@+id/tvProfile"
+									android:textSize="15dip" android:text="Type" android:layout_marginBottom="10px" android:layout_marginLeft="10px" android:layout_marginTop="10px"/>
+								<TextView
+									android:layout_width="150dip"
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" 
+									android:textColor="#395587" 
+									android:layout_toRightOf="@+id/tvProfile"
+									android:gravity="center_vertical"
+									android:id="@+id/tvBusinessType"
+									android:singleLine="true"
+									android:text="Profit" android:layout_marginBottom="10px" android:layout_marginTop="10dip" android:textSize="16dip"/>	
+								<LinearLayout
+									android:layout_width="30px"
+									android:layout_height="40px"
+									android:layout_alignParentRight="true"
+									android:gravity="center_vertical">
+									
+										<ImageView
+											android:layout_width="wrap_content"
+											android:layout_height="20px"
+											android:src="@drawable/arrow"/>
+								</LinearLayout>
+						</RelativeLayout>
+						
+				<RelativeLayout
+							android:id="@+id/rellayFavorites"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/list_bg_two"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip">
+							
+								<TextView
+									android:layout_width="100dip"
+									android:layout_height="wrap_content"
+									android:textColor="#000000" 
+									android:textStyle="bold"
+									android:id="@+id/tvFirstName"
+									android:textSize="15dip" android:text="Company" android:layout_marginLeft="10px" android:layout_marginTop="10px" android:layout_marginBottom="10px"/>
+									
+								<EditText
+									android:layout_width="150dip"
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" 
+									android:textColor="#395587" 
+									android:layout_toRightOf="@+id/tvFirstName"
+									android:gravity="center_vertical"
+									android:id="@+id/etCompany"
+									android:imeOptions="actionNext"
+									android:hint="Company" android:layout_marginBottom="10px" android:layout_marginTop="10px" android:textSize="16dip"/>	
+						</RelativeLayout>
+						<RelativeLayout
+							android:id="@+id/rellayFavorites"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/list_bg_two"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip">
+							
+								<TextView
+									android:layout_width="100dip"
+									android:layout_height="wrap_content"
+									android:textColor="#000000" 
+									android:textStyle="bold"
+									android:id="@+id/tvFirstName"
+									android:textSize="15dip" android:text="Name" android:layout_marginBottom="10px" android:layout_marginLeft="10px" android:layout_marginTop="10px"/>
+									
+								<EditText
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" 
+									android:textColor="#395587" 
+									android:layout_toRightOf="@+id/tvFirstName"
+									android:gravity="center_vertical"
+									android:hint="Name"
+									android:layout_marginBottom="10px" 
+									android:layout_marginTop="10px" 
+									android:layout_width="wrap_content" 
+									android:imeOptions="actionNext"
+									android:layout_marginRight="5dip" 
+									android:textSize="16dip"
+									android:id="@+id/etName"/>	
+						</RelativeLayout>
+						<RelativeLayout
+							android:id="@+id/rellayFavorites"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/list_bg_two"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip">
+							
+								<TextView
+									android:layout_width="100dip"
+									android:layout_height="wrap_content"
+									android:textColor="#000000" 
+									android:textStyle="bold"
+									android:id="@+id/tvFirstName"
+									android:textSize="15dip" android:text="Email" android:layout_marginBottom="10px" android:layout_marginLeft="10px" android:layout_marginTop="10px"/>
+									
+								<EditText
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" 
+									android:textColor="#395587" 
+									android:layout_toRightOf="@+id/tvFirstName"
+									android:gravity="center_vertical"
+									android:id="@+id/etEmail"
+									android:inputType="textEmailAddress"
+									android:imeOptions="actionNext"
+									android:hint="Email" android:layout_marginBottom="10px" android:layout_marginTop="10px" android:layout_width="wrap_content" android:layout_marginRight="5dip" android:textSize="16dip"/>	
+						</RelativeLayout>
+						<RelativeLayout
+							android:id="@+id/rellayFavorites"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/list_bg_two"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip">
+							
+								<TextView
+									android:layout_width="100dip"
+									android:layout_height="wrap_content"
+									android:textColor="#000000" 
+									android:textStyle="bold"
+									android:id="@+id/tvFirstName"
+									android:textSize="15dip" android:text="Phone No" android:layout_marginBottom="10px" android:layout_marginLeft="10px" android:layout_marginTop="10px"/>
+									
+								<EditText
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" 
+									android:textColor="#395587" 
+									android:layout_toRightOf="@+id/tvFirstName"
+									android:gravity="center_vertical"
+									android:imeOptions="actionNext"
+									android:inputType="number"
+									android:id="@+id/etPhNo"
+									android:hint="Phone No" android:layout_marginBottom="10px" android:layout_marginTop="10px" android:layout_width="wrap_content" android:layout_marginRight="5dip" android:textSize="16dip"/>	
+						</RelativeLayout>
+						<RelativeLayout
+							android:id="@+id/rellayFavorites"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/list_bg_two"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip">
+							
+								<TextView
+									android:layout_width="100dip"
+									android:layout_height="wrap_content"
+									android:textColor="#000000" 
+									android:textStyle="bold"
+									android:id="@+id/tvFirstName"
+									android:textSize="15dip" android:text="Password" android:layout_marginBottom="10px" android:layout_marginLeft="10px" android:layout_marginTop="10px"/>
+									
+								<EditText
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" 
+									android:textColor="#395587" 
+									android:layout_toRightOf="@+id/tvFirstName"
+									android:gravity="center_vertical"
+									android:inputType="textPassword"
+									android:id="@+id/etPassword"
+									android:imeOptions="actionNext"
+									android:hint="Password" android:layout_marginBottom="10px" android:layout_marginTop="10px" android:layout_width="wrap_content" android:layout_marginRight="5dip" android:textSize="16dip"/>	
+						</RelativeLayout>
+						<RelativeLayout
+							android:id="@+id/rellayFavorites"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/list_bg_two"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip">
+							
+								<TextView
+									android:layout_width="100dip"
+									android:layout_height="wrap_content"
+									android:textColor="#000000" 
+									android:textStyle="bold"
+									android:id="@+id/tvFirstName"
+									android:textSize="15dip" android:text="Address" android:layout_marginBottom="10px" android:layout_marginLeft="10px" android:layout_marginTop="10px"/>
+									
+								<EditText
+									android:layout_width="150dip"
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" 
+									android:textColor="#395587" 
+									android:layout_toRightOf="@+id/tvFirstName"
+									android:gravity="center_vertical"
+									android:imeOptions="actionNext"
+									android:id="@+id/etAddress"
+									android:layout_marginBottom="10px" android:layout_marginTop="10px" android:hint="Address" android:textSize="16dip"/>	
+						</RelativeLayout>
+						<RelativeLayout
+							android:id="@+id/rellayFavorites"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/list_bg_two"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip">
+							
+								<TextView
+									android:layout_width="100dip"
+									android:layout_height="wrap_content"
+									android:textColor="#000000" 
+									android:textStyle="bold"
+									android:id="@+id/tvFirstName"
+									android:textSize="15dip" android:text="City" android:layout_marginBottom="10px" android:layout_marginLeft="10px" android:layout_marginTop="10px"/>
+									
+								<EditText
+									android:layout_width="150dip"
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" 
+									android:textColor="#395587" 
+									android:layout_toRightOf="@+id/tvFirstName"
+									android:gravity="center_vertical"
+									android:imeOptions="actionNext"
+									android:id="@+id/etCity"
+									android:layout_marginBottom="10px" android:layout_marginTop="10px" android:hint="City" android:textSize="16dip"/>	
+						</RelativeLayout>
+						<RelativeLayout
+							android:id="@+id/rellayFavorites"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/list_bg_two"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip">
+							
+								<TextView
+									android:layout_width="100dip"
+									android:layout_height="wrap_content"
+									android:textColor="#000000" 
+									android:textStyle="bold"
+									android:id="@+id/tvFirstName"
+									android:textSize="15dip" android:text="State" android:layout_marginBottom="10px" android:layout_marginLeft="10px" android:layout_marginTop="10px"/>
+									
+								<EditText
+									android:layout_width="150dip"
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" 
+									android:textColor="#395587" 
+									android:layout_toRightOf="@+id/tvFirstName"
+									android:imeOptions="actionNext"
+									android:id="@+id/etState"
+									android:gravity="center_vertical"
+									android:layout_marginBottom="10px" android:layout_marginTop="10px" android:hint="State" android:textSize="16dip"/>	
+						</RelativeLayout>
+						<RelativeLayout
+							android:id="@+id/rellayFavorites"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip" android:background="@drawable/list_bg_two">
+							
+								<TextView
+									android:layout_width="100dip"
+									android:layout_height="wrap_content"
+									android:textColor="#000000" 
+									android:textStyle="bold"
+									android:id="@+id/tvFirstName"
+									android:textSize="15dip" android:text="Zip" android:layout_marginBottom="10px" android:layout_marginLeft="10px" android:layout_marginTop="10px"/>
+									
+								<EditText
+									android:layout_width="150dip"
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" 
+									android:textColor="#395587" 
+									android:layout_toRightOf="@+id/tvFirstName"
+									android:inputType="number"
+									android:id="@+id/etZip"
+									android:gravity="center_vertical"
+									android:imeOptions="actionNext"
+									android:layout_marginBottom="10px" android:layout_marginTop="10px" android:hint="Zip" android:textSize="16dip"/>	
+						</RelativeLayout>
+						<RelativeLayout
+							android:id="@+id/rellayFavorites"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/list_bg_three"
+							android:gravity="center_vertical"
+							android:layout_marginLeft="10dip"
+							android:layout_marginRight="10dip">
+							
+								<TextView
+									android:layout_width="100dip"
+									android:layout_height="wrap_content"
+									android:textColor="#000000" 
+									android:textStyle="bold"
+									android:id="@+id/tvFirstName"
+									android:textSize="15dip" android:text="Country" android:layout_marginBottom="10px" android:layout_marginLeft="10px" android:layout_marginTop="10px"/>
+									
+								<EditText
+									android:layout_height="wrap_content"
+									android:background="#FFFFFF" 
+									android:textColor="#395587" 
+									android:layout_toRightOf="@+id/tvFirstName"
+									android:gravity="center_vertical"
+									android:id="@+id/etCountry"
+									android:imeOptions="actionDone"
+									android:hint="Country" android:layout_marginBottom="10px" android:layout_marginTop="10px" android:layout_width="wrap_content" android:layout_marginRight="5dip" android:textSize="16dip"/>	
+						</RelativeLayout>
+						<Button
+									android:layout_width="150dip"
+									android:layout_height="wrap_content"
+									android:background="@drawable/submit"
+									android:layout_gravity="center_horizontal"
+									android:layout_marginTop="10dip"
+									android:layout_marginBottom="10dip"
+									android:id="@+id/btnSubmit"/>
+					</LinearLayout>
+					</ScrollView>
+</LinearLayout>

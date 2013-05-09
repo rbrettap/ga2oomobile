@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="130dip"
+  android:padding="8dip"
+  >
+  
+   		<RelativeLayout
+	  		android:layout_width="78dip"
+	  		android:layout_height="fill_parent"
+	  		android:background="@drawable/roundbackground_itembg"
+	  	 	android:gravity="center">
+	  	 	<ProgressBar
+    		  		android:id="@+id/eventicon_progress_bar"
+		     		android:layout_width="wrap_content" 
+		       		android:layout_height="wrap_content"
+		      		android:indeterminate="true" 
+		      		android:layout_centerInParent="true"/>	
+	  		
+	  		<ImageView android:layout_width="70dip"
+  				   	   android:layout_height="70dip"
+	  			  	   android:id="@+id/ivEventIcon" 
+	  				   android:layout_centerInParent="true"/>
+		</RelativeLayout>
+		
+  		<LinearLayout android:layout_width="fill_parent"
+  					  android:layout_height="fill_parent"
+  					  android:orientation="vertical"
+  					  android:layout_marginLeft="5dip" >
+  				<TextView android:layout_width="fill_parent"
+  						  android:layout_height="wrap_content" 
+  						  android:textColor="@color/heading_color_dark"
+  						  android:textStyle="bold"
+  						  android:textSize="16dip"
+  						  android:id="@+id/tvUpName"
+  						  android:singleLine="true"
+  						 />
+  				<LinearLayout android:layout_width="fill_parent"
+  					  		  android:layout_height="wrap_content">
+		  				<TextView android:layout_width="wrap_content"
+		  				          android:id="@+id/tvStartdate"            
+		  						  android:layout_height="wrap_content" 
+		  						  android:textColor="@color/heading_color_dark"
+		  						  android:textSize="13dip"
+		  						  />
+		  			    <TextView android:layout_width="wrap_content"
+		  				          android:id="@+id/tvStartTime" 
+                                  android:layout_marginLeft="5dip"          
+		  						  android:layout_height="wrap_content" 
+		  						  android:textColor="@color/heading_color_dark"
+		  						  android:textSize="13dip"/>
+		  				<TextView android:id="@+id/tvPrice"
+		  				          android:layout_width="wrap_content"
+		  						  android:layout_height="wrap_content" 
+		  						  android:layout_marginLeft="5dip"
+		  						  android:textColor="#959B9E"
+		  						  android:textSize="13dip"
+		  						   />
+  				</LinearLayout>
+  				<LinearLayout android:layout_width="fill_parent"
+  					  		  android:layout_height="fill_parent"
+  					  		  android:gravity="center_vertical">
+  					<RelativeLayout
+	  							android:layout_width="25dip"
+	  							android:layout_height="25dip"
+	  							android:visibility="gone"
+	  	 						android:gravity="center">
+	  	 				<ProgressBar
+		    		  		android:id="@+id/event_progress_bar"
+				     		android:layout_width="wrap_content" 
+				       		android:layout_height="wrap_content"
+				      		android:indeterminate="true" 
+				      		android:layout_centerInParent="true"/>			  
+  					  	<ImageView android:layout_width="25dip"
+				  				   android:layout_height="25dip"
+				  				   android:layout_weight="0"
+				  				   android:id="@+id/ivFriendOne" 
+				  				   android:layout_centerInParent="true"/>
+				  	</RelativeLayout>
+				  		<TextView android:layout_width="wrap_content"
+		  						  android:layout_height="wrap_content" 
+		  						  android:gravity="center_vertical"
+		  						  android:textColor="#2D7FC1"
+		  						  android:layout_marginLeft="1dip"
+		  						  android:layout_weight="1"
+		  						  android:textSize="13dip"
+		  						  android:id="@+id/tvNoOfFriends"
+		  						  />
+		  				<LinearLayout
+		  				android:layout_width="55dip"
+		  				android:layout_height="40dip"
+		  				android:gravity="center"
+		  				android:layout_marginLeft="5dip"
+		  				android:id="@+id/llStar"
+		  				 >
+		  				<ImageView android:layout_width="wrap_content"
+				  				   android:layout_height="wrap_content"
+				  				   android:layout_weight="0"
+				  				   android:src="@drawable/star"
+				  				   android:id="@+id/ivFavourite" />
+				  		</LinearLayout>
+				  		<LinearLayout
+		  				android:layout_width="55dip"
+		  				android:layout_height="40dip"
+		  				android:gravity="center"
+		  				android:layout_marginLeft="10dip"
+		  				android:id="@+id/llShare"
+		  				 >
+				  		<ImageView android:layout_width="wrap_content"
+				  				   android:layout_height="wrap_content"
+				  				   android:background="@drawable/share"
+				  				   android:id="@+id/ivShare" />	 
+				  		</LinearLayout>	  
+  				</LinearLayout>
+  		</LinearLayout>
+</LinearLayout>

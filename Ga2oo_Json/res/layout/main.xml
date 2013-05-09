@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/inner_bg"
+	android:gravity="center_horizontal">
+<RelativeLayout
+				android:id="@+id/rlTitle"
+				android:layout_width="fill_parent"
+				android:background="@drawable/top_bar"
+				android:gravity="center_vertical"
+				android:layout_height="40dip" 
+				android:paddingLeft="5dip" 
+				android:paddingRight="5dip">
+			
+				<Button
+					android:id="@+id/btnBack"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/back"
+					android:visibility="invisible"
+					android:layout_alignParentLeft="true" 
+					android:layout_centerInParent="true">
+				</Button>
+				<LinearLayout android:layout_width="wrap_content"
+							  android:layout_height="wrap_content"
+							  android:visibility="gone"
+							  android:id="@+id/llEventsButtons"
+							  android:layout_alignParentLeft="true" 
+							  android:layout_centerInParent="true">
+						<Button
+							android:id="@+id/btnCalView"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/btn_calview">
+						</Button>
+						<Button
+							android:id="@+id/btnListView"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/btn_listview">
+						</Button>
+				</LinearLayout>
+				<TextView
+				  android:id="@+id/tvTitle" 
+				  android:layout_width="wrap_content"
+	  			  android:layout_height="wrap_content"
+	  			  android:layout_centerInParent="true"
+	  			  android:visibility="gone"
+	  			  android:textSize="21dip"
+	  			  android:textStyle="bold"
+	  			  android:textColor="#ffffff" />
+				
+				<Button
+					android:id="@+id/btnLogout"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/logout_btn"
+					android:visibility="invisible"
+					android:layout_alignParentRight="true" 
+					android:layout_centerInParent="true">
+				</Button>
+			
+			</RelativeLayout>
+    <com.facebook.android.LoginButton
+        android:id="@+id/login"
+        android:src="@drawable/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_margin="30dp"
+        />
+
+		
+	<Button android:id="@+id/uploadButton"
+        android:text="@string/upload"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:paddingRight="20dp" 
+        android:paddingLeft="20dp"
+        android:layout_margin="10dp" 
+        />
+        
+	<Button android:id="@+id/requestButton"
+        android:text="@string/request"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:paddingRight="20dp" 
+        android:paddingLeft="20dp"
+        android:layout_margin="10dp" 
+        />
+
+
+	<Button android:id="@+id/postButton" 
+        android:text="@string/post"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:paddingRight="20dp" 
+        android:paddingLeft="20dp"
+        android:layout_margin="10dp" 
+		/>
+		
+    <Button android:id="@+id/deletePostButton" 
+        android:text="@string/delete"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:paddingRight="20dp" 
+        android:paddingLeft="20dp"
+        android:layout_margin="10dp" 
+        />
+
+
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:id="@+id/llSearchedEvent"
+			>
+	<TextView android:layout_width="fill_parent"
+  			  android:layout_height="wrap_content"
+			  android:textStyle="bold"
+			  android:layout_marginLeft="10dip"
+  			  android:id="@+id/tvFeatured"
+  			  android:textSize="16dip"
+	  		  android:textColor="@color/heading_color_dark"
+	  		  android:layout_marginTop="5dip"
+	  		  android:text="Search Result" />
+	  <TextView android:layout_width="fill_parent"
+	  		    android:layout_height="2dip"
+	  		    android:layout_marginTop="5dip"
+	  		    android:background="@drawable/seperator" />
+	  		<TextView android:layout_width="fill_parent"
+  			  android:layout_height="fill_parent"
+  			  android:gravity="center"
+  			  android:id="@+id/tvResult"
+  			  android:textSize="16dip"
+	  		  android:textColor="@color/heading_color_dark"
+	  		  android:visibility="gone"
+	  		  android:layout_marginTop="5dip"
+	  		  android:text="No Search Result" />
+		<ListView 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:id="@+id/lvSearched"
+			android:layout_weight="1"
+		>
+		</ListView>
+</LinearLayout>

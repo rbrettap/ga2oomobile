@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center|bottom">
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginRight="4dip"
+	    android:background="@drawable/events_icon"
+	    android:layout_marginBottom="5px" >
+	</TextView>
+	
+	<TextView
+		android:id="@+id/tab_label"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+	    android:layout_marginRight="4dip"
+		android:text="Events"
+		android:textStyle="bold"
+		android:textColor="#ffffff"
+		android:textSize="9px"/>
+</LinearLayout>

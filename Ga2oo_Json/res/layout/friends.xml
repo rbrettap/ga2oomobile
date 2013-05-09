@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  android:orientation="vertical"
+  android:id="@+id/llFriends"
+  android:paddingTop="8dip"
+  android:paddingBottom="8dip">
+		 <RelativeLayout  
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:background="@drawable/btnbg"
+		     android:id="@+id/rlFindFriend">
+		    
+		     <EditText  
+		     	  android:id="@+id/etSearchFriend"
+		          android:layout_width="240dip"
+		          android:layout_height="wrap_content"
+		          android:background="@drawable/search_editbg"
+		          android:textColor="#000000"
+		          android:textSize="13dip"
+		          android:layout_alignParentLeft="true"
+		          android:layout_centerVertical="true"
+		          android:layout_marginLeft="10dip"
+		          android:paddingLeft="30dip" 
+		          android:gravity="left|center_vertical"
+		          android:hint="Search Friend" 
+		          android:paddingRight="40dip"
+		          android:singleLine="true" 
+		          android:imeOptions="actionSearch"/>
+		           <ImageView  android:id="@+id/ivSave" 
+		 					   android:layout_width="wrap_content"
+		      				   android:layout_height="wrap_content"
+							      android:src="@drawable/editsave"
+							      android:layout_marginLeft="210dip"
+							      android:layout_centerVertical="true"
+		     />  
+		          
+		      <Button   
+		      	   android:id="@+id/btnSearchcancel"
+		           android:layout_width="wrap_content"
+		     	   android:layout_height="wrap_content"
+		     	   android:layout_centerVertical="true"
+		     	   android:layout_toRightOf="@id/etSearchFriend"
+		     	   android:layout_marginLeft="9dip"
+		     	   android:background="@drawable/cancel_btn_click"/>
+		   </RelativeLayout>
+	   	<ListView 
+  		android:layout_width="fill_parent"
+  		android:layout_marginTop="5dip"
+  		android:layout_height="wrap_content"
+  		android:visibility="gone"
+  		android:isScrollContainer="false"
+  		android:id="@+id/lvsearchedFriend"
+  		></ListView>
+	   <ListView 
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:id="@+id/lvFriends"
+  		android:isScrollContainer="false"
+  		></ListView>
+  		  		<TextView 
+  			android:layout_width="fill_parent"
+  			android:layout_height="wrap_content"
+  			android:text="No result found"
+  			android:textColor="#000000"
+  			android:id="@+id/tvnoResult"
+  			android:visibility="gone"
+  			android:textSize="18dip"
+  			android:gravity="center"
+  			android:isScrollContainer="false"
+  		
+  		/>
+ </LinearLayout>

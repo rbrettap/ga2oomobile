@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  android:orientation="vertical"
+  android:paddingTop="10dip">
+  		<RelativeLayout  
+	     android:id="@+id/rlSearchFriend"
+	     android:layout_width="fill_parent"
+	     android:layout_height="wrap_content"
+	     android:background="@drawable/btnbg">
+	    
+	     <EditText  
+	     	  android:id="@+id/etSearchFriend"
+	          android:layout_width="240dip"
+	          android:layout_height="wrap_content"
+	          android:background="@drawable/search_editbg"
+	          android:textColor="#000000"
+	          android:textSize="13dip"
+	          android:layout_alignParentLeft="true"
+	          android:layout_centerVertical="true"
+	          android:layout_marginLeft="10dip"
+	          android:paddingLeft="30dip" 
+	          android:gravity="left|center_vertical"
+	          android:hint="Search" 
+	          android:paddingRight="40dip"
+	          android:singleLine="true" android:imeOptions="actionDone"/>
+	          
+		   <ImageView  android:id="@+id/ivSave" 
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:src="@drawable/editsave"
+		      android:layout_marginLeft="210dip"
+		      android:layout_centerVertical="true"
+		     />  
+	      
+	      <Button   
+	      	   android:id="@+id/btn_cancel"
+	           android:layout_width="wrap_content"
+	     	   android:layout_height="wrap_content"
+	     	   android:layout_centerVertical="true"
+	     	   android:layout_toRightOf="@id/etSearchFriend"
+	     	   android:layout_marginRight="10dip"
+	     	   android:layout_marginLeft="10dip"
+	     	   android:background="@drawable/cancel_btn_click"/>
+	   </RelativeLayout>
+  		<ListView 
+  		android:layout_width="fill_parent"
+  		android:layout_marginTop="5dip"
+  		android:layout_height="wrap_content"
+  		android:id="@+id/lvsearchedFriend"
+  		></ListView>
+ </LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@android:id/tabhost"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:fadingEdgeLength="0px"
+		>
+		
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:fitsSystemWindows="true"
+			android:background="@drawable/inner_bg">
+			
+			
+			<!-- Title layout -->
+			
+			<RelativeLayout
+				android:id="@+id/rlTitle"
+				android:layout_width="fill_parent"
+				android:background="@drawable/top_bar"
+				android:gravity="center_vertical"
+				android:layout_height="40dip" 
+				android:paddingLeft="5dip" 
+				android:paddingRight="5dip">
+			
+				<Button
+					android:id="@+id/btnBack"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/back"
+					android:visibility="visible"
+					android:layout_alignParentLeft="true" 
+					android:layout_centerInParent="true">
+				</Button>
+				<LinearLayout android:layout_width="wrap_content"
+							  android:layout_height="wrap_content"
+							  android:visibility="gone"
+							  android:id="@+id/llEventsButtons"
+							  android:layout_alignParentLeft="true" 
+							  android:layout_centerInParent="true">
+						<Button
+							android:id="@+id/btnCalView"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/btn_calview">
+						</Button>
+						<Button
+							android:id="@+id/btnListView"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:background="@drawable/btn_listview">
+						</Button>
+				</LinearLayout>
+				<TextView
+				  android:id="@+id/tvTitle" 
+				  android:layout_width="170dip"
+	  			  android:layout_height="wrap_content"
+	  			  android:layout_centerInParent="true"
+	  			  android:layout_marginLeft="35dip"
+	  			  android:visibility="gone"
+	  			  android:singleLine="true"
+	  			  android:textSize="21dip"
+	  			  android:textStyle="bold"
+	  			  android:textColor="#ffffff" />
+				
+				<Button
+					android:id="@+id/btnLogout"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/logout_btn"
+					android:visibility="visible"
+					android:layout_alignParentRight="true" 
+					android:layout_centerInParent="true">
+				</Button>
+			
+			</RelativeLayout>
+
+			<TabWidget
+				android:id="@android:id/tabs"
+				android:layout_width="fill_parent"
+				android:layout_height="60dip"
+				android:layout_marginLeft="7dip"
+				android:layout_marginRight="7dip"
+				android:layout_marginTop="7dip"
+				android:layout_gravity="top|center_horizontal"
+				android:layout_weight="0"
+				android:background="@drawable/tab_bg"
+				android:fadingEdgeLength="0px"
+				/>
+				
+			<FrameLayout
+				android:id="@android:id/tabcontent"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1"
+				android:fadingEdgeLength="0px"
+				/>
+		</LinearLayout>
+</TabHost>

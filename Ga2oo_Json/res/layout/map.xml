@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical">
+  
+  		<EditText android:layout_width="fill_parent"
+  			  android:layout_height="wrap_content"
+  			  android:paddingLeft="40dip"
+			  android:gravity="center_vertical"
+			  android:singleLine="true"
+			  android:imeOptions="actionSearch"
+  			  android:hint="Ex: San Francisco"
+  			  android:id="@+id/etSearch"
+  			  android:background="@drawable/search_bg" />
+  		
+  		<com.google.android.maps.MapView 
+		        android:id="@+id/mapView"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:enabled="true"
+		        android:clickable="true"
+		        android:apiKey="02qALuveTEvaz52JrZyxv5GWafhacLBvdqjr6Lw"
+
+		        />
+		         <LinearLayout android:id="@+id/zoom" 
+                   android:layout_width="wrap_content" 
+                   android:layout_height="wrap_content" 
+                   android:layout_alignParentBottom="true" 
+                   android:layout_centerHorizontal="true" 
+        /> 
+  		
+</LinearLayout>

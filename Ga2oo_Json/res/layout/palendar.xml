@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical">
+		  <LinearLayout android:layout_width="fill_parent"
+		  					  android:layout_height="fill_parent"
+		  					  android:visibility="gone"
+		  					  android:orientation="vertical" 
+		  					  android:id="@+id/llCalView">
+		  		<LinearLayout android:layout_width="fill_parent"
+		  					  android:layout_height="wrap_content"
+		  					  android:id="@+id/llPalendarMonthAndWeekDays" />
+		  		
+		  		<LinearLayout android:layout_width="fill_parent"
+		  					  android:layout_height="wrap_content"
+		  					  android:gravity="center"
+		  					  android:id="@+id/llPalendarDaysOfMonth" />	
+		  		
+		  		<ListView android:id="@+id/lvPalendarEvents"
+				  	      android:layout_width="fill_parent"	
+				  		  android:layout_height="fill_parent"
+				  		  android:fadingEdgeLength="0dip"
+						  android:fadingEdge="none"
+						  android:scrollingCache="false"
+						  android:scrollbars="none"
+				  		  android:background="@drawable/listview_bg" />  
+		</LinearLayout>		
+		<LinearLayout android:layout_width="fill_parent"
+  					  android:layout_height="fill_parent"
+  					  android:visibility="gone"
+  					  android:orientation="vertical" 
+  					  android:id="@+id/llListView">
+  					  
+  				<LinearLayout android:layout_width="fill_parent"
+  						      android:layout_height="wrap_content"
+  						      android:background="@drawable/bluebar">
+  						<ImageView android:layout_width="wrap_content"
+  								   android:layout_height="wrap_content"
+  								   android:id="@+id/ivLeftCatg"
+  								   android:layout_weight="0"
+  								   android:background="@drawable/leftarrow" />
+  						<HorizontalScrollView android:layout_width="wrap_content"
+  											  android:layout_height="fill_parent"
+  											  android:scrollbars="none"
+  											  android:fadingEdgeLength="0dip"
+  											  android:layout_weight="1">
+  									<LinearLayout android:layout_width="wrap_content"
+  												  android:layout_height="fill_parent"
+  												  android:id="@+id/llCatg"
+  												  android:paddingLeft="10dip"
+  												  android:paddingRight="10dip"
+  												  android:gravity="center_vertical">
+  											
+  									</LinearLayout>
+  						</HorizontalScrollView>
+  						<ImageView android:layout_width="wrap_content"
+  								   android:layout_height="wrap_content"
+  								   android:id="@+id/ivRightCatg"
+  								   android:layout_weight="0"
+  								   android:background="@drawable/rightarrow" />		   
+  				</LinearLayout>
+  				
+  				<LinearLayout android:layout_width="fill_parent"
+  							  android:layout_height="wrap_content"
+  							  android:gravity="center_vertical"
+  							  android:layout_margin="10dip">
+  						<TextView android:layout_width="wrap_content"
+  								  android:layout_height="wrap_content"
+  								  android:text="Feb"
+  								  android:id="@+id/tvMonthInList"
+  								  android:textSize="24dip"
+  								  android:visibility="gone"
+  								  android:textColor="@color/heading_color_dark" />	  
+  						<TextView android:layout_width="wrap_content"
+  								  android:layout_height="wrap_content"
+  								  android:text="Feb 2"
+  								  android:textStyle="bold"
+  								  android:id="@+id/tvDateInList"
+  								  android:textSize="24dip"
+  								  android:layout_marginLeft="8dip"
+  								  android:textColor="@color/heading_color_dark" />	
+  						<ImageView android:layout_width="wrap_content"
+  								   android:layout_height="wrap_content"
+  								   android:layout_marginLeft="5dip"
+  								   android:background="@drawable/cal_icon"
+  								   android:id="@+id/ivCalIcon" />
+  						<TextView android:layout_width="wrap_content"
+  								  android:layout_height="wrap_content"
+  								  android:singleLine="true"
+  								  android:gravity="center_vertical"
+  								  android:background="@drawable/dropdown"
+  								  android:layout_marginLeft="10dip"
+  								  android:paddingRight="25dip"
+  								  android:paddingLeft="10dip"
+  								  android:textColor="#ffffff"
+  								  android:text="Walking "
+  								  android:id="@+id/tvDistance" /> 
+  						<TextView android:layout_width="wrap_content"
+  								  android:layout_height="wrap_content"
+  								  android:singleLine="true"
+  								  android:gravity="center_vertical"
+  								  android:background="@drawable/dropdown"
+  								  android:paddingRight="25dip"
+  								  android:paddingLeft="10dip"
+  								  android:layout_marginLeft="5dip"
+  								  android:textColor="#ffffff"
+  								  android:text="Top Hits "
+  								  android:id="@+id/tvType" /> 
+  				</LinearLayout>
+  				
+  				<ListView android:layout_width="fill_parent"
+  						  android:layout_height="fill_parent"
+  						  android:fadingEdgeLength="0dip"
+  						  android:fadingEdge="none"
+  						  android:scrollbars="none"
+  						  android:id="@+id/lvEventsList" />
+  		</LinearLayout>  
+</LinearLayout>

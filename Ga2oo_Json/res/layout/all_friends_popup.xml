@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="280dip"
+  android:background="@drawable/upcoming_hdg_bg"
+  android:paddingBottom="5dip"
+  android:layout_height="wrap_content">
+  
+  		<ImageView android:layout_width="wrap_content"
+  				   android:layout_height="wrap_content"
+  				   android:layout_alignParentRight="true"
+  				   android:background="@drawable/close_button"
+  				   android:id="@+id/ivClose" />
+  		<TextView android:layout_width="wrap_content"
+  				 android:layout_height="3dip"
+  				 android:layout_below="@+id/ivClose"/>
+  		<ListView android:layout_width="fill_parent"
+  				  android:layout_height="wrap_content"
+  				  android:orientation="vertical"
+  				  android:layout_marginBottom="20dip"
+  				  android:layout_below="@+id/ivClose"
+  				  android:id="@+id/lvFriendsList" />
+  			<Button android:layout_width="wrap_content"
+  					android:layout_height="wrap_content"
+  					android:id="@+id/btnDone"
+  					android:background="@drawable/done"
+  					android:layout_below="@+id/lvFriendsList"
+  					android:gravity="center_horizontal"
+  					android:layout_centerHorizontal="true"
+  				/>
+  	
+  			<TextView 
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+  				android:layout_below="@+id/btnDone"
+  				android:textSize="16dip"
+  				android:text="No friends yet"
+  				android:textColor="@drawable/white"
+  				android:gravity="center"
+  				android:visibility="gone"
+  				android:textStyle="bold"
+  				android:id="@+id/tvNoAnyFriend"
+  			/>
+  	
+</RelativeLayout>

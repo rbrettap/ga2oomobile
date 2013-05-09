@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="35px"
+  >
+ 
+  <Button 
+  android:layout_gravity="right"
+  android:id="@+id/btnDone"
+  android:layout_marginTop="4px"
+  android:background="@drawable/empty_bg"
+  android:text="Done"
+  android:textStyle="bold"
+  android:textSize="14px"
+  android:textColor="#ffffff"
+  android:layout_marginRight="10px"
+  
+  android:layout_width="57px"
+  android:layout_height="27px">
+  </Button>
+</FrameLayout>

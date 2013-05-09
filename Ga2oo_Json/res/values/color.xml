@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="text_color_light">#013C53</color>
+	<color name="heading_color_light">#94B1BD</color>
+	<color name="heading_color_dark">#013C53</color>
+	<color name="friends_list_bgcolor">#DBEFF7</color>
+	 <drawable name="white">#ffffff</drawable> 
+  <drawable name="black">#000000</drawable> 
+</resources>

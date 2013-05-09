@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  android:padding ="10dip">
+  	
+  		<RelativeLayout
+	  				android:layout_width="70dip"
+	  				android:layout_height="50dip"
+	  	 			android:gravity="center">
+	  	 		<ProgressBar
+				      android:layout_width="wrap_content" 
+				      android:layout_height="wrap_content"
+				      android:indeterminate="true" 
+				      android:id="@+id/friend_list_progress_bar"
+				      android:layout_centerInParent="true"/>			  
+  				<ImageView android:layout_width="70dip"
+				  		   android:layout_height="50dip"
+				  		   android:layout_weight="0"
+				  		   android:id="@+id/ivFriendsListIcon"
+				  		   android:layout_centerInParent="true"/>
+		</RelativeLayout>
+  		<TextView android:layout_width="wrap_content"
+  				  android:layout_height="wrap_content"
+  				  android:textColor="#ffffff"
+  				  android:text="Richard Brett"
+  				  android:singleLine="true"
+  				  android:id="@+id/tvFriendsListName"
+  				  
+  				  android:textSize="16dip"
+  				  android:layout_marginLeft="10dip"
+  				  android:layout_weight="1" />
+  	   <ImageView android:layout_width="20dip" 
+  				  android:layout_height="20dip"
+  				  android:layout_weight="0"
+  				  android:id="@+id/ivCheckBox"
+  				  android:src="@drawable/btn_check_off"
+  				  android:visibility="invisible"
+  				   />
+</LinearLayout>
