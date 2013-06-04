@@ -30,7 +30,7 @@ public class AppConstants
 //	public static final String HOST_URL = "http://5.ga2ootesting.appspot.com/rest/v1/";
 //	public static final String IMAGE_HOST_URL="http://5.ga2ootesting.appspot.com/";
 	public static final String JSON_HOST_URL = "http://ga2ooprod.appspot.com/rest/v2/";
-	public static final String IMAGE_HOST_URL="http://ga2ooprod.appspot.com";
+	public static final String IMAGE_HOST_URL="";  // this should be empty since the image url has the http 
 	public static final String Authenticate_User_URL =  "user/signin/";
 	public static final String USER_ACCOUNT_URL = "user/id/";
 	public static final String GET_USER_LOCATION_URL = "user/savedlocations/id/";
