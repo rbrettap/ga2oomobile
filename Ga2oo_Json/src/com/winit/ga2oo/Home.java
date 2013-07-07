@@ -284,7 +284,7 @@ public class Home extends ShareEvent implements LocationResult
 		{
 			if(!vctUserAccount.get(0).imagesrc.equals(AppConstants.NOIMAGE) || !vctUserAccount.get(0).imagesrc.equals(""))
 			{
-				userImageUrl=AppConstants.IMAGE_HOST_URL+vctUserAccount.get(0).imagesrc;
+				userImageUrl=vctUserAccount.get(0).imagesrc;
 				if(!objDrawableManager.fetchDrawableOnThread(userImageUrl, ivUserImage,65,50,vctUserAccount.get(0).imageId,vctUserAccount.get(0).isImageUpdated)){
 					ivUserImage.setImageResource(R.drawable.no_image_smal_event);
 				}
