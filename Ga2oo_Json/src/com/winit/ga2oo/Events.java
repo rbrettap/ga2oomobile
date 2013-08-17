@@ -62,7 +62,7 @@ import com.winit.parsing.net.JsonHttpHelper;
 
 public class Events extends ShareEvent implements CalendarListener
 {
-	private static final String CURREN_EVENT_CATEGORY = "CurrenEvenetCategory";
+	private static final String CURRENT_EVENT_CATEGORY = "CurrentEventCategory";
 	public static final String LOGTAG ="EventsScreen";
 	public static final String ISCALBTNCLICKED = "isCalBtnClicked";
 	public static final String EVENTS = "Events";
@@ -120,6 +120,8 @@ public class Events extends ShareEvent implements CalendarListener
 	private Calendar cal;
 	private SharedPreferences sharedPreferences;
 	
+	private static final String kLogTag = Events.class.getSimpleName();
+	
 	@Override
     public void onCreate(Bundle savedInstanceState) 
     {
@@ -135,7 +137,7 @@ public class Events extends ShareEvent implements CalendarListener
 		super.onResume();
 		setContentView(R.layout.events);
 		sharedPreferences = getPreferences(MODE_PRIVATE);
-		categoryId = sharedPreferences.getInt(CURREN_EVENT_CATEGORY, 0);
+		categoryId = sharedPreferences.getInt(CURRENT_EVENT_CATEGORY, 0);
 		context=this;
 		isCalBtnClicked = this.getIntent().getBooleanExtra(ISCALBTNCLICKED, true);
 		jsonHelper = JsonHttpHelper.getInstance();
@@ -1071,6 +1073,8 @@ public class Events extends ShareEvent implements CalendarListener
 	public void buildFilteredCalView()
 	{
 //		progressDialog.show();
+	    
+	    
 		if(llDaysOfMonth.getChildCount() > 0)
 			llDaysOfMonth.removeAllViews();
 			
@@ -1439,7 +1443,7 @@ public class Events extends ShareEvent implements CalendarListener
 	}
 	protected void saveCurrentCategory() {
 	    SharedPreferences.Editor editor = sharedPreferences.edit();
-	    editor.putInt(CURREN_EVENT_CATEGORY, categoryId);
+	    editor.putInt(CURRENT_EVENT_CATEGORY, categoryId);
 	    editor.commit();
 	}
 	

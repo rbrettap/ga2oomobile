@@ -11,10 +11,12 @@
 		  					  android:id="@+id/llCalView">
 		  		<LinearLayout android:layout_width="fill_parent"
 		  					  android:layout_height="wrap_content"
+		  					  android:orientation="horizontal"
 		  					  android:id="@+id/llPalendarMonthAndWeekDays" />
 		  		
 		  		<LinearLayout android:layout_width="fill_parent"
 		  					  android:layout_height="wrap_content"
+		  					  android:orientation="horizontal"
 		  					  android:gravity="center"
 		  					  android:id="@+id/llPalendarDaysOfMonth" />	
 		  		
@@ -48,6 +50,7 @@
   											  android:layout_weight="1">
   									<LinearLayout android:layout_width="wrap_content"
   												  android:layout_height="fill_parent"
+  												  android:orientation="horizontal"
   												  android:id="@+id/llCatg"
   												  android:paddingLeft="10dip"
   												  android:paddingRight="10dip"
