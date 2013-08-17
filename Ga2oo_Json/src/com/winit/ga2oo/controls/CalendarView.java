@@ -22,6 +22,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.rjb.android.impl.core.log.Flog;
 import com.winit.ga2oo.BusinessPalender;
 import com.winit.ga2oo.DrawableManager;
 import com.winit.ga2oo.EventDetails;
@@ -42,8 +43,6 @@ public class CalendarView extends LinearLayout
 
 	private static final String NO_EVENT = "no event";
 
-	private final String LOGTAG = "CalendarView";
-	
 	private PopUpDailog customDialog;
 	private int month, year;
 	private Context context;
@@ -68,6 +67,8 @@ public class CalendarView extends LinearLayout
 	private CustomCalEventsAdapter objCustomCalEventsAdapter;
 	private CalendarListener currenntListener;
 	
+	private static final String kLogTag = CalendarView.class.getSimpleName();
+	
 	public CalendarView(Context context, int month, int year, CalendarListener cl)
 	{
 		
@@ -81,7 +82,7 @@ public class CalendarView extends LinearLayout
 		eventBL=new EventsBusinessLayer();
 		vctEventdates=new ArrayList<EventDates>();
 		strAttendingEvents=eventBL.getLogedInUserAttendingEvents(AppConstants.USER_ID);
-//		vctEventList=new ArrayList<EventsDetails>();
+		vctEventList=new ArrayList<EventsDetails>();
 //		vctEventList=eventBL.getAllEventsList();
 	}
 
@@ -124,6 +125,8 @@ public class CalendarView extends LinearLayout
 	
 	public RelativeLayout addButtonWithDate(int date)
 	{
+	    Flog.p(Flog.DEBUG,  kLogTag, "addButtonWithDate");
+	    
 		final RelativeLayout rlEachDate=new RelativeLayout(context);
 		TextView tvNoOfEvents=new TextView(context);
 		tvNoOfEvents.setText("");
