@@ -1,7 +1,7 @@
-package com.ga2oo.android.impl.core.log;
+package com.rjb.android.impl.core.log;
 
 import com.winit.ga2oo.BuildConfig;
-import com.ga2oo.android.impl.core.FConstants;
+import com.rjb.android.impl.core.FConstants;
 
 import android.text.TextUtils;
 import android.util.Log;
