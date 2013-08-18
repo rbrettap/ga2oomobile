@@ -23,7 +23,6 @@ import com.ga2oo.palendar.objects.BusinessRegistration;
 import com.ga2oo.palendar.objects.UserAccount;
 import com.ga2oo.palendar.objects.UserLocationObject;
 import com.ga2oo.palendar.xmlparsers.LocationDeleteWrapper;
-import com.ga2oo.palendar.xmlparsers.UrlPost;
 import com.ga2oo.parsing.net.JsonHttpHelper;
 
 public class Ga2ooJsonParsers {
