@@ -32,7 +32,7 @@ import android.widget.Button;
 
 import com.facebook.android.SessionEvents.AuthListener;
 import com.facebook.android.SessionEvents.LogoutListener;
-import com.winit.ga2oo.R;
+import com.ga2oo.palendar.R;
 
 
 

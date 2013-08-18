@@ -37,7 +37,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.facebook.android.Facebook.DialogListener;
-import com.winit.ga2oo.R;
+import com.ga2oo.palendar.R;
 
 public class FbDialog extends Dialog {
 
