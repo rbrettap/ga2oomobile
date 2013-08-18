@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Ga2oo</string>
+    <string name="app_name">ThePalendar</string>
     
         
       <!-- A -->
-      		<string name="aboutNote">go2oo version 1 is a particular implementation of ga2oo mobile product on Android platform.</string>
+      		<string name="aboutNote">The Palendar version 1 is a particular implementation of ga2oo mobile product on Android platform.</string>
       		<string name="add_to_favorite_title">Favorite</string>
       		<string name="add_to_favorite">Choose a category to make a favorite?</string>
 			<string name="all_added_to_favorite">This event and company are already added to your favorites.</string>	

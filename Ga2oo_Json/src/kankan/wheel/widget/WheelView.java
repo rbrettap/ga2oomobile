@@ -41,7 +41,7 @@ import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
 
-import com.winit.ga2oo.R;
+import com.ga2oo.palendar.R;
 
 
 /**

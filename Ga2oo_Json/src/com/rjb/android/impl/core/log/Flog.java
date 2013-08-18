@@ -1,6 +1,6 @@
 package com.rjb.android.impl.core.log;
 
-import com.winit.ga2oo.BuildConfig;
+import com.ga2oo.palendar.BuildConfig;
 import com.rjb.android.impl.core.FConstants;
 
 import android.text.TextUtils;

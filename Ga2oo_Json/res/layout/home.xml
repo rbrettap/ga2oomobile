@@ -113,6 +113,7 @@
 	  				      <LinearLayout 
 	  				      	android:layout_width="fill_parent"
 	  				      	android:layout_height="wrap_content"
+	  				      	android:orientation="horizontal"
 	  				      	android:id="@+id/llFeatured"
 	  				      	android:isScrollContainer="false"
 	  				      >
@@ -134,6 +135,7 @@
 	  				      <LinearLayout 
 	  				      	android:layout_width="fill_parent"
 	  				      	android:layout_height="wrap_content"
+	  				      	android:orientation="horizontal"
 	  				      	android:id="@+id/llUpcoming"
 	  				      	android:isScrollContainer="false"
 	  				      >
@@ -141,4 +143,12 @@
 	  				      </LinearLayout>
   			</LinearLayout>
   	</ScrollView>
+  	
+  	    <LinearLayout
+        android:id="@+id/getAdBottomSpace"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+  	
 </LinearLayout>
