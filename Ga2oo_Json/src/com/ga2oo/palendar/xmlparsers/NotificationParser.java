@@ -7,10 +7,8 @@ import org.xml.sax.SAXException;
 
 import android.util.Log;
 
-import com.ga2oo.palendar.businesslayer.EventsBusinessLayer;
 import com.ga2oo.palendar.businesslayer.UserAccountBusinessLayer;
 import com.ga2oo.palendar.common.AppConstants;
-import com.ga2oo.palendar.objects.FavoriteEvent;
 import com.ga2oo.palendar.objects.Notifications;
 
 public class NotificationParser extends BaseGa2ooParser

@@ -7,11 +7,9 @@ import org.xml.sax.SAXException;
 
 import android.util.Log;
 
-import com.ga2oo.palendar.businesslayer.EventsBusinessLayer;
 import com.ga2oo.palendar.businesslayer.UserAccountBusinessLayer;
 import com.ga2oo.palendar.common.AppConstants;
 import com.ga2oo.palendar.objects.Business;
-import com.ga2oo.palendar.objects.FavoriteEvent;
 
 public class FavoriteCompanyParser extends BaseGa2ooParser
 {
