@@ -1,7 +1,5 @@
 package com.ga2oo.jsonparsers;
 
-import com.ga2oo.jsonparsers.UserAccountResult;
-
 public class LocationDeleteWrapper {
 private LocationsDeleteResult useraccount;
     
