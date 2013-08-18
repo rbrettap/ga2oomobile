@@ -39,6 +39,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -80,7 +81,9 @@ import com.winit.parsing.net.JsonHttpHelper;
 import com.winit.parsing.net.LocationUtility;
 import com.winit.parsing.net.LocationUtility.LocationResult;
 
-public class Home extends ShareEvent implements LocationResult
+import com.flurry.android.*;
+
+public class Home extends ShareEvent implements LocationResult, FlurryAdListener
 {
 	public static final String LOGTAG = "HomeScreen";
 	public static final String NONE = "None";
@@ -163,6 +166,10 @@ public class Home extends ShareEvent implements LocationResult
 	private JsonHttpHelper jsonHelper;
 	UserAccountBusinessLayer userLayer;
 	
+	private final String kLogTag = getClass().getSimpleName();
+	private FrameLayout fContainer;
+
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
     {
@@ -170,7 +177,70 @@ public class Home extends ShareEvent implements LocationResult
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		
 		super.onCreate(savedInstanceState);
+
     }
+	
+	@Override
+	public void onStart() {
+	    
+	    super.onStart();
+	    FlurryAgent.onStartSession(this, AppConstants.Flurry_Api_Key.toString());
+	}
+	
+    @Override
+    public boolean shouldDisplayAd(String adSpaceName, FlurryAdType type)
+    {
+        Log.d(kLogTag, "shouldDisplayAd("+adSpaceName+","+type.toString()+")");
+        return true;
+    }
+
+    @Override
+    public void spaceDidFailToReceiveAd(String adSpaceName)
+    {
+        Log.d(kLogTag, "spaceDidFailToReceiveAd("+adSpaceName+")");
+    }
+
+    @Override
+    public void spaceDidReceiveAd(String adSpaceName)
+    {
+        Log.d(kLogTag, "spaceDidReceiveAd("+adSpaceName+")");
+        FlurryAds.displayAd(this, "Banner_Top", fContainer);
+    }
+    @Override
+    public void onApplicationExit(String adSpaceName)
+    {
+        Log.d(kLogTag, "onApplicationExit("+adSpaceName+")");
+    }
+
+    @Override
+    public void onRenderFailed(String adSpaceName)
+    {
+        Log.d(kLogTag, "onRenderFailed("+adSpaceName+")");
+    }
+    
+    @Override
+    public void onAdClicked(String adSpaceName)
+    {
+        Log.d(kLogTag, "onAdClicked("+adSpaceName+")");
+    }
+
+    @Override
+    public void onAdOpened(String adSpaceName)
+    {
+        Log.d(kLogTag, "onAdOpened("+adSpaceName+")");
+    }
+
+    @Override
+    public void onAdClosed(String adSpaceName)
+    {
+        Log.d(kLogTag, "onAdClosed("+adSpaceName+")");
+    }    
+    
+    @Override
+    public void onVideoCompleted(String adSpace) 
+    {
+        Log.d(kLogTag, "onVideoCompleted "+ adSpace);
+    }   
 	
 	@Override
 	public void onResume()
@@ -446,6 +516,15 @@ public class Home extends ShareEvent implements LocationResult
 			}
 			
 		});
+		
+        LinearLayout linearLayout = (LinearLayout)findViewById(R.id.getAdBottomSpace);
+        fContainer = new FrameLayout(this);
+        linearLayout.addView(fContainer);       
+        FlurryAds.setAdListener(this); 
+		
+	      // fetch and prepare ad for this ad space. won’t render one yet
+        FlurryAds.fetchAd(this, "Banner_Top", fContainer, FlurryAdSize.BANNER_BOTTOM);
+
 
 	}
 		
@@ -1398,6 +1477,8 @@ public class Home extends ShareEvent implements LocationResult
 		super.onStop();
 		if(objDrawableManager != null)
 			objDrawableManager.clear();
+		
+		FlurryAgent.onEndSession(this);
 	}
 	 
 	@Override
@@ -1434,7 +1515,5 @@ public class Home extends ShareEvent implements LocationResult
 		Log.i(LOGTAG, "searchedDate = "+result);
 		return result.toString();
 	}
-	
-	
-	
+
 }

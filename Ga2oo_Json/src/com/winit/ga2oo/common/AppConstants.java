@@ -95,6 +95,8 @@ public class AppConstants
 	public static ArrayList<EventLocation> vctEventLocation;
 	
 	public static final String APP_ID = "148110835259569";
+	public static final String Flurry_Api_Key = "FDQ6ZW6TB8C3SM9PY3GJ";
+	
 	
 	public static final String NOIMAGE="no image";
 

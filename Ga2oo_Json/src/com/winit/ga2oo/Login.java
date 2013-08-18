@@ -46,6 +46,7 @@ import com.facebook.android.SessionEvents.AuthListener;
 import com.facebook.android.SessionEvents.LogoutListener;
 import com.facebook.android.SessionStore;
 import com.facebook.android.Util;
+import com.flurry.android.FlurryAgent;
 import com.google.gson.JsonElement;
 import com.winit.ga2oo.businesslayer.EventsBusinessLayer;
 import com.winit.ga2oo.businesslayer.UserAccountBusinessLayer;
@@ -108,12 +109,14 @@ public class Login extends Activity
     
     private AlertDialog alertDialog;
     public int code=-2;
+    
+    private static final String kLogTag = FlurryAgent.class.getSimpleName();
+    
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
 	{
 		super.onCreate(savedInstanceState);
-	        
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		if(this.getIntent().getExtras()==null || LOGIN.equals(this.getIntent().getExtras().getString(CURRENTSCREEN))){
 		setContentView(R.layout.login);
@@ -392,7 +395,24 @@ public class Login extends Activity
 				}
 			}
 		});
-	}	
+	}
+	
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FlurryAgent.onStartSession(this, AppConstants.Flurry_Api_Key.toString());
+        Log.d(kLogTag, "onStart");
+    }
+    
+    
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        FlurryAgent.onEndSession(this);
+        Log.d(kLogTag, "onStop");
+    }
+
 	
 	public boolean emailAddressValidation(String strEmail)
 	  {

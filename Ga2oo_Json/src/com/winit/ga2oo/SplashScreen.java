@@ -29,12 +29,15 @@ import com.winit.parsing.net.JsonHttpHelper;
 import com.winit.parsing.net.LocationUtility;
 import com.winit.parsing.net.LocationUtility.LocationResult;
 
+import com.flurry.android.*;
+
 public class SplashScreen extends Activity implements LocationResult
 {
 	
 	private static final String DATEFORMAT = "#.#######";
 
 	public static final String LOGTAG = "SplashScreen";
+	private static final String kLogTag = FlurryAgent.class.getSimpleName();
 	
 	HttpHelper helper;
 	private AlertDialog.Builder InternetPopup;
@@ -44,11 +47,18 @@ public class SplashScreen extends Activity implements LocationResult
 	public static double lattitude,longitude;
 	private JsonElement element;
 	private JsonHttpHelper jsonHelper;
+	
+	private String fApiKey;
+	 
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
+        
+        //fApiKey = getIntent().getExtras().getString();
+        fApiKey = AppConstants.Flurry_Api_Key.toString();
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.splashscreen);
@@ -85,6 +95,22 @@ public class SplashScreen extends Activity implements LocationResult
 		}
     }
     
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FlurryAgent.onStartSession(this, fApiKey);
+        Log.d(kLogTag, "onStart");
+    }
+    
+    
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        FlurryAgent.onEndSession(this);
+        Log.d(kLogTag, "onStop");
+    }
+
     //Creating DB and opening DB
     public void createDataBase()
     {
