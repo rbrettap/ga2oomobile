@@ -1,4 +1,4 @@
-package com.ga2oo.palendar.xmlparsers;
+package com.ga2oo.jsonparsers;
 
 import com.ga2oo.jsonparsers.UserAccountResult;
 
