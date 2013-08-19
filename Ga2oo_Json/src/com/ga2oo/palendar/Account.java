@@ -23,7 +23,6 @@ import android.widget.ImageView;
 
 import com.ga2oo.palendar.businesslayer.UserAccountBusinessLayer;
 import com.ga2oo.palendar.objects.UserAccount;
-import com.ga2oo.palendar.xmlparsers.Ga2ooParsers;
 
 public class Account extends Activity 
 {

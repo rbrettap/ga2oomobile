@@ -37,7 +37,6 @@ import com.ga2oo.palendar.controls.PopUpDailog;
 import com.ga2oo.palendar.objects.Friend;
 import com.ga2oo.palendar.objects.UserAccount;
 import com.ga2oo.palendar.objects.UserFriend;
-import com.ga2oo.palendar.xmlparsers.FriendParser;
 import com.ga2oo.jsonparsers.Ga2ooJsonParsers;
 import com.ga2oo.jsonparsers.Ga2ooUsersWrapper;
 import com.ga2oo.jsonparsers.UserFriendWrapper;
@@ -66,7 +65,6 @@ public class MyCircle extends Activity
 	private LinearLayout llFriends;
 	private CustomFriendsAdapter friendAdapter;
 	private InputMethodManager imm;
-	private FriendParser friendParser;
 	private boolean isAnyUser=true;
 	private boolean isDeleted=false,isEditClicked=false;
 	private String searchKeyword="",friendImageUrl; 
@@ -121,7 +119,6 @@ public class MyCircle extends Activity
 		lvFriends.setDivider(getResources().getDrawable(R.drawable.line));
 		lvFriends.setVerticalScrollBarEnabled(false);
 
-		friendParser 		= new FriendParser();
 		AppConstants.vctFriend = new ArrayList<Friend>();
 		new LoadUserFriends().execute();
 

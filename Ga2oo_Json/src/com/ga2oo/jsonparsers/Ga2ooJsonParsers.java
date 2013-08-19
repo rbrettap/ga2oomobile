@@ -7,6 +7,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -22,9 +24,9 @@ import com.ga2oo.palendar.objects.Association;
 import com.ga2oo.palendar.objects.BusinessRegistration;
 import com.ga2oo.palendar.objects.UserAccount;
 import com.ga2oo.palendar.objects.UserLocationObject;
-import com.ga2oo.palendar.xmlparsers.LocationDeleteWrapper;
-import com.ga2oo.palendar.xmlparsers.UrlPost;
+import com.ga2oo.jsonparsers.LocationDeleteWrapper;
 import com.ga2oo.parsing.net.JsonHttpHelper;
+import com.rjb.android.impl.core.util.SafeRunnable;
 
 public class Ga2ooJsonParsers {
 
@@ -38,39 +40,51 @@ public class Ga2ooJsonParsers {
 
 	private static String LOGTAG = "Ga2ooJsonParsers";
 	
-	private static JsonHttpHelper jsonHelper = JsonHttpHelper.getInstance();
+	 private static JsonHttpHelper jsonHelper = JsonHttpHelper.getInstance();
 	 static int status;
 	 public static String regMessage="",addFriendMessage="",updateUserProfileMgs;
+
 	
-	public static int loginStatus(String username, String password)
+	public static int loginStatus(final String username, final String password)
 	{
-		try {
-			Log.i(LOGTAG, "Login started...");
-			URL url = new URL(AppConstants.JSON_HOST_URL+AppConstants.Authenticate_User_URL);
-			HttpURLConnection connection = (HttpURLConnection)url.openConnection();
-			connection.setDoInput(true);
-			connection.setDoOutput(true);
-			connection.setUseCaches(false);
-			connection.setRequestProperty(CONTENT_TYPE,APPLICATION_JSON);
-			connection.setRequestMethod(POST);
-			String content = "{\"useraccount\": {\"username\": \""+username+"\", \"password\": \""+password+"\"} }";
-			DataOutputStream printout = new DataOutputStream ( connection.getOutputStream () );
-			// send the data
-			printout.writeBytes(content);
-			printout.flush();
-			printout.close();
-			 JsonElement element = new JsonParser().parse(new BufferedReader(new InputStreamReader(connection.getInputStream())));
-			Object userAccObject = jsonHelper.parse(element, UserAccountWrapper.class);
-			if(userAccObject!=null){
-				status = ((UserAccountWrapper)userAccObject).getUserAccount().result.code;
-			}else status=0;
-			}  
-			catch(Exception e){  
-				status=0;
-				Log.e(LOGTAG, "Error in login!");
-			} 
-			Log.i(LOGTAG, "Login successfully completed.");
-	return status;
+	     ExecutorService mDataSenderExecutor= Executors.newSingleThreadExecutor();
+	     
+	     
+	        SafeRunnable runnable = new SafeRunnable() {
+	            @Override
+	            public void safeRun() {
+	                try {
+	                    Log.i(LOGTAG, "Login started...");
+	                    URL url = new URL(AppConstants.JSON_HOST_URL+AppConstants.Authenticate_User_URL);
+	                    HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+	                    connection.setDoInput(true);
+	                    connection.setDoOutput(true);
+	                    connection.setUseCaches(false);
+	                    connection.setRequestProperty(CONTENT_TYPE,APPLICATION_JSON);
+	                    connection.setRequestMethod(POST);
+	                    String content = "{\"useraccount\": {\"username\": \""+username+"\", \"password\": \""+password+"\"} }";
+	                    DataOutputStream printout = new DataOutputStream ( connection.getOutputStream () );
+	                    // send the data
+	                    printout.writeBytes(content);
+	                    printout.flush();
+	                    printout.close();
+	                     JsonElement element = new JsonParser().parse(new BufferedReader(new InputStreamReader(connection.getInputStream())));
+	                    Object userAccObject = jsonHelper.parse(element, UserAccountWrapper.class);
+	                    if(userAccObject!=null){
+	                        status = ((UserAccountWrapper)userAccObject).getUserAccount().result.code;
+	                    }else status=0;
+	                    }  
+	                    catch(Exception e){  
+	                        status=0;
+	                        Log.e(LOGTAG, "Error in login!");
+	                    } 
+	                    Log.i(LOGTAG, "Login successfully completed.");
+	                   
+	            }
+	        };
+	        
+	        mDataSenderExecutor.submit(runnable);        
+	        return status;
 	}
 	
 	public static int deleteUserFriend(int userFriendId)

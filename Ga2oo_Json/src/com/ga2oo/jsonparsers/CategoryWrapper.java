@@ -1,4 +1,4 @@
-package com.ga2oo.palendar.xmlparsers;
+package com.ga2oo.jsonparsers;
 
 import java.util.List;
 
@@ -8,12 +8,12 @@ public class CategoryWrapper {
 
 	List <Category> categories;
 
-	public List<Category> getCaregories() {
+	public List<Category> getCategories() {
 		return categories;
 	}
 
-	public void setCaregories(List<Category> caregories) {
-		this.categories = caregories;
+	public void setCategories(List<Category> categories) {
+		this.categories = categories;
 	}
 	
 }

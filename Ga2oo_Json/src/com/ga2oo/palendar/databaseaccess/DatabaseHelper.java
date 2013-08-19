@@ -27,12 +27,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	public static String DB_PATH = "/data/data/com.ga2oo.palendar/";
 	public static String FOLDER_NAME = "/ga2oo";
 	 
-    public static String DB_NAME = "Ga2oo.sqlite";
+    public static String DB_NAME = "palendar.sqlite";
+    public static String REF_DB_NAME = "palendar.sqlite";
  
     public static SQLiteDatabase _database; 
  
     private final Context myContext;
-    public static String apstorphe = "'";
+    public static String apostrophe = "'";
 	public static String sep = ",";	
 	
 	public DatabaseHelper(Context context) 
@@ -56,7 +57,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             //of your application so we are gonna be able to overwrite that database with our database.
     		try
     		{
-    			
     			copyDataBase();
     		} 
     		catch (IOException e) 
@@ -101,10 +101,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     
     public void copyDataBase() throws IOException
-    {
-     
+    {    
     	//Open your local db as the input stream
-    	InputStream myInput = myContext.getAssets().open(DB_NAME);
+    	InputStream myInput = myContext.getAssets().open(REF_DB_NAME);
     	OutputStream myOutput;
     	String outFileName = DB_PATH + DB_NAME;
     	// Path to the just created empty db

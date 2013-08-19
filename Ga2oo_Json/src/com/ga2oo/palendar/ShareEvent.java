@@ -37,7 +37,6 @@ import com.ga2oo.palendar.common.Tools;
 import com.ga2oo.palendar.controls.PopUpDailog;
 import com.ga2oo.palendar.objects.Business;
 import com.ga2oo.palendar.objects.UserFriend;
-import com.ga2oo.palendar.xmlparsers.Ga2ooParsers;
 import com.ga2oo.jsonparsers.Ga2ooJsonParsers;
 
 public class ShareEvent extends Activity
@@ -75,7 +74,6 @@ public class ShareEvent extends Activity
 	private DrawableManager objDrawableManager;
 	private UserAccountBusinessLayer userActBL;
 	private EventsBusinessLayer eventsBL;
-	private Ga2ooParsers objGa2ooParsers;
 	String recommendationStatus="";
 	
 	
@@ -89,8 +87,6 @@ public class ShareEvent extends Activity
 			userActBL = new UserAccountBusinessLayer();
 		if(eventsBL == null)
 			eventsBL = new EventsBusinessLayer();
-		if(objGa2ooParsers==null)
-			objGa2ooParsers=new Ga2ooParsers();
 		objDrawableManager		= new DrawableManager();
 		vctFriendIds				=  new ArrayList<Integer>();
 	}
