@@ -56,7 +56,6 @@ public class SplashScreen extends Activity implements LocationResult
     {
         super.onCreate(savedInstanceState);
         
-        //fApiKey = getIntent().getExtras().getString();
         fApiKey = AppConstants.Flurry_Api_Key.toString();
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -91,7 +90,7 @@ public class SplashScreen extends Activity implements LocationResult
 //			userAccBL.clearGa2ooUserList();
 //			userAccBL.clearData();
 			
-			new GetCategoryesAndBusinessTypes().execute();					
+			new GetCategoriesAndBusinessTypes().execute();					
 		}
     }
     
@@ -118,7 +117,7 @@ public class SplashScreen extends Activity implements LocationResult
 		try
 		{
 			dbHelper.createDataBase();
-//			DatabaseHelper.openDataBase();
+			//DatabaseHelper.openDataBase();
 		}
 		catch (Exception e)
 		{							
@@ -139,7 +138,7 @@ public class SplashScreen extends Activity implements LocationResult
 		
 	}
 	
-	private class GetCategoryesAndBusinessTypes extends AsyncTask<Void,Void,Boolean>{
+	private class GetCategoriesAndBusinessTypes extends AsyncTask<Void,Void,Boolean>{
 
 		@Override
 		protected Boolean doInBackground(Void... params) {

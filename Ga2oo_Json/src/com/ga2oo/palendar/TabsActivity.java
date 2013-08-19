@@ -85,7 +85,7 @@ public class TabsActivity extends TabActivity implements OnTabChangeListener
         	TabHost.TabSpec tab = tabs.newTabSpec(TABS[i]);
         	
 
-        	ComponentName oneActivity = new ComponentName(COM_GA2OO, COM_GA2OO + TABS[i]);
+        	ComponentName oneActivity = new ComponentName(COM_GA2OO, TABS[i]);
         	Intent intent = new Intent().setComponent(oneActivity);
         	tab.setContent(intent);        	
         	
