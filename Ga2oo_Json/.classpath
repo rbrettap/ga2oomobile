@@ -8,5 +8,6 @@
 	<classpathentry exported="true" kind="lib" path="libs/android-support-v4.jar"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/com_markupartist_android_widget_pulltorefresh"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="/Users/rich_brett/Desktop/oldstuff/RJB/ga2oomobile/Ga2oo_Json/lib/pulltorefresh/bin/com_markupartist_android_widget_pulltorefresh.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
