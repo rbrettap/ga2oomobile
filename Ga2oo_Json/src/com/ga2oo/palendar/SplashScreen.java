@@ -22,7 +22,7 @@ import com.ga2oo.palendar.businesslayer.EventsBusinessLayer;
 import com.ga2oo.palendar.businesslayer.UserAccountBusinessLayer;
 import com.ga2oo.palendar.common.AppConstants;
 import com.ga2oo.palendar.databaseaccess.DatabaseHelper;
-import com.ga2oo.palendar.xmlparsers.CategoryWrapper;
+import com.ga2oo.jsonparsers.CategoryWrapper;
 import com.ga2oo.jsonparsers.BusinessTypeWrapper;
 import com.ga2oo.parsing.net.HttpHelper;
 import com.ga2oo.parsing.net.JsonHttpHelper;
@@ -56,7 +56,6 @@ public class SplashScreen extends Activity implements LocationResult
     {
         super.onCreate(savedInstanceState);
         
-        //fApiKey = getIntent().getExtras().getString();
         fApiKey = AppConstants.Flurry_Api_Key.toString();
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -91,7 +90,7 @@ public class SplashScreen extends Activity implements LocationResult
 //			userAccBL.clearGa2ooUserList();
 //			userAccBL.clearData();
 			
-			new GetCategoryesAndBusinessTypes().execute();					
+			new GetCategoriesAndBusinessTypes().execute();					
 		}
     }
     
@@ -118,7 +117,7 @@ public class SplashScreen extends Activity implements LocationResult
 		try
 		{
 			dbHelper.createDataBase();
-//			DatabaseHelper.openDataBase();
+			//DatabaseHelper.openDataBase();
 		}
 		catch (Exception e)
 		{							
@@ -139,7 +138,7 @@ public class SplashScreen extends Activity implements LocationResult
 		
 	}
 	
-	private class GetCategoryesAndBusinessTypes extends AsyncTask<Void,Void,Boolean>{
+	private class GetCategoriesAndBusinessTypes extends AsyncTask<Void,Void,Boolean>{
 
 		@Override
 		protected Boolean doInBackground(Void... params) {
@@ -149,9 +148,9 @@ public class SplashScreen extends Activity implements LocationResult
 				element = jsonHelper.sendGetRequest(AppConstants.JSON_HOST_URL+AppConstants.CATEGORY_LIST);
 				Object categoriesObjects = jsonHelper.parse(element, CategoryWrapper.class);
 				if(categoriesObjects!=null){
-					if(((CategoryWrapper) categoriesObjects).getCaregories()!=null){
-						for(int i=0;i<((CategoryWrapper)categoriesObjects).getCaregories().size();i++){
-							eventBL.insertCategories(((CategoryWrapper)categoriesObjects).getCaregories().get(i));
+					if(((CategoryWrapper) categoriesObjects).getCategories()!=null){
+						for(int i=0;i<((CategoryWrapper)categoriesObjects).getCategories().size();i++){
+							eventBL.insertCategories(((CategoryWrapper)categoriesObjects).getCategories().get(i));
 						}
 					}
 				}

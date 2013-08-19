@@ -142,9 +142,9 @@ public class FriendsBusinessLayer
 		return DatabaseHelper.deleteAllDataFromTable(FRIENDS+WHERE+USERADDEDFRIENDID+EQUALLY+userFriendAddedId+AND+USERID+EQUALLY+AppConstants.USER_ID);
 	}
 	
-//	public boolean deleteAlFriend(){
-//		return DatabaseHelper.deleteAllDataFromTable(FRIENDS);
-//	}
+	public boolean deleteAlFriend(){
+		return DatabaseHelper.deleteAllDataFromTable(FRIENDS);
+	}
 	
 	public boolean Insert(UserFriend objUserFriend)
 	{ 

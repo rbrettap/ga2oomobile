@@ -33,6 +33,7 @@ public class TabsActivity extends TabActivity implements OnTabChangeListener
 	private static final String EVENTS = "Events";
 	private static final String HOME = "Home";
 	private static final String PARENT_PAGE = "parentPage";
+    private static final String COM_GA2OO2 = "com.ga2oo.palendar.";
 	private static final String COM_GA2OO = "com.ga2oo.palendar";
 	private static final String SELECTED_ID = "selectedId";
 	private static final String MORE_GROUP_ACTIVITY = "MoreGroupActivity";
@@ -85,7 +86,7 @@ public class TabsActivity extends TabActivity implements OnTabChangeListener
         	TabHost.TabSpec tab = tabs.newTabSpec(TABS[i]);
         	
 
-        	ComponentName oneActivity = new ComponentName(COM_GA2OO, COM_GA2OO + TABS[i]);
+        	ComponentName oneActivity = new ComponentName(COM_GA2OO, COM_GA2OO2+TABS[i]);
         	Intent intent = new Intent().setComponent(oneActivity);
         	tab.setContent(intent);        	
         	

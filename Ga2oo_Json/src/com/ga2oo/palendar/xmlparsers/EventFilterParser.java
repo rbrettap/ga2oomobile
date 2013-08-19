@@ -1,17 +1,14 @@
 package com.ga2oo.palendar.xmlparsers;
 
 import java.util.ArrayList;
-import java.util.Vector;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
 import android.util.Log;
 
-import com.ga2oo.palendar.businesslayer.EventsBusinessLayer;
 import com.ga2oo.palendar.common.AppConstants;
 import com.ga2oo.palendar.objects.EventsDetails;
-import com.ga2oo.palendar.objects.FavoriteEvent;
 
 public class EventFilterParser extends BaseGa2ooParser
 {

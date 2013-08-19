@@ -30,7 +30,6 @@ import com.ga2oo.palendar.businesslayer.UserAccountBusinessLayer;
 import com.ga2oo.palendar.common.AppConstants;
 import com.ga2oo.palendar.objects.Friend;
 import com.ga2oo.palendar.objects.UserFriend;
-import com.ga2oo.palendar.xmlparsers.FriendParser;
 import com.ga2oo.jsonparsers.UserFriendWrapper;
 import com.ga2oo.parsing.net.JsonHttpHelper;
 
@@ -46,7 +45,6 @@ public class Friends extends Activity
 	private FriendsBusinessLayer friendBL;
 	private DrawableManager drawManager;
 	private CustomFriendsAdapter friendAdapter;
-	FriendParser friendParser;
 	
 	private ProgressDialog progressDialog;
 	private ListView lvFriends;
@@ -92,36 +90,35 @@ public class Friends extends Activity
 
 		uabl = new UserAccountBusinessLayer();
 		
-		friendParser 		= new FriendParser();
 		jsonHelper = JsonHttpHelper.getInstance();
 		
 //		progressDialog.show();
 		AppConstants.vctFriend =new ArrayList<Friend>();
-//		new LoadFriendsList().execute();
-//		new Thread(new  Runnable()
-//		{
-//			@Override
-//			public void run() 
-//			{
-////				friendBL.deleteAlFriend();
-//				Log.i(LOGTAG, "Loading friends list...");
-//					try {
-//						element = jsonHelper.sendGetRequest(AppConstants.JSON_HOST_URL+AppConstants.FRIEND_URL+AppConstants.USER_ID);
-//					} catch (Exception e) {
-//						Log.e(LOGTAG, "Error in loading friends list.");
-//						e.printStackTrace();
-//					}
-//					Object userFriendObjects =  jsonHelper.parse(element, UserFriendWrapper.class);
-//					AppConstants.vctFriend.addAll(((UserFriendWrapper)userFriendObjects).getUseraccount().friendships);
-//					for(int i=0;i<((UserFriendWrapper)userFriendObjects).getUseraccount().friendships.size();i++){
-//						uabl.InsertFriend(((UserFriendWrapper)userFriendObjects).getUseraccount().friendships.get(i));
-//					}
-//					Log.i(LOGTAG, "Loading friends list successfully completed.");
-//
-//				runOnUiThread(new Runnable()
-//				{
-//					public void run() 
-//					{
+		new LoadFriendsList().execute();
+		new Thread(new  Runnable()
+		{
+			@Override
+			public void run() 
+			{
+				friendBL.deleteAlFriend();
+				Log.i(LOGTAG, "Loading friends list...");
+					try {
+						element = jsonHelper.sendGetRequest(AppConstants.JSON_HOST_URL+AppConstants.FRIEND_URL+AppConstants.USER_ID);
+					} catch (Exception e) {
+						Log.e(LOGTAG, "Error in loading friends list.");
+						e.printStackTrace();
+					}
+					Object userFriendObjects =  jsonHelper.parse(element, UserFriendWrapper.class);
+					AppConstants.vctFriend.addAll(((UserFriendWrapper)userFriendObjects).getUseraccount().friendships);
+					for(int i=0;i<((UserFriendWrapper)userFriendObjects).getUseraccount().friendships.size();i++){
+						uabl.InsertFriend(((UserFriendWrapper)userFriendObjects).getUseraccount().friendships.get(i));
+					}
+					Log.i(LOGTAG, "Loading friends list successfully completed.");
+
+				runOnUiThread(new Runnable()
+				{
+					public void run() 
+					{
 						vecFreindsInfo=friendBL.getUserFriendInformation("");
 						if(vecFreindsInfo!=null && vecFreindsInfo.size()!=0)
 						{
@@ -134,11 +131,11 @@ public class Friends extends Activity
 							tvnoResult.setVisibility(View.VISIBLE);
 							tvnoResult.setText("There are no friend");
 						}
-//					}
-//				});
-//				progressDialog.dismiss();
-//			}
-//		}).start();
+					}
+				});
+				progressDialog.dismiss();
+			}
+		}).start();
 
 		
 		TabsActivity.btnBack.setVisibility(View.GONE);

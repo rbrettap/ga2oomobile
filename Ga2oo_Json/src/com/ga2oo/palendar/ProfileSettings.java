@@ -36,7 +36,6 @@ import com.ga2oo.palendar.controls.PopUpDailog;
 import com.ga2oo.palendar.objects.UserAccount;
 import com.ga2oo.palendar.objects.UserCurrentLocationBasedOnZip;
 import com.ga2oo.palendar.objects.UserLocationObject;
-import com.ga2oo.palendar.xmlparsers.Ga2ooParsers;
 import com.ga2oo.palendar.xmlparsers.ParseUserCurrentLocationBasedOnZip;
 import com.ga2oo.jsonparsers.Ga2ooJsonParsers;
 import com.ga2oo.parsing.net.HttpHelper;
@@ -69,7 +68,6 @@ public class ProfileSettings extends Activity implements LocationResult
 	private PopUpDailog customDialog;
 	private LinearLayout llSavedLoc;
 	private DrawableManager drawManager ;
-	public Ga2ooParsers objGa2ooParsers;
 	private String userImageUrl;
 	private EditText etEmail,etFirstName,etLastName;
 	private TextView etUsername;
@@ -238,7 +236,6 @@ public class ProfileSettings extends Activity implements LocationResult
 		else
 			tvMessage.setText(getResources().getString(R.string.sure_to_remove_location));
 		
-		objGa2ooParsers=new Ga2ooParsers();
 		btnYes.setOnClickListener(new OnClickListener()
 		{					
 			@Override
@@ -310,7 +307,6 @@ public class ProfileSettings extends Activity implements LocationResult
 				objupdateProfile.strEmail=etEmail.getText().toString();
 				objupdateProfile.strUserName=etUsername.getText().toString();
 				vctUpdateData.add(objupdateProfile);
-				Ga2ooParsers register=new Ga2ooParsers();
 	//			int updateStatusStatus=register.updateUserProfile(vctUpdateData);
 				int updateStatusStatus = Ga2ooJsonParsers.updateUserProfile(vctUpdateData);
                 AppConstants.isProfileUpdated=true;

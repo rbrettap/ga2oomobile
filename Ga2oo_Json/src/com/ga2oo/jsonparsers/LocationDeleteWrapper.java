@@ -1,6 +1,4 @@
-package com.ga2oo.palendar.xmlparsers;
-
-import com.ga2oo.jsonparsers.UserAccountResult;
+package com.ga2oo.jsonparsers;
 
 public class LocationDeleteWrapper {
 private LocationsDeleteResult useraccount;
