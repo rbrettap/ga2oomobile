@@ -49,6 +49,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * */
     public void createDataBase() throws IOException
     {
+        boolean dbDelete = removeDatabase();
+        // remove the database every time....
+        
        	boolean dbExist = checkDataBase();
  
     	if(!dbExist)
@@ -98,6 +101,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     	}
  
     	return checkDB != null ? true : false;
+    }
+    
+    /**
+     */
+    private boolean removeDatabase()
+    {    
+        try
+        {
+            myContext.deleteDatabase(DB_NAME);
+        }
+        catch(SQLiteException e)
+        {
+            return false;
+        }
+        return true;
     }
     
     public void copyDataBase() throws IOException

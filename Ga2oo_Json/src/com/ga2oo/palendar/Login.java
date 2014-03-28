@@ -558,6 +558,7 @@ public class Login extends Activity
 		@Override
 		protected void onPreExecute() {
 			status=Ga2ooJsonParsers.loginStatus(username, password);
+			// for some reason the status = 0 unless this is done twice....
 			progDialog.setMessage(getResources().getString(R.string.authenticating_please_wait));
 			progDialog.show();
 			super.onPreExecute();
