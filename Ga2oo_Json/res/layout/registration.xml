@@ -15,49 +15,50 @@
 					android:layout_height="wrap_content"
 					android:background="@drawable/back"
 					android:visibility="visible"
-					android:layout_marginLeft="5dip">
+					android:layout_marginLeft="5dp">
 				</Button>
   				<TextView android:layout_height="wrap_content"
 			  			  
 			  			  android:gravity="center"
 			  			  android:textSize="21sp"
 			  			  android:textStyle="bold"
-			  			  android:textColor="#ffffff" android:layout_weight="1" android:text="Registration" android:layout_width="fill_parent" android:paddingLeft="10dip"/>
+			  			  android:textColor="#ffffff" android:text="@string/registration" android:layout_width="fill_parent" android:paddingLeft="10dp"/>
 			</RelativeLayout>
   				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:text="Account Type"
+					android:text="@string/account_type"
 					android:textColor="#4C566C"
-					android:layout_marginLeft="15dip"
+					android:layout_marginLeft="15dp"
 					android:textStyle="bold"
 					android:textSize="18sp"
-					android:layout_marginTop="10dip"
-					android:layout_marginBottom="5dip"/>
+					android:layout_marginTop="10dp"
+					android:layout_marginBottom="5dp"/>
  						<RelativeLayout
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_three"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip" android:id="@+id/rlPersonal">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp" android:id="@+id/rlPersonal">
 							
 								<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:layout_margin="10dip"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:textStyle="bold" android:textSize="17dip" android:text="Personal"/>
+									android:textStyle="bold" android:textSize="17sp" android:text="@string/personal"/>
 									
 								<LinearLayout
-									android:layout_width="30px"
-									android:layout_height="40px"
+									android:layout_width="30dp"
+									android:layout_height="40dp"
 									android:layout_alignParentRight="true"
 									android:gravity="center_vertical">
 									
 										<ImageView
 											android:layout_width="wrap_content"
-											android:layout_height="20px"
+											android:layout_height="20dp"
+											android:contentDescription="@string/desc"
 											android:src="@drawable/arrow"/>
 								</LinearLayout>
 						</RelativeLayout>			

@@ -7,41 +7,43 @@
   
   	<LinearLayout
 		  android:layout_width="fill_parent"
-		  android:layout_margin="10dip"
+		  android:layout_margin="10dp"
+		    android:baselineAligned="false"
 		  android:layout_height="wrap_content">
 	  <RelativeLayout
-	  		android:layout_width="107dip"
-	  		android:layout_height="82dip"
+	  		android:layout_width="107dp"
+	  		android:layout_height="82dp"
 	  		android:id="@+id/rlFriendImage"
 	  		android:background="@drawable/roundbackground_itembg"
 	  		android:gravity="center">
 	  	    <ProgressBar
     		  android:id="@+id/friend_profile_progress_bar"
-		      android:layout_width="20dip" 
-		      android:layout_height="20dip"
+		      android:layout_width="20dp" 
+		      android:layout_height="20dp"
 		      android:layout_gravity="center"
 		      android:indeterminate="true" 
 		      android:layout_centerInParent="true"/>	
-	  		<ImageView android:layout_width="100dip"	
-	  				   android:layout_height="75dip"
+	  		<ImageView android:layout_width="100dp"	
+	  				   android:layout_height="75dp"
 	  				   android:id="@+id/ivUserImage"
+	  				   android:contentDescription="@string/desc"
 	  				   android:layout_centerInParent="true"/>
 		</RelativeLayout>
-	  		<LinearLayout android:layout_width="wrap_content"
+	  		<LinearLayout android:layout_width="0dp"
 	  					  android:layout_height="wrap_content"
 	  					  android:layout_weight="1"
-	  					  android:layout_marginLeft="10dip"
+	  					  android:layout_marginLeft="10dp"
 	  					  android:orientation="vertical">
 	  				<TextView android:layout_width="fill_parent"
 	  						  android:layout_height="wrap_content"
-	  						  android:textSize="26dip"
+	  						  android:textSize="26sp"
 	  						  android:textStyle="bold"
 	  						  android:id="@+id/tvFName"
 	  						  android:textColor="@color/heading_color_dark"
 	  						  />
 	  				<TextView android:layout_width="fill_parent"
 	  						  android:layout_height="wrap_content"
-	  						  android:textSize="26dip"
+	  						  android:textSize="26sp"
 	  						  android:textStyle="bold"
 	  						  android:id="@+id/tvLName"
 	  						  android:textColor="@color/heading_color_dark"
@@ -49,8 +51,8 @@
 	  				<TextView android:layout_width="fill_parent"
 	  						  android:layout_height="wrap_content"
 	  						  android:id="@+id/tvLocation"
-	  						  android:layout_marginTop="5dip"
-	  						  android:textSize="14dip"
+	  						  android:layout_marginTop="5dp"
+	  						  android:textSize="14sp"
 	  						  android:textStyle="bold"
 	  						  android:textColor="@color/heading_color_dark"
 	  						  />
@@ -68,41 +70,42 @@
   					android:layout_height="wrap_content"
   					android:background="@drawable/send_mess_btn"
   					android:id="@+id/btnSendMessage" />
-  			<Button android:layout_width="106dip"
-  					android:layout_height="31dip"
+  			<Button android:layout_width="106dp"
+  					android:layout_height="31dp"
   					android:background="@drawable/see_pal"
-  					android:layout_marginLeft="30dip"
+  					android:layout_marginLeft="30dp"
   					android:id="@+id/btnSeeCalendar" />
   	</LinearLayout>
 					<LinearLayout android:layout_width="fill_parent"
 			  							  android:layout_height="wrap_content"
 			  							  android:id="@+id/llUpcomingHeading"
-			  							  android:layout_margin="10dip">
+			  							  android:layout_margin="10dp">
 				  				<TextView android:layout_width="wrap_content"
 			  							  android:layout_height="wrap_content"
 			  							  android:id="@+id/tvUpcoming"
-			  							  android:textSize="16dip"
+			  							  android:textSize="16sp"
 			  							  android:layout_weight="1"
 			  							  android:textStyle="bold"
 				  						  android:textColor="@color/heading_color_dark"
-				  						  android:text="Upcoming Events" />
+				  						  android:text="@string/upcoming_events" />
 				  				<ImageView android:layout_width="wrap_content"
 						  				   android:layout_height="wrap_content"
 							  			   android:id="@+id/ivImage"
 							  			   android:layout_weight="0"
+							  			   android:contentDescription="@string/desc"
 							  			   android:src="@drawable/cal" />
 			  				</LinearLayout>
 	  				
 			  				<View android:layout_width="fill_parent"
-			  				      android:layout_height="1dip"
+			  				      android:layout_height="1dp"
 			  				      android:background="@drawable/seperator" />
   	<ScrollView android:layout_width="fill_parent"
   				android:layout_height="fill_parent"
-  				android:layout_marginLeft = "10dip"
-  				android:layout_marginRight = "10dip"
-  				android:layout_marginBottom = "10dip"
+  				android:layout_marginLeft = "10dp"
+  				android:layout_marginRight = "10dp"
+  				android:layout_marginBottom = "10dp"
   				android:fadingEdge="none"
-  				android:fadingEdgeLength="0dip"
+  				android:fadingEdgeLength="0dp"
   				android:scrollbars="none"
   				android:id="@+id/svEvents" >
 	  				      

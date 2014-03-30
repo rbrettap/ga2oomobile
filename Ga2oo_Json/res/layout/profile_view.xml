@@ -20,37 +20,37 @@
   						android:gravity="center"
   						>
   						<TextView
-							android:layout_height="30px"
-							android:text="Profile"
+							android:layout_height="30dp"
+							android:text="@string/profile"
 							android:textStyle="bold"
 							android:gravity="center_vertical" 
-							android:layout_marginTop="10px" 
+							android:layout_marginTop="10dp" 
 							android:textColor="@color/heading_color_dark" 
 							android:layout_width="fill_parent" 
-							android:layout_marginLeft="10px"
-							android:textSize="16dip" />
+							android:layout_marginLeft="10dp"
+							android:textSize="16sp" />
   						<RelativeLayout
 							android:id="@+id/rellayProfile"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_one"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp">
 							
 								<TextView
-									android:layout_width="100px"
+									android:layout_width="100dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="Email" 
+									android:text="@string/email2" 
 									android:textStyle="bold"
 									android:id="@+id/tvEmail"
-									android:textSize="15dip"/>
+									android:textSize="15sp"/>
 								<EditText
-									android:layout_width="150dip"
+									android:layout_width="150dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:background="#FFFFFF" 
 									android:textColor="#395587" 
 									android:layout_toRightOf="@+id/tvEmail"
@@ -58,32 +58,32 @@
 									android:gravity="center_vertical"
 									android:textStyle="bold" 
 									android:singleLine="true"
-									android:textSize="15dip"/>	
+									android:textSize="15sp"/>	
 								
 						</RelativeLayout>
 						<RelativeLayout
-							android:id="@+id/rellayFavorites"
+							android:id="@+id/rellayFirstname"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_two"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp">
 							
 								<TextView
-									android:layout_width="100dip"
+									android:layout_width="100dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="First Name" 
+									android:text="@string/firstname" 
 									android:textStyle="bold"
 									android:id="@+id/tvFirstName"
-									android:textSize="15dip"/>
+									android:textSize="15sp"/>
 									
 								<EditText
-									android:layout_width="150dip"
+									android:layout_width="150dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:background="#FFFFFF" 
 									android:textColor="#395587" 
 									android:singleLine="true"
@@ -91,31 +91,31 @@
 									android:id="@+id/etFirstName"
 									android:gravity="center_vertical"
 									android:textStyle="bold"
-									android:textSize="15dip"/>	
+									android:textSize="15sp"/>	
 						</RelativeLayout>
   						<RelativeLayout
-							android:id="@+id/rellayFavorites"
+							android:id="@+id/rellayLastName"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_two"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp">
 							
 								<TextView
-									android:layout_width="100dip"
+									android:layout_width="100dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="Last Name" 
+									android:text="@string/lastname" 
 									android:textStyle="bold"
 									android:id="@+id/tvLastName"
-									android:textSize="15dip"/>
+									android:textSize="15sp"/>
 									
 								<EditText
-									android:layout_width="150dip"
+									android:layout_width="150dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:background="#FFFFFF" 
 									android:textColor="#395587" 
 									android:singleLine="true"
@@ -123,7 +123,7 @@
 									android:id="@+id/etLastName"
 									android:gravity="center_vertical"
 									android:textStyle="bold"
-									android:textSize="15dip"/>	
+									android:textSize="15sp"/>	
 						</RelativeLayout>
 						<RelativeLayout
 							android:id="@+id/rellayAccount"
@@ -131,67 +131,67 @@
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_three"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp">
 							
 								<TextView
-									android:layout_width="100dip"
+									android:layout_width="100dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="User Name" 
+									android:text="@string/username" 
 									android:textStyle="bold"
 									android:id="@+id/tvUsername"
-									android:textSize="15dip"/>
+									android:textSize="15sp"/>
 									
 								<TextView
 								    android:id="@+id/etUsername"
-									android:layout_width="100dip"
+									android:layout_width="100dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:background="#FFFFFF" 
 									android:textColor="#395587" 
 									android:singleLine="true"
 									android:layout_toRightOf="@+id/tvUsername"
 									android:gravity="center_vertical"
 									android:textStyle="bold"
-									android:textSize="15dip"/>	
+									android:textSize="15sp"/>	
 						</RelativeLayout>				
   						<TextView
-							android:layout_height="30px"
-							android:text="Update Image"
+							android:layout_height="30dp"
+							android:text="@string/update_image"
 							android:textStyle="bold"
 							android:gravity="center_vertical" 
-							android:layout_marginTop="10px" 
+							android:layout_marginTop="10dp" 
 							android:textColor="@color/heading_color_dark"
 							android:layout_width="fill_parent" 
-							android:layout_marginLeft="10dip"
-							android:textSize="16dip"/>
+							android:layout_marginLeft="10dp"
+							android:textSize="16sp"/>
   						<RelativeLayout
-							android:id="@+id/rellayProfile"
-							android:layout_width="300dip"
-							android:layout_height="140dip"
+							android:id="@+id/rellayChooseImage"
+							android:layout_width="300dp"
+							android:layout_height="140dp"
 							android:background="@drawable/roundbackground_itembg"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp">
 							
 								<TextView
-									android:layout_width="130px"
+									android:layout_width="130dp"
 									android:layout_height="fill_parent"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="Choose Image" 
+									android:text="@string/choose_image" 
 									android:textStyle="bold"
 									android:gravity="center_vertical"
 									android:id="@+id/tvChooseImg"
-									android:textSize="15dip"/>
+									android:textSize="15sp"/>
 								<LinearLayout
-									android:layout_width="100dip"
-									android:layout_height="100dip"
+									android:layout_width="100dp"
+									android:layout_height="100dp"
 									android:layout_toRightOf="@+id/tvChooseImg"
 									android:gravity="center_vertical"
-									android:layout_margin="20dip"
+									android:layout_margin="20dp"
 									>
 										<RelativeLayout
 									  		android:layout_width="wrap_content"
@@ -205,23 +205,24 @@
 											      android:indeterminate="true" 
 											      android:layout_centerInParent="true"/>	
 																	  		
-										  		<ImageView android:layout_width="99dip"
-														   android:layout_height="98dip"
+										  		<ImageView android:layout_width="99dp"
+														   android:layout_height="98dp"
 														   android:id="@+id/ivImage"
+														   android:contentDescription="@string/desc"
 										  				   android:layout_centerInParent="true"/>
 										</RelativeLayout>
 								</LinearLayout>
 						</RelativeLayout>
   						<TextView
-							android:layout_height="30px"
-							android:text="Saved Locations"
+							android:layout_height="30dp"
+							android:text="@string/saved_locations"
 							android:textStyle="bold"
 							android:gravity="center_vertical" 
-							android:layout_marginTop="10px" 
+							android:layout_marginTop="10dp" 
 							android:textColor="@color/heading_color_dark" 
 							android:layout_width="fill_parent" 
-							android:layout_marginLeft="10dip"
-							android:textSize="16dip"/>
+							android:layout_marginLeft="10dp"
+							android:textSize="16sp"/>
 					<LinearLayout 
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
@@ -235,28 +236,29 @@
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_three"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip"
-							android:layout_marginBottom="20dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp"
+							android:layout_marginBottom="20dp">
 							
 								<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="Add More Locations" 
+									android:text="@string/add_more_locations" 
 									android:textStyle="bold"
 									android:id="@+id/tvAddMoreLocation"
-									android:textSize="15dip"/>
+									android:textSize="15sp"/>
 								<LinearLayout
-									android:layout_width="30px"
-									android:layout_height="40px"
+									android:layout_width="30dp"
+									android:layout_height="40dp"
 									android:layout_alignParentRight="true"
 									android:gravity="center_vertical">
 									
 										<ImageView
 											android:layout_width="wrap_content"
-											android:layout_height="20px"
+											android:layout_height="20dp"
+											android:contentDescription="@string/desc"
 											android:src="@drawable/arrow"/>
 								</LinearLayout>	
 								

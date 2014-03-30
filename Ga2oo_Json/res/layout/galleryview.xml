@@ -15,9 +15,10 @@ android:orientation="vertical"
 							      android:indeterminate="true" 
 							      android:layout_centerInParent="true"/>	
 				  		
-				  		<ImageView android:layout_width="220dip"
-							 	   android:layout_height="210dip"
+				  		<ImageView android:layout_width="220dp"
+							 	   android:layout_height="210dp"
 							 	   android:id="@+id/imageview"
+							 	   android:contentDescription="@string/desc"
 				  				   android:layout_centerInParent="true"/>
 		    </RelativeLayout>
 </LinearLayout>

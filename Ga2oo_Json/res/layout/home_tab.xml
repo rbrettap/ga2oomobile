@@ -8,15 +8,15 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:background="@drawable/home_icon"
-	    android:layout_marginBottom="5px" >
+	    android:layout_marginBottom="5dp" >
 	</TextView>
 	
 	<TextView
 		android:id="@+id/tab_label"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Home"
+		android:text="@string/home"
 		android:textStyle="bold"
 		android:textColor="#ffffff"
-		android:textSize="9px"/>
+		android:textSize="12sp"/>
 </LinearLayout>

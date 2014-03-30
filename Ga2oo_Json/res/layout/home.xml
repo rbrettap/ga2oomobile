@@ -9,14 +9,14 @@
   	<LinearLayout
   		  android:layout_height="wrap_content"
 		  android:layout_width="fill_parent"
-		  android:layout_marginTop ="10dip"
-  		  android:layout_marginBottom ="5dip"
-  		  android:layout_marginLeft ="10dip"
-  		  android:layout_marginRight ="10dip">
+		  android:layout_marginTop ="10dp"
+  		  android:layout_marginBottom ="5dp"
+  		  android:layout_marginLeft ="10dp"
+  		  android:layout_marginRight ="10dp">
 	 
 	  <RelativeLayout
-	  		android:layout_width="75dip"
-	  		android:layout_height="70dip"
+	  		android:layout_width="75dp"
+	  		android:layout_height="70dp"
 	  		android:id="@+id/rlUserImage"
 	  		android:background="@drawable/roundbackground_itembg"
 	  	 	android:gravity="center">
@@ -27,34 +27,35 @@
 		      android:indeterminate="true" 
 		      android:layout_centerInParent="true"/>	
 	  		
-	  		<ImageView android:layout_width="65dip"	
-	  				   android:layout_height="65dip"
+	  		<ImageView android:layout_width="65dp"	
+	  				   android:layout_height="65dp"
 	  				   android:id="@+id/ivUserImage"
+	  				   android:contentDescription="@string/desc"
 	  				   android:layout_centerInParent="true"/>
 		</RelativeLayout>
 		
 	  		<LinearLayout android:layout_width="wrap_content"
 	  					  android:layout_height="wrap_content"
 	  					  android:layout_weight="1"
-	  					  android:layout_marginLeft="10dip"
+	  					  android:layout_marginLeft="10dp"
 	  					  android:orientation="vertical">
 	  				<TextView android:layout_width="fill_parent"
 	  						  android:layout_height="wrap_content"
 	  						  android:textStyle="bold"
-	  						  android:textSize="16dip"
+	  						  android:textSize="16sp"
 	  						  android:id="@+id/tvName"
 	  						  android:textColor="@color/text_color_light"
 	  						  />
 	  				<TextView android:layout_width="fill_parent"
 	  						  android:layout_height="wrap_content"
 	  						  android:id="@+id/tvLocation"
-	  						  android:layout_marginTop="7dip"
-	  						  android:textSize="11dip"
+	  						  android:layout_marginTop="7dp"
+	  						  android:textSize="12sp"
 	  						  android:textColor="@color/text_color_light"
 	  						   />
 	  				<Button android:layout_width="wrap_content"
 	  						android:layout_height="wrap_content"
-	  						android:layout_marginTop="10dip"
+	  						android:layout_marginTop="10dp"
 	  						android:id="@+id/btnAddLocation"
 	  						android:background="@drawable/addlocation_click"/>
 	  		</LinearLayout>
@@ -70,44 +71,44 @@
   	
   	<TextView android:layout_width="wrap_content"
   			  android:layout_height="wrap_content"
-  			  android:paddingLeft="30dip"
+  			  android:paddingLeft="30dp"
   			  android:gravity="center_vertical"
   			  android:layout_gravity="center_horizontal"
-  			  android:layout_marginBottom="5dip"
+  			  android:layout_marginBottom="5dp"
   			  android:textSize="15sp"
   			  android:id="@+id/tvQuickSearch"
   			  android:background="@drawable/quick_search" 
   			  android:singleLine="true" 
-  			  android:hint="Quick Search"
+  			  android:hint="@string/quick_search"
   			  android:editable="false"
   			  android:imeOptions="actionDone"/>
   	  					<TextView android:layout_width="fill_parent"
   							  android:layout_height="wrap_content"
   							  android:id="@+id/tvFeatured"
-  							  	android:layout_marginLeft ="10dip"
-  								android:layout_marginRight ="10dip"
-  							  android:textSize="16dip"
+  							  	android:layout_marginLeft ="10dp"
+  								android:layout_marginRight ="10dp"
+  							  android:textSize="16sp"
   							  android:textStyle="bold"
 	  						  android:textColor="@color/heading_color_dark"
-	  						  android:text="Featured Events" />
+	  						  android:text="@string/featured_events" />
 	  				<View android:layout_width="fill_parent"
-	  				      android:layout_height="1dip"
-	  				      android:layout_marginTop="5dip"
+	  				      android:layout_height="1dp"
+	  				      android:layout_marginTop="5dp"
 	  				      android:background="@drawable/seperator" />
   	<ScrollView android:layout_width="fill_parent"
   				android:layout_height="fill_parent"
-  				android:layout_marginTop ="5dip"
-  				android:layout_marginBottom ="5dip"
-  				android:layout_marginLeft ="10dip"
-  				android:layout_marginRight ="10dip"
+  				android:layout_marginTop ="5dp"
+  				android:layout_marginBottom ="5dp"
+  				android:layout_marginLeft ="10dp"
+  				android:layout_marginRight ="10dp"
   				android:scrollbars="none"
-  				android:fadingEdgeLength="0dip"
+  				android:fadingEdgeLength="0dp"
   				android:isScrollContainer="false"
   				android:id="@+id/svEvents" >
   			
   			<LinearLayout android:layout_width="fill_parent"
-  						  android:layout_height="fill_parent"
-  						  android:id="@+id/llEvetsMain"
+  						  android:layout_height="wrap_content"
+  						  android:id="@+id/llEventsMain"
   						  android:orientation="vertical">
   					
 	  				      <LinearLayout 
@@ -123,14 +124,14 @@
 	  				<TextView android:layout_width="fill_parent"
   							  android:layout_height="wrap_content"
   							  android:id="@+id/tvUpcoming"
-  							  android:textSize="16dip"
+  							  android:textSize="16sp"
   							  android:textStyle="bold"
 	  						  android:textColor="@color/heading_color_dark"
-	  						  android:layout_marginTop="5dip"
-	  						  android:text="Upcoming Events" />
+	  						  android:layout_marginTop="5dp"
+	  						  android:text="@string/upcoming_events" />
 	  				<View android:layout_width="fill_parent"
 	  				      android:layout_height="wrap_content"
-	  				      android:layout_marginTop="5dip"
+	  				      android:layout_marginTop="5dp"
 	  				      android:background="@drawable/seperator" />
 	  				      <LinearLayout 
 	  				      	android:layout_width="fill_parent"
