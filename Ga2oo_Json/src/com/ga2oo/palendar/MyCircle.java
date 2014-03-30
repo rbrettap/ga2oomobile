@@ -418,7 +418,7 @@ public class MyCircle extends Activity
 			Button btnYes = (Button)popup.findViewById(R.id.btnYes);
 			Button btnNo = (Button)popup.findViewById(R.id.btnNo);
 			TextView tvMessage=(TextView)popup.findViewById(R.id.tvMessage);
-			tvMessage.setText(getResources().getString(R.string.are_you_shure_to_delete_friend));
+			tvMessage.setText(getResources().getString(R.string.are_you_sure_to_delete_friend));
 			
 			btnYes.setOnClickListener(new OnClickListener()
 			{					

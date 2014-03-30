@@ -474,7 +474,7 @@ public class EventDetailsViewPager extends ShareEvent {
 		JsonElement element = null;
 		JsonHttpHelper jsonHelper = JsonHttpHelper.getInstance();
 		EventsBusinessLayer evbl = new EventsBusinessLayer();
-		AppConstants.vctEventsDetails = new ArrayList();
+		AppConstants.vctEventsDetails = new ArrayList<EventsDetailsData>();
 		Log.i(LOGTAG, "Loading event details...");
 		try {
 			element = jsonHelper.sendGetRequest(AppConstants.JSON_HOST_URL+AppConstants.EVENT_DETAILS+eventid);

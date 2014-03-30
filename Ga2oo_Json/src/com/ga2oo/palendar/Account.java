@@ -13,7 +13,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,8 +20,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.ga2oo.palendar.businesslayer.UserAccountBusinessLayer;
-import com.ga2oo.palendar.objects.UserAccount;
 
 public class Account extends Activity 
 {

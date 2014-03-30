@@ -24,11 +24,11 @@
 								android:text="@string/aboutNote"
 								android:textStyle="bold"
 								android:gravity="center_vertical" 
-								android:layout_marginTop="10px" 
+								android:layout_marginTop="10dp" 
 								android:textColor="#4C566C" 
 								android:layout_width="fill_parent" 
-								android:textSize="13dip" 
-								android:layout_margin="10px"
+								android:textSize="13sp" 
+								android:layout_margin="10dp"
 								android:id="@+id/tvAbout"/>					
   					</LinearLayout>
   			</ScrollView>

@@ -19,43 +19,43 @@
   						android:layout_height="wrap_content"
   						android:gravity="center">
 	  						<TextView
-								android:layout_height="30px"
-								android:text="For more Information"
+								android:layout_height="30dp"
+								android:text="@string/for_more_information"
 								android:textStyle="bold"
 								android:gravity="center_vertical" 
-								android:layout_marginTop="10px" 
+								android:layout_marginTop="10dp" 
 								android:textColor="#4C566C" 
 								android:layout_width="fill_parent" 
-								android:textSize="18dip" 
-								android:layout_marginLeft="15px"/>
+								android:textSize="18sp" 
+								android:layout_marginLeft="15dp"/>
 	  						<RelativeLayout
 								android:id="@+id/rellayProfile"
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
 								android:gravity="center_vertical"
-								android:layout_marginLeft="10dip"
-								android:layout_marginRight="10dip">
+								android:layout_marginLeft="10dp"
+								android:layout_marginRight="10dp">
 							
 									<TextView
 										android:layout_height="wrap_content"
-										android:layout_margin="10px"
+										android:layout_margin="10dp"
 										android:textColor="#000000" 
-										android:text="Contact :" 
+										android:text="@string/contact2" 
 										android:textStyle="bold"
 										android:id="@+id/tvContact" 
-										android:textSize="15dip" 
-										android:layout_width="100px"/>
+										android:textSize="15sp" 
+										android:layout_width="100dp"/>
 										
 									<TextView
 										android:layout_height="wrap_content"
-										android:layout_margin="10px"
+										android:layout_margin="10dp"
 										android:textColor="#000000" 
-										android:text="040-65696367" 
+										android:text="@string/initnumber" 
 										android:textStyle="bold"
 										android:id="@+id/tvContactNumber" 
 										android:layout_toRightOf="@+id/tvContact"
-										android:textSize="15dip" 
-										android:layout_width="150px"/>
+										android:textSize="15sp" 
+										android:layout_width="150dp"/>
 							</RelativeLayout>
   					</LinearLayout>
   			</ScrollView>
