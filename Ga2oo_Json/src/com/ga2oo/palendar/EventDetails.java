@@ -1,6 +1,5 @@
 package com.ga2oo.palendar;
 
-import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -71,6 +71,8 @@
 			<string name="event">Event</string>
 			<string name="event_details">Event Details</string>
 			<string name="event_price">\n Event Price:</string>
+			<string name="enter_firstname">Enter First name</string>
+			<string name="enter_lastname">Enter Last name</string>			
 			<string name="enter_username">Enter Username</string>
 			<string name="enter_password">Enter Password</string>
 			<string name="enter_zip">Enter Zip</string>

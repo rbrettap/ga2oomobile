@@ -55,7 +55,6 @@ import com.ga2oo.palendar.common.DialogUtility;
 import com.ga2oo.palendar.objects.Business;
 import com.ga2oo.palendar.objects.EventsDetails;
 import com.ga2oo.palendar.objects.FavoriteEvent;
-import com.ga2oo.palendar.services.FriendsService;
 import com.ga2oo.jsonparsers.BusinessAccountsWrapper;
 import com.ga2oo.jsonparsers.BusinessToFavoriteWrapper;
 import com.ga2oo.jsonparsers.EventsWrapper;

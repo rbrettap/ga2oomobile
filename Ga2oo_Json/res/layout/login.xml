@@ -95,7 +95,7 @@
 			    	android:hint="@string/enter_password"
 			    	android:layout_height="wrap_content"
 			    	android:id="@+id/etPassword"
-			    	android:password="true"
+			    	android:inputType="textPassword"
 			    	android:textSize="13sp"
 			    	android:layout_toRightOf="@+id/tvPassword"
 			    	android:layout_marginRight="10dp" 

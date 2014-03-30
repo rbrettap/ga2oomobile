@@ -30,7 +30,7 @@
 						android:background="@drawable/deletebtn"
 						android:layout_marginLeft="230dp"
 						android:layout_marginTop="13dp"
-						android:layout_toRightOf="@+id/tvFriendsName"
+						android:layout_toRightOf="@+id/tvlocationName"
 						android:id="@+id/btnRemoveLocation"
 					/>
 		</RelativeLayout>

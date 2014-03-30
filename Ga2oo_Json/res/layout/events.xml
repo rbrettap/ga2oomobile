@@ -8,27 +8,30 @@
   						      android:layout_height="wrap_content"
   						      android:background="@drawable/bluebar">
   						
-  						<ImageView android:layout_width="15dip"
-  								   android:layout_height="15dip"
+  						<ImageView android:layout_width="15dp"
+  								   android:layout_height="15dp"
   								   android:id="@+id/ivSearch"
-  								   android:layout_marginLeft="2dip"
+  								   android:layout_marginLeft="2dp"
   								   android:layout_gravity="center_vertical"
+  								   android:contentDescription="@string/desc"
   								   android:background="@drawable/search" />
   						<ImageView android:layout_width="wrap_content"
   								   android:layout_height="wrap_content"
   								   android:id="@+id/ivLeftCatg"
   								   android:layout_weight="0"
+  								   android:contentDescription="@string/desc"
   								   android:background="@drawable/leftarrow" />
   						<HorizontalScrollView android:layout_width="wrap_content"
   											  android:layout_height="fill_parent"
   											  android:scrollbars="none"
-  											  android:fadingEdgeLength="0dip"
+  											  android:fadingEdgeLength="0dp"
   											  android:layout_weight="1">
   									<LinearLayout android:layout_width="wrap_content"
+  									              android:orientation="horizontal"
   												  android:layout_height="fill_parent"
   												  android:id="@+id/llCatg"
-  												  android:paddingLeft="10dip"
-  												  android:paddingRight="10dip"
+  												  android:paddingLeft="10dp"
+  												  android:paddingRight="10dp"
   												  android:gravity="center_vertical">
   											
   									</LinearLayout>
@@ -36,6 +39,7 @@
   						<ImageView android:layout_width="wrap_content"
   								   android:layout_height="wrap_content"
   								   android:id="@+id/ivRightCatg"
+  								   android:contentDescription="@string/desc"
   								   android:layout_weight="0"
   								   android:background="@drawable/rightarrow" />		   
   				</LinearLayout>
@@ -47,7 +51,7 @@
 			  		<TextView 
 			  				  android:layout_width="fill_parent"
 	  						  android:layout_height="wrap_content"
-	  						  android:textSize="20dip"
+	  						  android:textSize="20sp"
 	  						  android:textStyle="bold"
 	  						  android:visibility="gone"
 	  						  android:gravity="center_horizontal"
@@ -55,18 +59,20 @@
 			  				  android:id="@+id/tvFriendName"
 			  		/>
 				<LinearLayout android:layout_width="fill_parent"
+				              android:orientation="horizontal"
 		  					  android:layout_height="wrap_content"
 		  					  android:id="@+id/llMonthAndWeekDays" />
   		
 		  		<LinearLayout android:layout_width="fill_parent"
 		  					  android:layout_height="wrap_content"
+		  					  android:orientation="horizontal"
 		  					  android:gravity="center"
 		  					  android:id="@+id/llDaysOfMonth" />	
 		  		
 <!-- 		  		<ListView android:id="@+id/lvEvents"
 				  	      android:layout_width="fill_parent"	
-				  		  android:layout_height="80dip"
-				  		  android:fadingEdgeLength="0dip"
+				  		  android:layout_height="80dp"
+				  		  android:fadingEdgeLength="0dp"
   						  android:fadingEdge="none"
   						  android:scrollingCache="false"
   						  android:layout_weight="1"
@@ -74,8 +80,9 @@
 				  		  android:background="@drawable/listview_bg" />  
 -->
 			<ImageView    android:layout_width="fill_parent"	
-				  		  android:layout_height="fill_parent"
-				  		  android:fadingEdgeLength="0dip"
+				  		  android:layout_height="0dp"
+				  		  android:fadingEdgeLength="0dp"
+				  		  android:contentDescription="@string/desc"
   						  android:fadingEdge="none"
   						  android:scrollingCache="false"
   						  android:layout_weight="1"
@@ -95,24 +102,25 @@
   				<LinearLayout android:layout_width="fill_parent"
   							  android:layout_height="wrap_content"
   							  android:gravity="center_vertical|center_horizontal"
-  							  android:layout_margin="10dip">
+  							  android:layout_margin="10dp">
   						<TextView android:layout_width="wrap_content"
   								  android:layout_height="wrap_content"
-  								  android:text="Feb"
+  								  android:text="@string/feb"
   								  android:id="@+id/tvMonthInList"
-  								  android:textSize="24dip"
+  								  android:textSize="24sp"
   								  android:visibility="gone"
   								  android:textColor="@color/heading_color_dark" />	  
   						<TextView android:layout_width="wrap_content"
   								  android:layout_height="wrap_content"
   								  android:textStyle="bold"
   								  android:id="@+id/tvDateInList"
-  								  android:textSize="24dip"
-  								  android:layout_marginLeft="8dip"
+  								  android:textSize="24sp"
+  								  android:layout_marginLeft="8dp"
   								  android:textColor="@color/heading_color_dark" />	
   						<ImageView android:layout_width="wrap_content"
   								   android:layout_height="wrap_content"
-  								   android:layout_marginLeft="5dip"
+  								   android:layout_marginLeft="5dp"
+  								   android:contentDescription="@string/desc"
   								   android:background="@drawable/cal_icon"
   								   android:id="@+id/ivCalIcon" />
   						<TextView android:layout_width="wrap_content"
@@ -120,28 +128,28 @@
   								  android:singleLine="true"
   								  android:gravity="center_vertical"
   								  android:background="@drawable/dropdown"
-  								  android:layout_marginLeft="10dip"
-  								  android:paddingRight="25dip"
-  								  android:paddingLeft="10dip"
+  								  android:layout_marginLeft="10dp"
+  								  android:paddingRight="25dp"
+  								  android:paddingLeft="10dp"
   								  android:textColor="#ffffff"
-  								  android:text="Walking "
+  								  android:text="@string/walking"
   								  android:id="@+id/tvDistance" /> 
   						<TextView android:layout_width="wrap_content"
   								  android:layout_height="wrap_content"
   								  android:singleLine="true"
   								  android:gravity="center_vertical"
   								  android:background="@drawable/dropdown"
-  								  android:paddingRight="25dip"
-  								  android:paddingLeft="10dip"
-  								  android:layout_marginLeft="5dip"
+  								  android:paddingRight="25dp"
+  								  android:paddingLeft="10dp"
+  								  android:layout_marginLeft="5dp"
   								  android:textColor="#ffffff"
-  								  android:text="Top Hits "
+  								  android:text="@string/top_hits"
   								  android:id="@+id/tvType" /> 
   				</LinearLayout>
   				
   				<com.markupartist.android.widget.PullToRefreshListView android:layout_width="fill_parent"
   						  android:layout_height="fill_parent"
-  						  android:fadingEdgeLength="0dip"
+  						  android:fadingEdgeLength="0dp"
   						  android:fadingEdge="none"
   						  android:scrollbars="none"
   						  android:id="@+id/lvEventsList" />

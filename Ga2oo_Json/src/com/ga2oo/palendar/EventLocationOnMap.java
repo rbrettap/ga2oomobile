@@ -152,6 +152,7 @@ public class EventLocationOnMap extends MapActivity
 		});
 		       
 	    }
+	@SuppressWarnings("deprecation")
 	private void setMapPoints()
 	{
 		mapview.invalidate();

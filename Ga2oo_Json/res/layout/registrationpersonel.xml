@@ -227,7 +227,7 @@
 									android:layout_marginTop="10dp"
 									android:id="@+id/etPassword" 
 									android:singleLine="true"
-									android:password="true" 
+									android:inputType="textPassword" 
 									android:textSize="15sp"
 									android:imeOptions="actionNext"/>	
 						</RelativeLayout>
@@ -266,7 +266,7 @@
 									android:layout_marginTop="10dp" 
 									android:id="@+id/etConfirmPassword"
 									android:singleLine="true"
-									android:password="true" 
+									android:inputType="textPassword" 
 									android:textSize="15sp"
 									android:imeOptions="actionDone"/>	
 						</RelativeLayout>
