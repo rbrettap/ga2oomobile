@@ -10,20 +10,20 @@
   					<LinearLayout
   						android:orientation="vertical"
   						android:layout_width="fill_parent"
-  						android:layout_marginLeft="10dip"
-  						android:layout_marginRight="10dip"
+  						android:layout_marginLeft="10dp"
+  						android:layout_marginRight="10dp"
   						android:layout_height="fill_parent"
   						>
   						<TextView
 									android:layout_width="fill_parent"
-									android:layout_height="30px"
+									android:layout_height="30dp"
 									android:textColor="@color/heading_color_dark" 
-									android:text="Settings" 
-									android:layout_marginTop="10dip"
-									android:layout_marginLeft="1dip"
+									android:text="@string/settings" 
+									android:layout_marginTop="10dp"
+									android:layout_marginLeft="1dp"
 									android:textStyle="bold"
-									android:id="@+id/tvPassword"
-									android:textSize="16dip"/>
+									android:id="@+id/tvSettings"
+									android:textSize="16sp"/>
   						<RelativeLayout
 							android:id="@+id/rellayProfile"
 							android:layout_width="wrap_content"
@@ -33,18 +33,18 @@
 							>
 							
 								<TextView
-									android:layout_width="130px"
+									android:layout_width="130dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="6px"
+									android:layout_margin="6dp"
 									android:textColor="#000000" 
-									android:text="Password" 
+									android:text="@string/password" 
 									android:textStyle="bold"
 									android:id="@+id/tvPassword"
-									android:textSize="15dip"/>
+									android:textSize="15sp"/>
 								<EditText
-									android:layout_width="150dip"
+									android:layout_width="150dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:background="#FFFFFF" 
 									android:textColor="#395587" 
 									android:layout_toRightOf="@+id/tvPassword"
@@ -53,7 +53,7 @@
 									android:id="@+id/etAccPassword"
 									android:inputType="textPassword"
 									android:singleLine="true"
-									android:textSize="15dip"/>	
+									android:textSize="15sp"/>	
 								
 						</RelativeLayout>
   						<RelativeLayout
@@ -65,31 +65,33 @@
 							>
 							
 								<TextView
-									android:layout_width="130dip"
+									android:layout_width="130dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="6px"
+									android:layout_margin="6dp"
 									android:textColor="#000000" 
-									android:text="Invisible Mode" 
+									android:text="@string/invisiblemode" 
 									android:textStyle="bold"
 									android:id="@+id/tvLastName"
-									android:textSize="15dip"/>
+									android:textSize="15sp"/>
 									
 									<LinearLayout 
 										android:layout_width="wrap_content"
 										android:layout_height="wrap_content"
 										android:layout_toRightOf="@+id/tvLastName"
 										android:gravity="right"
-										android:paddingRight="10dip"
+										android:paddingRight="10dp"
 										android:orientation="horizontal"
 										android:layout_alignParentRight="true"
 									>
 										<ImageView 
+										    android:contentDescription="@string/desc"
 											android:layout_width="wrap_content"
 											android:layout_height="wrap_content"
 											android:id="@+id/btnYes"
 											android:src="@drawable/yes"
 										/>
 										<ImageView 
+										    android:contentDescription="@string/desc"
 											android:layout_width="wrap_content"
 											android:layout_height="wrap_content"
 											android:id="@+id/btnNo"
@@ -105,30 +107,32 @@
 							android:gravity="center_vertical">
 							
 								<TextView
-									android:layout_width="130dip"
+									android:layout_width="130dp"
 									android:layout_height="wrap_content"
-									android:layout_margin="6px"
+									android:layout_margin="6dp"
 									android:textColor="#000000" 
-									android:text="Delete Account" 
+									android:text="@string/deleteaccount" 
 									android:textStyle="bold"
 									android:id="@+id/tvDelete"
-									android:textSize="15dip"/>
+									android:textSize="15sp"/>
 								<LinearLayout 
 										android:layout_width="wrap_content"
 										android:layout_height="wrap_content"
 										android:layout_toRightOf="@+id/tvDelete"
 										android:gravity="right"
-										android:paddingRight="10dip"
+										android:paddingRight="10dp"
 										android:orientation="horizontal"
 										android:layout_alignParentRight="true"
 									>
 										<ImageView 
+										    android:contentDescription="@string/desc"
 											android:layout_width="wrap_content"
 											android:layout_height="wrap_content"
 											android:id="@+id/btnYesDelete"
 											android:src="@drawable/yes"
 										/>
-										<ImageView 
+										<ImageView
+										    android:contentDescription="@string/desc" 
 											android:layout_width="wrap_content"
 											android:layout_height="wrap_content"
 											android:id="@+id/btnNoDelete"

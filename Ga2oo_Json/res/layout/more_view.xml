@@ -20,14 +20,14 @@
   						android:gravity="center"
   						>
   						<TextView
-							android:layout_height="30px"
-							android:text="Settings"
+							android:layout_height="30dp"
+							android:text="@string/settings"
 							android:textStyle="bold"
 							android:gravity="center_vertical" 
-							android:layout_marginTop="10px" 
-							android:textSize="16dip"
+							android:layout_marginTop="10dp" 
+							android:textSize="16sp"
 							android:textColor="@color/heading_color_dark" 
-							android:layout_marginLeft="10dip" 
+							android:layout_marginLeft="10dp" 
 							android:layout_width="fill_parent"/>
   						<RelativeLayout
 							android:id="@+id/rellayProfile"
@@ -35,26 +35,27 @@
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_one"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp">
 							
 								<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="Profile" 
-									android:textStyle="bold" android:textSize="15dip"/>
+									android:text="@string/profile" 
+									android:textStyle="bold" android:textSize="15sp"/>
 									
 								<LinearLayout
-									android:layout_width="30px"
-									android:layout_height="40px"
+									android:layout_width="30dp"
+									android:layout_height="40dp"
 									android:layout_alignParentRight="true"
 									android:gravity="center_vertical">
 									
 										<ImageView
 											android:layout_width="wrap_content"
-											android:layout_height="20px"
+											android:layout_height="20dp"
+											android:contentDescription="@string/desc"
 											android:src="@drawable/arrow"/>
 								</LinearLayout>
 						</RelativeLayout>
@@ -65,26 +66,27 @@
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_two"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp">
 							
 								<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="My Circle" 
-									android:textStyle="bold" android:textSize="15dip"/>
+									android:text="@string/my_circle" 
+									android:textStyle="bold" android:textSize="15sp"/>
 									
 								<LinearLayout
-									android:layout_width="30px"
-									android:layout_height="40px"
+									android:layout_width="30dp"
+									android:layout_height="40dp"
 									android:layout_alignParentRight="true"
 									android:gravity="center_vertical">
 									
 										<ImageView
 											android:layout_width="wrap_content"
-											android:layout_height="20px"
+											android:layout_height="20dp"
+											android:contentDescription="@string/desc"
 											android:src="@drawable/arrow"/>
 								</LinearLayout>
 						</RelativeLayout>
@@ -94,26 +96,27 @@
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_two"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp">
 							
 								<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="Favorites" 
-									android:textStyle="bold" android:textSize="15dip"/>
+									android:text="@string/favorites" 
+									android:textStyle="bold" android:textSize="15sp"/>
 									
 								<LinearLayout
-									android:layout_width="30px"
-									android:layout_height="40px"
+									android:layout_width="30dp"
+									android:layout_height="40dp"
 									android:layout_alignParentRight="true"
 									android:gravity="center_vertical">
 									
 										<ImageView
 											android:layout_width="wrap_content"
-											android:layout_height="20px"
+											android:layout_height="20dp"
+											android:contentDescription="@string/desc"
 											android:src="@drawable/arrow"/>
 								</LinearLayout>
 						</RelativeLayout>
@@ -125,65 +128,67 @@
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_three"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp">
 							
 								<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="Account" 
-									android:textStyle="bold" android:textSize="15dip"/>
+									android:text="@string/account" 
+									android:textStyle="bold" android:textSize="15sp"/>
 									
 								<LinearLayout
-									android:layout_width="30px"
-									android:layout_height="40px"
+									android:layout_width="30dp"
+									android:layout_height="40dp"
 									android:layout_alignParentRight="true"
 									android:gravity="center_vertical">
 									
 										<ImageView
 											android:layout_width="wrap_content"
-											android:layout_height="20px"
+											android:layout_height="20dp"
+											android:contentDescription="@string/desc"
 											android:src="@drawable/arrow"/>
 								</LinearLayout>
 						</RelativeLayout>				
   						<TextView
 							android:layout_width="fill_parent"
-							android:layout_height="30px"
-							android:text="General"
+							android:layout_height="30dp"
+							android:text="@string/general"
 							android:textStyle="bold"
 							android:gravity="center_vertical" 
-							android:textSize="16dip"
-							android:layout_marginTop="10px" 
+							android:textSize="16sp"
+							android:layout_marginTop="10dp" 
 							android:textColor="@color/heading_color_dark" 
-							android:layout_marginLeft="10dip"/>
+							android:layout_marginLeft="10dp"/>
   						<RelativeLayout
 							android:id="@+id/rellayAbout"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_one"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp">
 							
 								<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="About" 
-									android:textStyle="bold" android:textSize="15dip"/>
+									android:text="@string/about" 
+									android:textStyle="bold" android:textSize="15sp"/>
 									
 								<LinearLayout
-									android:layout_width="30px"
-									android:layout_height="40px"
+									android:layout_width="30dp"
+									android:layout_height="40dp"
 									android:layout_alignParentRight="true"
 									android:gravity="center_vertical">
 									
 										<ImageView
 											android:layout_width="wrap_content"
-											android:layout_height="20px"
+											android:layout_height="20dp"
+											android:contentDescription="@string/desc"
 											android:src="@drawable/arrow"/>
 								</LinearLayout>
 						</RelativeLayout>
@@ -193,26 +198,27 @@
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_two"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp">
 							
 								<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="F.A.Q" 
-									android:textStyle="bold" android:textSize="15dip"/>
+									android:text="@string/faq" 
+									android:textStyle="bold" android:textSize="15sp"/>
 									
 								<LinearLayout
-									android:layout_width="30px"
-									android:layout_height="40px"
+									android:layout_width="30dp"
+									android:layout_height="40dp"
 									android:layout_alignParentRight="true"
 									android:gravity="center_vertical">
 									
 										<ImageView
 											android:layout_width="wrap_content"
-											android:layout_height="20px"
+											android:layout_height="20dp"
+											android:contentDescription="@string/desc"
 											android:src="@drawable/arrow"/>
 								</LinearLayout>
 						</RelativeLayout>
@@ -223,27 +229,28 @@
 							android:layout_height="wrap_content"
 							android:background="@drawable/list_bg_three"
 							android:gravity="center_vertical"
-							android:layout_marginLeft="10dip"
-							android:layout_marginRight="10dip"
-							android:layout_marginBottom="20dip">
+							android:layout_marginLeft="10dp"
+							android:layout_marginRight="10dp"
+							android:layout_marginBottom="20dp">
 							
 								<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:layout_margin="10px"
+									android:layout_margin="10dp"
 									android:textColor="#000000" 
-									android:text="Contact" 
-									android:textStyle="bold" android:textSize="15dip"/>
+									android:text="@string/contact" 
+									android:textStyle="bold" android:textSize="15sp"/>
 									
 								<LinearLayout
-									android:layout_width="30px"
-									android:layout_height="40px"
+									android:layout_width="30dp"
+									android:layout_height="40dp"
 									android:layout_alignParentRight="true"
 									android:gravity="center_vertical">
 									
 										<ImageView
 											android:layout_width="wrap_content"
-											android:layout_height="20px"
+											android:layout_height="20dp"
+											android:contentDescription="@string/desc"
 											android:src="@drawable/arrow"/>
 								</LinearLayout>
 						</RelativeLayout>	

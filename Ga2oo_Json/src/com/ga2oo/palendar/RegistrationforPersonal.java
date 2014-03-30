@@ -393,7 +393,7 @@ public class RegistrationforPersonal extends Activity implements LocationResult
 					}
 					else if(regStatus>0)
 					{
-						 alertDialog.setTitle(getResources().getString(R.string.congrates));
+						 alertDialog.setTitle(getResources().getString(R.string.congrats));
 						 alertDialog.setMessage(Ga2ooJsonParsers.regMessage);
 						 alertDialog.show();
 						 alertDialog.setButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener()

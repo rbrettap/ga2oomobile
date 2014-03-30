@@ -11,15 +11,15 @@
 			android:layout_height="wrap_content"
 			android:background="@drawable/list_bg_one"
 			android:gravity="center_vertical"
-			android:layout_marginLeft="10dip"
-			android:layout_marginRight="10dip">
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp">
 					<TextView
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-						android:layout_margin="10px"
+						android:layout_margin="10dp"
 						android:textColor="#000000" 
 						android:textStyle="bold"
-						android:textSize="15dip"
+						android:textSize="15sp"
 						android:id="@+id/tvlocationName"
 					/>
 					<Button 
@@ -28,9 +28,9 @@
 						android:gravity="center_vertical"
 						android:layout_centerVertical="true"
 						android:background="@drawable/deletebtn"
-						android:layout_marginLeft="230dip"
-						android:layout_marginTop="13dip"
-						android:layout_toRightOf="@+id/tvFriendsName"
+						android:layout_marginLeft="230dp"
+						android:layout_marginTop="13dp"
+						android:layout_toRightOf="@+id/tvlocationName"
 						android:id="@+id/btnRemoveLocation"
 					/>
 		</RelativeLayout>

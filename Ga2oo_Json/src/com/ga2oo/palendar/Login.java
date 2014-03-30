@@ -55,7 +55,6 @@ import com.ga2oo.palendar.common.DialogUtility;
 import com.ga2oo.palendar.objects.Business;
 import com.ga2oo.palendar.objects.EventsDetails;
 import com.ga2oo.palendar.objects.FavoriteEvent;
-import com.ga2oo.palendar.services.FriendsService;
 import com.ga2oo.jsonparsers.BusinessAccountsWrapper;
 import com.ga2oo.jsonparsers.BusinessToFavoriteWrapper;
 import com.ga2oo.jsonparsers.EventsWrapper;
@@ -558,6 +557,7 @@ public class Login extends Activity
 		@Override
 		protected void onPreExecute() {
 			status=Ga2ooJsonParsers.loginStatus(username, password);
+			// for some reason the status = 0 unless this is done twice....
 			progDialog.setMessage(getResources().getString(R.string.authenticating_please_wait));
 			progDialog.show();
 			super.onPreExecute();

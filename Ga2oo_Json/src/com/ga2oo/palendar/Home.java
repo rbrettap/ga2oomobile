@@ -116,7 +116,7 @@ public class Home extends ShareEvent implements LocationResult, FlurryAdListener
 	public static List<com.ga2oo.palendar.objects.Events> vctEvents1;
 	public  ListView lvFriendsList;
 	public PullToRefreshListView lvFeatured,lvUpcoming;
-	public LinearLayout llHomeRoot,llFeatured,llUpcoming,llEvetsMain;
+	public LinearLayout llHomeRoot,llFeatured,llUpcoming,llEventsMain;
 	private RelativeLayout rlUserImage;
 	private ScrollView svEvents;
 	private TextView noEventsFound;
@@ -266,7 +266,7 @@ public class Home extends ShareEvent implements LocationResult, FlurryAdListener
 		btnNoOfEvents  			= (Button) findViewById(R.id.btnNoOfEvents);
 		tvQuickSearch  			= (TextView) findViewById(R.id.tvQuickSearch);
 		svEvents				= (ScrollView)findViewById(R.id.svEvents);	
-		llEvetsMain				= (LinearLayout)findViewById(R.id.llEvetsMain);
+		llEventsMain			= (LinearLayout)findViewById(R.id.llEventsMain);
 		llFeatured				= (LinearLayout)findViewById(R.id.llFeatured);
 		tvUpcoming				= (TextView)findViewById(R.id.tvUpcoming);
 		llUpcoming				= (LinearLayout)findViewById(R.id.llUpcoming);
@@ -303,7 +303,7 @@ public class Home extends ShareEvent implements LocationResult, FlurryAdListener
 			@Override
 			public boolean onTouch(View v, MotionEvent event) 
 			{
-				View view = (View) llEvetsMain.getChildAt(2);
+				View view = (View) llEventsMain.getChildAt(2);
 				int diff = (view.getTop()-(svEvents.getScrollY()));
 				view.setVisibility(View.GONE);
 				if(diff<=64)

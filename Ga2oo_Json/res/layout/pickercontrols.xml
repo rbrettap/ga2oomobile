@@ -2,21 +2,21 @@
 <FrameLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"
-  android:layout_height="35px"
+  android:layout_height="35dp"
   >
  
   <Button 
   android:layout_gravity="right"
   android:id="@+id/btnDone"
-  android:layout_marginTop="4px"
+  android:layout_marginTop="4dp"
   android:background="@drawable/empty_bg"
-  android:text="Done"
+  android:text="@string/done"
   android:textStyle="bold"
-  android:textSize="14px"
+  android:textSize="14sp"
   android:textColor="#ffffff"
-  android:layout_marginRight="10px"
+  android:layout_marginRight="10dp"
   
-  android:layout_width="57px"
-  android:layout_height="27px">
+  android:layout_width="57dp"
+  android:layout_height="27dp">
   </Button>
 </FrameLayout>

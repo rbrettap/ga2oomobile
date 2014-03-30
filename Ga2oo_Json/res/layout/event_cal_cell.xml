@@ -9,23 +9,24 @@
 			  		android:layout_height="wrap_content"
 			  	 	android:gravity="center">
 			  	    <ProgressBar
-		    		   android:layout_width="30dip"
-	  				   android:layout_height="30dip"
+		    		   android:layout_width="30dp"
+	  				   android:layout_height="30dp"
 	  				   android:id="@+id/calEventProgressBar"
 					   android:indeterminate="true" 
 					   android:layout_centerInParent="true"/>	
 			  		
-			  		<ImageView	android:layout_width="40dip"
-			  				    android:layout_height="35dip"
+			  		<ImageView	android:layout_width="40dp"
+			  				    android:layout_height="35dp"
 			  				    android:id="@+id/ivCalEventIcon"
+			  				    android:contentDescription="@string/desc"
 			  				    android:layout_centerInParent="true"/>
 		 </RelativeLayout>
   		 <TextView android:layout_width="fill_parent"
   				   android:layout_height="wrap_content"
-  				   android:layout_marginLeft="10dip"
+  				   android:layout_marginLeft="10dp"
   				   android:singleLine="true"
   				   android:id="@+id/tvCalEventName"
   				   android:textColor="#000000"
-  				   android:textSize="18dip"
+  				   android:textSize="18sp"
   				   android:textStyle="bold" />
 </LinearLayout>

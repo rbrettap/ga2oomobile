@@ -2,12 +2,12 @@
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"
-  android:layout_height="130dip"
-  android:padding="8dip"
+  android:layout_height="130dp"
+  android:padding="8dp"
   >
   
    		<RelativeLayout
-	  		android:layout_width="78dip"
+	  		android:layout_width="78dp"
 	  		android:layout_height="fill_parent"
 	  		android:background="@drawable/roundbackground_itembg"
 	  	 	android:gravity="center">
@@ -18,21 +18,22 @@
 		      		android:indeterminate="true" 
 		      		android:layout_centerInParent="true"/>	
 	  		
-	  		<ImageView android:layout_width="70dip"
-  				   	   android:layout_height="70dip"
+	  		<ImageView android:layout_width="70dp"
+  				   	   android:layout_height="70dp"
 	  			  	   android:id="@+id/ivEventIcon" 
+	  			  	   android:contentDescription="@string/desc"
 	  				   android:layout_centerInParent="true"/>
 		</RelativeLayout>
 		
   		<LinearLayout android:layout_width="fill_parent"
   					  android:layout_height="fill_parent"
   					  android:orientation="vertical"
-  					  android:layout_marginLeft="5dip" >
+  					  android:layout_marginLeft="5dp" >
   				<TextView android:layout_width="fill_parent"
   						  android:layout_height="wrap_content" 
   						  android:textColor="@color/heading_color_dark"
   						  android:textStyle="bold"
-  						  android:textSize="16dip"
+  						  android:textSize="16sp"
   						  android:id="@+id/tvUpName"
   						  android:singleLine="true"
   						 />
@@ -42,28 +43,28 @@
 		  				          android:id="@+id/tvStartdate"            
 		  						  android:layout_height="wrap_content" 
 		  						  android:textColor="@color/heading_color_dark"
-		  						  android:textSize="13dip"
+		  						  android:textSize="13sp"
 		  						  />
 		  			    <TextView android:layout_width="wrap_content"
 		  				          android:id="@+id/tvStartTime" 
-                                  android:layout_marginLeft="5dip"          
+                                  android:layout_marginLeft="5dp"          
 		  						  android:layout_height="wrap_content" 
 		  						  android:textColor="@color/heading_color_dark"
-		  						  android:textSize="13dip"/>
+		  						  android:textSize="13sp"/>
 		  				<TextView android:id="@+id/tvPrice"
 		  				          android:layout_width="wrap_content"
 		  						  android:layout_height="wrap_content" 
-		  						  android:layout_marginLeft="5dip"
+		  						  android:layout_marginLeft="5dp"
 		  						  android:textColor="#959B9E"
-		  						  android:textSize="13dip"
+		  						  android:textSize="13sp"
 		  						   />
   				</LinearLayout>
   				<LinearLayout android:layout_width="fill_parent"
   					  		  android:layout_height="fill_parent"
   					  		  android:gravity="center_vertical">
   					<RelativeLayout
-	  							android:layout_width="25dip"
-	  							android:layout_height="25dip"
+	  							android:layout_width="25dp"
+	  							android:layout_height="25dp"
 	  							android:visibility="gone"
 	  	 						android:gravity="center">
 	  	 				<ProgressBar
@@ -72,44 +73,46 @@
 				       		android:layout_height="wrap_content"
 				      		android:indeterminate="true" 
 				      		android:layout_centerInParent="true"/>			  
-  					  	<ImageView android:layout_width="25dip"
-				  				   android:layout_height="25dip"
-				  				   android:layout_weight="0"
-				  				   android:id="@+id/ivFriendOne" 
+  					  	<ImageView android:layout_width="25dp"
+				  				   android:layout_height="25dp"
+				  				   android:id="@+id/ivFriendOne"
+				  				   android:contentDescription="@string/desc" 
 				  				   android:layout_centerInParent="true"/>
 				  	</RelativeLayout>
-				  		<TextView android:layout_width="wrap_content"
+				  		<TextView android:layout_width="0dp"
 		  						  android:layout_height="wrap_content" 
 		  						  android:gravity="center_vertical"
 		  						  android:textColor="#2D7FC1"
-		  						  android:layout_marginLeft="1dip"
+		  						  android:layout_marginLeft="1dp"
 		  						  android:layout_weight="1"
-		  						  android:textSize="13dip"
+		  						  android:textSize="13sp"
 		  						  android:id="@+id/tvNoOfFriends"
 		  						  />
 		  				<LinearLayout
-		  				android:layout_width="55dip"
-		  				android:layout_height="40dip"
+		  				android:layout_width="55dp"
+		  				android:layout_height="40dp"
 		  				android:gravity="center"
-		  				android:layout_marginLeft="5dip"
+		  				android:layout_marginLeft="5dp"
 		  				android:id="@+id/llStar"
 		  				 >
-		  				<ImageView android:layout_width="wrap_content"
+		  				<ImageView android:layout_width="0dp"
 				  				   android:layout_height="wrap_content"
 				  				   android:layout_weight="0"
 				  				   android:src="@drawable/star"
+				  				   android:contentDescription="@string/desc"
 				  				   android:id="@+id/ivFavourite" />
 				  		</LinearLayout>
 				  		<LinearLayout
-		  				android:layout_width="55dip"
-		  				android:layout_height="40dip"
+		  				android:layout_width="55dp"
+		  				android:layout_height="40dp"
 		  				android:gravity="center"
-		  				android:layout_marginLeft="10dip"
+		  				android:layout_marginLeft="10dp"
 		  				android:id="@+id/llShare"
 		  				 >
 				  		<ImageView android:layout_width="wrap_content"
 				  				   android:layout_height="wrap_content"
 				  				   android:background="@drawable/share"
+				  				   android:contentDescription="@string/desc"
 				  				   android:id="@+id/ivShare" />	 
 				  		</LinearLayout>	  
   				</LinearLayout>

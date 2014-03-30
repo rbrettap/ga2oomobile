@@ -8,17 +8,17 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:background="@drawable/palendar_icon"
-	      android:layout_marginRight="4dip"
-	    android:layout_marginBottom="5px" >
+	      android:layout_marginRight="4dp"
+	    android:layout_marginBottom="5dp" >
 	</TextView>
 	
 	<TextView
 		android:id="@+id/tab_label"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Palendar"
-		  android:layout_marginRight="4dip"
+		android:text="@string/palendar"
+		  android:layout_marginRight="4dp"
 		android:textStyle="bold"
 		android:textColor="#ffffff"
-		android:textSize="9px"/>
+		android:textSize="12sp"/>
 </LinearLayout>

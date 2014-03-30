@@ -7,11 +7,11 @@
   
   		<EditText android:layout_width="fill_parent"
   			  android:layout_height="wrap_content"
-  			  android:paddingLeft="40dip"
+  			  android:paddingLeft="40dp"
 			  android:gravity="center_vertical"
 			  android:singleLine="true"
 			  android:imeOptions="actionSearch"
-  			  android:hint="Ex: San Francisco"
+  			  android:hint="@string/inithint"
   			  android:id="@+id/etSearch"
   			  android:background="@drawable/search_bg" />
   		
@@ -27,8 +27,8 @@
 		         <LinearLayout android:id="@+id/zoom" 
                    android:layout_width="wrap_content" 
                    android:layout_height="wrap_content" 
-                   android:layout_alignParentBottom="true" 
-                   android:layout_centerHorizontal="true" 
+                   android:orientation="horizontal"
+                   android:gravity="bottom|center" 
         /> 
   		
 </LinearLayout>

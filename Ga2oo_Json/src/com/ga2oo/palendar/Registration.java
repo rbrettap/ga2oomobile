@@ -18,7 +18,6 @@ public class Registration extends Activity
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.registration);
-		rlBusiness = (RelativeLayout)findViewById(R.id.rlBusiness);
 		rlPersonal = (RelativeLayout)findViewById(R.id.rlPersonal);
 		btnBack = (Button)findViewById(R.id.btnBack);
 		btnBack.setOnClickListener(new OnClickListener()
@@ -30,15 +29,6 @@ public class Registration extends Activity
 			}
 		});
 		
-		rlBusiness.setOnClickListener(new OnClickListener() 
-		{
-			@Override
-			public void onClick(View v) 
-			{
-				Intent intent = new Intent(Registration.this,RegistrationforBussiness.class);
-				startActivity(intent);
-			}
-		});
 		rlPersonal.setOnClickListener(new OnClickListener() 
 		{
 			@Override

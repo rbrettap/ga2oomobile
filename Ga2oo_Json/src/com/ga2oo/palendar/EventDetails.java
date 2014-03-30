@@ -1,6 +1,5 @@
 package com.ga2oo.palendar;
 
-import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -269,7 +268,7 @@ public class EventDetails extends ShareEvent
 		@Override
 		protected Boolean doInBackground(Void... params) {
 			EventsBusinessLayer evbl = new EventsBusinessLayer();
-			AppConstants.vctEventsDetails = new ArrayList();
+			AppConstants.vctEventsDetails = new ArrayList<EventsDetailsData>();
 			Log.i(LOGTAG, "Loading event details...");
 			try {
 				element = jsonHelper.sendGetRequest(AppConstants.JSON_HOST_URL+AppConstants.EVENT_DETAILS+eventId);

@@ -10,22 +10,22 @@
 	  	android:id="@+id/rlMonth"
 	  	android:layout_width="fill_parent"
 	  	android:gravity="center_vertical"
-	  	android:layout_height="29dip">
+	  	android:layout_height="29dp">
 	  	
 	  		<LinearLayout
-	  			 android:layout_width="65dip"
+	  			 android:layout_width="65dp"
 	  			 android:id="@+id/llPrevious"
 	  			 android:layout_height="fill_parent"
 	  			 android:gravity="left|center_vertical"
 	  			 android:layout_alignParentLeft="true" 
-	  			 android:paddingLeft="15dip"
+	  			 android:paddingLeft="15dp"
 	  			 android:layout_centerInParent="true">
 	  			 
 					  	<Button
 					  		android:id="@+id/btnPrevious"
 					  		android:layout_width="wrap_content"
 					  		android:layout_height="wrap_content"
-					  		android:layout_marginTop="3dip"
+					  		android:layout_marginTop="3dp"
 					  		android:background="@drawable/arrow_rgt">
 				  		</Button>
 				  		
@@ -33,10 +33,10 @@
 	  		
 		  	<TextView
 		  		android:id="@+id/tvMonth"
-		  		android:layout_width="190dip"
-		  		android:layout_height="29dip"
-		  		android:text="April 2011"
-		  		android:textSize="20dip"
+		  		android:layout_width="190dp"
+		  		android:layout_height="29dp"
+		  		android:text="@string/april2014"
+		  		android:textSize="20sp"
 		  		android:textStyle="bold"
 		  		android:singleLine="true"
 		  		android:gravity="center"
@@ -45,19 +45,19 @@
 		  	</TextView>
 		  	
 		  	<LinearLayout
-		  			 android:layout_width="65dip"
+		  			 android:layout_width="65dp"
 		  			 android:id="@+id/llNext"
 		  			 android:layout_height="fill_parent"
 		  			 android:gravity="right|center_vertical"
 			  		 android:layout_alignParentRight="true"
-			  		 android:paddingRight="15dip"
+			  		 android:paddingRight="15dp"
 			  		 android:layout_centerInParent="true">
 			  		 
 						  	<Button
 						  		android:id="@+id/btnNext"
 						  		android:layout_width="wrap_content"
 						  		android:layout_height="wrap_content"
-						  		android:layout_marginTop="3dip"
+						  		android:layout_marginTop="3dp"
 						  		android:background="@drawable/arrow_lft">
 						  	</Button> 
 						  	
@@ -67,77 +67,77 @@
      
 	  <LinearLayout android:layout_width="fill_parent"
 	  				android:layout_height="wrap_content"
-	  				android:paddingBottom="1dip"
+	  				android:paddingBottom="1dp"
 	  				android:gravity="center">
 	  				
 			  		<TextView
 					  		android:id="@+id/tvSun"
-					  		android:layout_width="46dip"
+					  		android:layout_width="46dp"
 					  		android:layout_height="wrap_content"
 					  		android:text="@string/calendar.view.Sun"
 					  		android:gravity="center"
 					  		android:textStyle="bold"
-					  		android:textSize="11dip"
+					  		android:textSize="12sp"
 					  		android:textColor="#4D4D4D">
 			  		</TextView>
 			  		<TextView
 					  		android:id="@+id/tvMon"
-					  		android:layout_width="46dip"
+					  		android:layout_width="46dp"
 					  		android:layout_height="wrap_content"
 					  		android:text="@string/calendar.view.Mon"
 					  		android:gravity="center"
 					  		android:textStyle="bold"
-					  		android:textSize="11dip"
+					  		android:textSize="12sp"
 					  		android:textColor="#4D4D4D">
 			  		</TextView>
 			  		<TextView
 					  		android:id="@+id/tvTue"
-					  		android:layout_width="46dip"
+					  		android:layout_width="46dp"
 					  		android:layout_height="wrap_content"
 					  		android:text="@string/calendar.view.Tue"
 					  		android:gravity="center"
 					  		android:textStyle="bold"
-					  		android:textSize="11dip"
+					  		android:textSize="12sp"
 					  		android:textColor="#4D4D4D">
 			  		</TextView>
 			  		<TextView
 					  		android:id="@+id/tvWed"
-					  		android:layout_width="46dip"
+					  		android:layout_width="46dp"
 					  		android:layout_height="wrap_content"
 					  		android:text="@string/calendar.view.Wed"
 					  		android:gravity="center"
 					  		android:textStyle="bold"
-					  		android:textSize="11dip"
+					  		android:textSize="12sp"
 					  		android:textColor="#4D4D4D">
 			  		</TextView>
 			  		<TextView
 					  		android:id="@+id/tvThu"
-					  		android:layout_width="46dip"
+					  		android:layout_width="46dp"
 					  		android:layout_height="wrap_content"
 					  		android:text="@string/calendar.view.Thu"
 					  		android:gravity="center"
 					  		android:textStyle="bold"
-					  		android:textSize="11dip"
+					  		android:textSize="12sp"
 					  		android:textColor="#4D4D4D">
 			  		</TextView>
 			  		<TextView
 					  		android:id="@+id/tvFri"
-					  		android:layout_width="46dip"
+					  		android:layout_width="46dp"
 					  		android:layout_height="wrap_content"
 					  		android:text="@string/calendar.view.Fri"
 					  		android:gravity="center"
 					  		android:textStyle="bold"
-					  		android:textSize="11dip"
+					  		android:textSize="12sp"
 					  		android:textColor="#4D4D4D">
 			  		</TextView>
 			  		<TextView
 					  		android:id="@+id/tvSat"
-					  		android:layout_width="46dip"
+					  		android:layout_width="46dp"
 					  		android:layout_height="wrap_content"
 					  		android:text="@string/calendar.view.Sat"
 					  		android:gravity="center"
 					  		android:textStyle="bold"
-					  		android:textSize="11dip"
+					  		android:textSize="12sp"
 					  		android:textColor="#4D4D4D">
 			  		</TextView>
 	  </LinearLayout>
