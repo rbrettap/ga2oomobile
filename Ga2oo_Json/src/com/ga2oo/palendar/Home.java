@@ -217,6 +217,12 @@ public class Home extends ShareEvent implements LocationResult, FlurryAdListener
     {
         Log.d(kLogTag, "onRenderFailed("+adSpaceName+")");
     }
+ 
+    @Override
+    public void onRendered(String adSpaceName)
+    {
+        Log.d(kLogTag, "onRendered("+adSpaceName+")");
+    }
     
     @Override
     public void onAdClicked(String adSpaceName)
