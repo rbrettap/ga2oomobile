@@ -9,13 +9,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 //import org.w3c.dom.Document;
 //import org.w3c.dom.Node;
 //import org.w3c.dom.NodeList;
 
 import android.util.Log;
+import android.widget.Toast;
 
+import com.rjb.android.impl.core.RJBCore;
+import com.rjb.android.impl.core.http.HttpRequest;
+import com.rjb.android.impl.core.http.HttpRequestManager;
+import com.rjb.android.impl.core.http.HttpStreamRequest.RequestMethod;
+import com.rjb.android.impl.core.log.Flog;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.ga2oo.palendar.businesslayer.UserAccountBusinessLayer;
@@ -26,6 +33,8 @@ import com.ga2oo.palendar.objects.UserAccount;
 import com.ga2oo.palendar.objects.UserLocationObject;
 import com.ga2oo.jsonparsers.LocationDeleteWrapper;
 import com.ga2oo.parsing.net.JsonHttpHelper;
+import com.rjb.android.impl.core.serializer.ByteArraySerializer;
+import com.rjb.android.impl.core.serializer.StringSerializer;
 import com.rjb.android.impl.core.util.SafeRunnable;
 
 public class Ga2ooJsonParsers {
@@ -44,10 +53,65 @@ public class Ga2ooJsonParsers {
 	 static int status;
 	 public static String regMessage="",addFriendMessage="",updateUserProfileMgs;
 
-	
-	public static int loginStatus(final String username, final String password)
+	 public static Ga2ooJsonParsers mInstance = null;
+	 
+	private Ga2ooJsonParsers()
 	{
-	     ExecutorService mDataSenderExecutor= Executors.newSingleThreadExecutor();
+	    
+	}
+	
+	public static Ga2ooJsonParsers getInstance()
+	{
+	    if (mInstance == null)
+	    {
+	        mInstance = new Ga2ooJsonParsers();
+	    }
+	    return mInstance;
+	}
+	 
+	 
+	public int loginStatus(final String username, final String password)
+	{
+	   /* 
+	    String url = AppConstants.JSON_HOST_URL+AppConstants.Authenticate_User_URL;
+	    
+        HttpRequest<String, String> request = new HttpRequest<String, String>();
+        request.setUrl(url);
+        request.addRequestParameter(CONTENT_TYPE, APPLICATION_JSON);
+        request.setRequestMethod(RequestMethod.kPost);
+        String content = "{\"useraccount\": {\"username\": \""+username+"\", \"password\": \""+password+"\"} }";
+        request.setRequestSerializer(new StringSerializer());
+        request.setResponseSerializer(new StringSerializer());
+        request.setRequest(content);
+
+         request.setListener(new HttpRequest.Listener<String, String>() {
+            @Override
+            public void result(final HttpRequest<String, String> request,  String response) {
+                final int responseCode = request.getResponseCode();
+
+                // send a toast message with the response code...
+                if ((Flog.getLogLevel() <= Log.DEBUG) && (Flog.getInternalLogging())) {
+                    RJBCore.getInstance().postOnMainHandler(new Runnable() {
+                        public void run() {
+                            Toast.makeText(RJBCore.getInstance().getApplicationContext(),
+                                    "sUUS HTTP Response Code: " + responseCode, Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+
+                if (responseCode == 200) {
+                    
+                } else {
+                    //sendURLUntilSuccess(url, numRequests + 1, listener);
+                }
+            }
+        });
+        HttpRequestManager.getInstance().execute(Ga2ooJsonParsers.this, request);
+        */
+	    
+	
+	    
+	     final ExecutorService mDataSenderExecutor= Executors.newSingleThreadExecutor();
 	     
 	     
 	        SafeRunnable runnable = new SafeRunnable() {
@@ -79,15 +143,27 @@ public class Ga2ooJsonParsers {
 	                        Log.e(LOGTAG, "Error in login!");
 	                    } 
 	                    Log.i(LOGTAG, "Login successfully completed.");
+	                    mDataSenderExecutor.shutdown();
+	                    return;
 	                   
 	            }
 	        };
 	        
-	        mDataSenderExecutor.submit(runnable);        
+	        
+	        mDataSenderExecutor.submit(runnable);  
+	        
+	        try {
+	            mDataSenderExecutor.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
+	        }
+	        catch( InterruptedException e)
+	        {
+	            
+	        }
+	        
 	        return status;
 	}
 	
-	public static int deleteUserFriend(int userFriendId)
+	public int deleteUserFriend(int userFriendId)
 	{
 		try
 		{
@@ -114,7 +190,7 @@ public class Ga2ooJsonParsers {
 	return status;
 	}
 
-	public static int addFriend(int userId,int friendId)
+	public int addFriend(int userId,int friendId)
 	{
 		try
 		{
@@ -145,7 +221,7 @@ public class Ga2ooJsonParsers {
 	return status;
 	}
 		
-	public static int registerNewUser(List<com.ga2oo.palendar.objects.Registration> vctRegData)
+	public int registerNewUser(List<com.ga2oo.palendar.objects.Registration> vctRegData)
 	{
 		StringBuilder strRequest = new StringBuilder();
 		try
@@ -233,7 +309,7 @@ public class Ga2ooJsonParsers {
 		return status;
 	}
 	
-	public static int registerNewBusiness(List<BusinessRegistration> vctBusinessRegistration)
+	public int registerNewBusiness(List<BusinessRegistration> vctBusinessRegistration)
 	{
 		StringBuilder strRequest = new StringBuilder();
 		try
@@ -305,7 +381,7 @@ public class Ga2ooJsonParsers {
 
    }
 
-	public static int uploadUserImage(int userId,String imageAsciiCode)
+	public int uploadUserImage(int userId,String imageAsciiCode)
 	 {
 		StringBuffer strRequest = new StringBuffer();
 		 try
@@ -339,7 +415,7 @@ public class Ga2ooJsonParsers {
 		 return status;
 	 }	
 
-	public static int addUserSavedLocation(List<UserLocationObject> userSavedLoaction)
+	public int addUserSavedLocation(List<UserLocationObject> userSavedLoaction)
 	{
 		StringBuilder strRequest = new StringBuilder();
 		 try
@@ -386,7 +462,7 @@ public class Ga2ooJsonParsers {
 		 return status;
 	}
 
-	public static int changeUserPrimaryLocation(int locationId)
+	public int changeUserPrimaryLocation(int locationId)
 	{
 		StringBuilder strRequest = new StringBuilder();
 		try
@@ -422,7 +498,7 @@ public class Ga2ooJsonParsers {
 		return status;
 	}
 
-	public static int removeSavedLocation(int locationId)
+	public int removeSavedLocation(int locationId)
 	{
 		try
 		{
@@ -447,7 +523,7 @@ public class Ga2ooJsonParsers {
 		return status;
 	}
 
-	public static int updateUserProfile(List<com.ga2oo.palendar.objects.UpdateProfile> vctUpdateprofile){
+	public int updateUserProfile(List<com.ga2oo.palendar.objects.UpdateProfile> vctUpdateprofile){
 		UserAccountBusinessLayer userAccBL;
 		List<UserLocationObject> vctUserLocation;
 		List<Association> vctUserAssociations;
@@ -543,7 +619,7 @@ public class Ga2ooJsonParsers {
 		return status;
 	}
 	
-	public static int addEventToUser(int user_id, int eventid)
+	public int addEventToUser(int user_id, int eventid)
 	{
 		try
 		{
@@ -577,7 +653,7 @@ public class Ga2ooJsonParsers {
 	return status;
 	}
 		
-	public static int deleteUserEvent(int user_id, int eventAddedId)
+	public int deleteUserEvent(int user_id, int eventAddedId)
 	{
 		try
 		{
@@ -605,7 +681,7 @@ public class Ga2ooJsonParsers {
 		 return status;
 	}
 	
-	public static int addBusinessToUser(int user_id, int businessId)
+	public int addBusinessToUser(int user_id, int businessId)
 	{
 		try
 		{
@@ -641,7 +717,7 @@ public class Ga2ooJsonParsers {
 		return status;
 	}
 	
-	public static int deleteUserBusiness(int user_id, int eventAddedId)
+	public int deleteUserBusiness(int user_id, int eventAddedId)
 	{
 		try
 		{
@@ -667,7 +743,7 @@ public class Ga2ooJsonParsers {
 		return status;
 	}
 
-	public static String sendRecommendation(int[] friendIds,int eventId, String strSubject,String strDetail)
+	public String sendRecommendation(int[] friendIds,int eventId, String strSubject,String strDetail)
 	{
 		try
 		{
@@ -717,7 +793,7 @@ public class Ga2ooJsonParsers {
 		return ""+status;
 	}
 	
-	public static int friendRequestResponce(int userId,int useraddedfriendid,int responce)
+	public int friendRequestResponse(int userId,int useraddedfriendid,int responce)
 	{
 		try
 		{

@@ -556,8 +556,6 @@ public class Login extends Activity
 		ProgressDialog progDialog = new ProgressDialog(Login.this);
 		@Override
 		protected void onPreExecute() {
-			status=Ga2ooJsonParsers.getInstance().loginStatus(username, password);
-			// for some reason the status = 0 unless this is done twice....
 			progDialog.setMessage(getResources().getString(R.string.authenticating_please_wait));
 			progDialog.show();
 			super.onPreExecute();
@@ -565,6 +563,10 @@ public class Login extends Activity
 
 		@Override
 		protected Boolean doInBackground(Void... params) {
+		    
+            status=Ga2ooJsonParsers.getInstance().loginStatus(username, password);
+            // for some reason the status = 0 unless this is done twice....
+		    
 			Log.i(LOGTAG, "status = "+status);
 			if(status > 0)
 			{
