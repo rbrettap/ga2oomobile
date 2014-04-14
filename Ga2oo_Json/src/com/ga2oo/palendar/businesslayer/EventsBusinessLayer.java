@@ -77,7 +77,7 @@ public class EventsBusinessLayer
 	private static final String QUOTE = "'";
 	private static final String NAME = "NAME";
 	private static final String ID = "ID";
-	private static final String SUBCATEGORYES = "SUBCATEGORYES";
+	private static final String SUBCATEGORIES = "SUBCATEGORYES";
 	private static final String MAINCATEGORYNAME = "MAINCATEGORYNAME";
 	private static final String DATE_UPDATED = "DATE_UPDATED";
 	private static final String MAINCATEGORYID = "MAINCATEGORYID";
@@ -293,12 +293,12 @@ public class EventsBusinessLayer
 		values.put(MAINCATEGORYID, objCategory.maincategory);
  		values.put(MAINCATEGORYNAME,objCategory.maincategoryname);
  		values.put(DATE_UPDATED, objCategory.date_updated);
- 		String subcategoryes = "";
+ 		String subcategories = "";
  		for(int i=0;i<objCategory.subcategories.size();i++){
- 			subcategoryes+=(objCategory.subcategories.get(i).subcategoryid+",");
+ 			subcategories+=(objCategory.subcategories.get(i).subcategoryid+",");
  			insertSubcategory(objCategory.subcategories.get(i));
  		}
- 		values.put(SUBCATEGORYES,subcategoryes);
+ 		values.put(SUBCATEGORIES,subcategories);
 		if(data != null && data[0][0].value != null)
 		{
 			
@@ -316,19 +316,19 @@ public class EventsBusinessLayer
 	
 	public long insertSubcategory(Subcategory subcategoryObj){
 		String WHEREClause = ID+EQUALLY+subcategoryObj.subcategoryid;
-		DictionaryEntry [][] data = DatabaseHelper.get(SELECT+ID+COMMA+DATE_UPDATED+FROM+SUBCATEGORYES +WHERE+ WHEREClause); 
+		DictionaryEntry [][] data = DatabaseHelper.get(SELECT+ID+COMMA+DATE_UPDATED+FROM+SUBCATEGORIES +WHERE+ WHEREClause); 
 		ContentValues values = new ContentValues();
 		values.put(ID, subcategoryObj.subcategoryid);
 		values.put(DATE_UPDATED, subcategoryObj.date_updated);
 		values.put(NAME, subcategoryObj.subcategoryname);
 		if(data != null && data[0][0].value != null){
 			if(!subcategoryObj.date_updated.equals(data[0][1].value.toString())){
-				return DatabaseHelper.doUpdate(SUBCATEGORYES, values, WHEREClause, null);
+				return DatabaseHelper.doUpdate(SUBCATEGORIES, values, WHEREClause, null);
 			}else{
 				return 0;
 			}
 		}else{
-			return DatabaseHelper.doInsert(SUBCATEGORYES, values);
+			return DatabaseHelper.doInsert(SUBCATEGORIES, values);
 		}
 		
 	}
