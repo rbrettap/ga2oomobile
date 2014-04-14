@@ -144,7 +144,7 @@ public class MyMapActivity extends MapActivity
         		getLoacationAddress(lattitude2, longitude2);
 //        		Ga2ooParsers objGa2ooParsers=new Ga2ooParsers();
 //        		int locationId = objGa2ooParsers.addUserSavedLocation(userSavedLoaction);
-        		int locationId = Ga2ooJsonParsers.addUserSavedLocation(userSavedLoaction);
+        		int locationId = Ga2ooJsonParsers.getInstance().addUserSavedLocation(userSavedLoaction);
         			
         		if(locationId==0 || locationId==-1)
         		{

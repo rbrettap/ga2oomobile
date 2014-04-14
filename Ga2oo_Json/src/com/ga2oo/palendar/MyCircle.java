@@ -426,7 +426,7 @@ public class MyCircle extends Activity
 				public void onClick(View v) 
 				{
 //					status=objGa2ooParsers.deleteUserFriend(userFriendAddedId);
-					status = Ga2ooJsonParsers.deleteUserFriend(userFriendAddedId);
+					status = Ga2ooJsonParsers.getInstance().deleteUserFriend(userFriendAddedId);
 					Log.i("status",""+status);
 					if(status>0)
 					{
@@ -525,7 +525,7 @@ public class MyCircle extends Activity
 					int friendId=v.getId();
 					try
 					{
-						status = Ga2ooJsonParsers.addFriend(AppConstants.USER_ID,friendId);
+						status = Ga2ooJsonParsers.getInstance().addFriend(AppConstants.USER_ID,friendId);
 						if(status>0)
 						{
 							vecAdapterGa2ooUsers.remove(position);

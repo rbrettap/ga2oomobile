@@ -140,7 +140,7 @@ public class PalendarGroupActivity extends TabGroupActivity
 				UserAccountBusinessLayer userAccBL=new UserAccountBusinessLayer();
 				String currentEventId = userAccBL.getUserAddedEventId((Integer)((EventDetailsViewPager)PalendarGroupActivity.this.getCurrentActivity()).getCurrentView().getTag());
 				if(currentEventId!=null){
-					status = Ga2ooJsonParsers.deleteUserEvent(AppConstants.USER_ID, Integer.parseInt(currentEventId));
+					status = Ga2ooJsonParsers.getInstance().deleteUserEvent(AppConstants.USER_ID, Integer.parseInt(currentEventId));
 					if(status>0){
 						userAccBL.deleteUserFavorites(AppConstants.USER_ID, (Integer)((EventDetailsViewPager)PalendarGroupActivity.this.getCurrentActivity()).getCurrentView().getTag());
 						strAttendingEvents	= eventsBL.getLogedInUserAttendingEvents(AppConstants.USER_ID);

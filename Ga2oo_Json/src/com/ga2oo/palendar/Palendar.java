@@ -364,7 +364,7 @@ public class Palendar extends ShareEvent implements CalendarListener
 //						objGa2ooParsers=new Ga2ooParsers();
 						UserAccountBusinessLayer userAccBL=new UserAccountBusinessLayer();
 //						objGa2ooParsers.deleteUserEvent(AppConstants.USER_ID, CalendarView.userAddedEventId);
-						Ga2ooJsonParsers.deleteUserEvent(AppConstants.USER_ID, CalendarView.userAddedEventId);
+						Ga2ooJsonParsers.getInstance().deleteUserEvent(AppConstants.USER_ID, CalendarView.userAddedEventId);
 						userAccBL.deleteUserFavorites(AppConstants.USER_ID, CalendarView.eventId);
 						strAttendingEvents	= eventsBL.getLogedInUserAttendingEvents(AppConstants.USER_ID);
 						buildFilteredCalView();

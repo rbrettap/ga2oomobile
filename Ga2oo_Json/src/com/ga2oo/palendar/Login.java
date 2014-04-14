@@ -556,7 +556,7 @@ public class Login extends Activity
 		ProgressDialog progDialog = new ProgressDialog(Login.this);
 		@Override
 		protected void onPreExecute() {
-			status=Ga2ooJsonParsers.loginStatus(username, password);
+			status=Ga2ooJsonParsers.getInstance().loginStatus(username, password);
 			// for some reason the status = 0 unless this is done twice....
 			progDialog.setMessage(getResources().getString(R.string.authenticating_please_wait));
 			progDialog.show();

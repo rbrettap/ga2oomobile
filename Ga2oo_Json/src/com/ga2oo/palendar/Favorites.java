@@ -429,7 +429,7 @@ public class Favorites extends Activity
 						@Override
 						public void onClick(View v) 
 						{
-							Ga2ooJsonParsers.deleteUserEvent(AppConstants.USER_ID, objEventsDetails.useraddedeventid);
+						    Ga2ooJsonParsers.getInstance().deleteUserEvent(AppConstants.USER_ID, objEventsDetails.useraddedeventid);
 							vctAllFavoriteEventDetails.remove(position);
 							objCustomFavorit.notifyDataSetChanged();
 							userAccBL.deleteUserFavorites(AppConstants.USER_ID, eventID);
@@ -552,7 +552,7 @@ public class Favorites extends Activity
 						public void onClick(View v) 
 						{
 							Log.i("objBusiness.useraddedbusinessid",""+objBusiness.useraddedbusinessid);
-							Ga2ooJsonParsers.deleteUserBusiness(AppConstants.USER_ID, objBusiness.useraddedbusinessid);
+							Ga2ooJsonParsers.getInstance().deleteUserBusiness(AppConstants.USER_ID, objBusiness.useraddedbusinessid);
 							customDialog.dismiss();
 							vctAllFavoriteBusiness.remove(position);
 							objCustomFavoritBusiness.notifyDataSetChanged();

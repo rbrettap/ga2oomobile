@@ -71,7 +71,7 @@ public class GallaryActivity extends Activity
 	            		ProfileSettings.profileSettings.ivImage.setImageBitmap(getScaledBitmap(selectedImagePath));
 	            		strImageAsciiCode = imageToAscii(selectedImagePath);
 //	            		ga2ooParsersUserImageUpload.uploadUserImage(AppConstants.USER_ID, strImageAsciiCode);
-	            		Ga2ooJsonParsers.uploadUserImage(AppConstants.USER_ID, strImageAsciiCode);
+	            		Ga2ooJsonParsers.getInstance().uploadUserImage(AppConstants.USER_ID, strImageAsciiCode);
 	         	   	}
 	            }
 	 	   	   catch(NullPointerException npe)

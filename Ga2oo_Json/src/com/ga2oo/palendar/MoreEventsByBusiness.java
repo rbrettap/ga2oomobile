@@ -276,7 +276,7 @@ public class MoreEventsByBusiness extends Activity
 			{
 				int duration = Toast.LENGTH_SHORT;
 				CharSequence text="";
-				int status = Ga2ooJsonParsers.addBusinessToUser(AppConstants.USER_ID,businessId);
+				int status = Ga2ooJsonParsers.getInstance().addBusinessToUser(AppConstants.USER_ID,businessId);
 				if(status>0)
 				{
 					text = getResources().getString(R.string.company_added_successfully);  
@@ -311,7 +311,7 @@ public class MoreEventsByBusiness extends Activity
 				CharSequence text="";
 //				Ga2ooParsers objGa2ooParsers=new Ga2ooParsers();
 //				int status=objGa2ooParsers.addEventToUser(AppConstants.USER_ID,eventId);
-				int status = Ga2ooJsonParsers.addEventToUser(AppConstants.USER_ID,eventId);
+				int status = Ga2ooJsonParsers.getInstance().addEventToUser(AppConstants.USER_ID,eventId);
 				if(status>0)
 				{
 					text = getResources().getString(R.string.event_successfully_added)  ;

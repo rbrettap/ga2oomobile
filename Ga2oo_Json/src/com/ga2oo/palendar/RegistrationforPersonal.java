@@ -360,7 +360,7 @@ public class RegistrationforPersonal extends Activity implements LocationResult
 					objRegistration.strGeocode=strGeocode;
 					objRegistration.strIsPrimary=strIsPrimary;
 					vctRegistrationData.add(objRegistration);
-					regStatus = Ga2ooJsonParsers.registerNewUser(vctRegistrationData);
+					regStatus = Ga2ooJsonParsers.getInstance().registerNewUser(vctRegistrationData);
 					//TODO: upload image
 //					if(getIntent().getStringExtra(ID)!=null){
 //						String url = HTTPFACEBOOK+getIntent().getStringExtra(ID)+FACEBOOKPICTURE;
