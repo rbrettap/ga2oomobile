@@ -244,14 +244,14 @@ public class ProfileSettings extends Activity implements LocationResult
 				if(flag.equals(UPDATE))
 				{
 //				int status=objGa2ooParsers.changeUserPrimaryLocation(locationId);
-				int status = Ga2ooJsonParsers.changeUserPrimaryLocation(locationId);
+				int status = Ga2ooJsonParsers.getInstance().changeUserPrimaryLocation(locationId);
 				useracountBL=new UserAccountBusinessLayer();
 				useracountBL.updatePrimaryLocation(locationId);
 				}
 				else if(flag.equals(REMOVE))
 				{
 //					int status=objGa2ooParsers.removeSavedLocation(locationId);
-					int status = Ga2ooJsonParsers.removeSavedLocation(locationId);
+					int status = Ga2ooJsonParsers.getInstance().removeSavedLocation(locationId);
 					LinearLayout llSavedLocation=(LinearLayout)findViewById(locationId);
 					llSavedLocation.removeAllViews();
 					useracountBL=new UserAccountBusinessLayer();
@@ -308,7 +308,7 @@ public class ProfileSettings extends Activity implements LocationResult
 				objupdateProfile.strUserName=etUsername.getText().toString();
 				vctUpdateData.add(objupdateProfile);
 	//			int updateStatusStatus=register.updateUserProfile(vctUpdateData);
-				int updateStatusStatus = Ga2ooJsonParsers.updateUserProfile(vctUpdateData);
+				int updateStatusStatus = Ga2ooJsonParsers.getInstance().updateUserProfile(vctUpdateData);
                 AppConstants.isProfileUpdated=true;
 
 				if(updateStatusStatus>0)

@@ -130,7 +130,7 @@ public class EventLocationOnMap extends MapActivity
 				getLoacationAddress(mapOverlay.LATITUDE, mapOverlay.LONGITUDE);
 //				Ga2ooParsers objGa2ooParsers=new Ga2ooParsers();
 //				int locationId = objGa2ooParsers.addUserSavedLocation(userSavedLoaction);
-				int locationId = Ga2ooJsonParsers.addUserSavedLocation(userSavedLoaction);
+				int locationId = Ga2ooJsonParsers.getInstance().addUserSavedLocation(userSavedLoaction);
 				
 				if(locationId==0 || locationId==-1)
 				{

@@ -130,7 +130,7 @@ public class ShareEvent extends Activity
 				}
 				if(toAllFriend!=null)
 				{
-					recommendationStatus = Ga2ooJsonParsers.sendRecommendation(toAllFriend, eventID,strEventName,strEventDetail);
+					recommendationStatus = Ga2ooJsonParsers.getInstance().sendRecommendation(toAllFriend, eventID,strEventName,strEventDetail);
 					if(!recommendationStatus.equals(""))
 					{
 						if("0".equals(recommendationStatus)){
@@ -248,7 +248,7 @@ public class ShareEvent extends Activity
 					if(to.length!=0&&to!=null)
 					{
 						//TODO: response ? Ga2ooJsonPasers
-						recommendationStatus = Ga2ooJsonParsers.sendRecommendation(to, eventId,strEventName,strEventDetail);
+						recommendationStatus = Ga2ooJsonParsers.getInstance().sendRecommendation(to, eventId,strEventName,strEventDetail);
 						Log.v(LOGTAG, "showAllGa2ooFriendsPopup recommendationStatus = "+recommendationStatus);
 						if(!recommendationStatus.equals(""))
 						{
@@ -464,7 +464,7 @@ public class ShareEvent extends Activity
 			{
 				int duration = Toast.LENGTH_SHORT;
 				CharSequence text="";
-				int status = Ga2ooJsonParsers.addBusinessToUser(AppConstants.USER_ID, businessId);
+				int status = Ga2ooJsonParsers.getInstance().addBusinessToUser(AppConstants.USER_ID, businessId);
 				
 				
 				if(status>0)
@@ -499,7 +499,7 @@ public class ShareEvent extends Activity
 				customDialog.dismiss();
 				int duration = Toast.LENGTH_SHORT;
 				CharSequence text="";
-				int status =Ga2ooJsonParsers.addEventToUser(AppConstants.USER_ID, eventId);
+				int status =Ga2ooJsonParsers.getInstance().addEventToUser(AppConstants.USER_ID, eventId);
 				if(status>0)
 				{
 					text = getResources().getString(R.string.event_successfully_added);  ;    

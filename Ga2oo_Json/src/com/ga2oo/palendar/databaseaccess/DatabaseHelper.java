@@ -83,24 +83,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      */
     private boolean checkDataBase()
     {	 
-    	SQLiteDatabase checkDB = null;
- 
     	try
     	{
     		String myPath = getCurrentDBPath();
-    		checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE); 
+    		File f = new File(myPath);
+    		
+    		if (f.exists())
+    		{
+    		  _database = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE); 
+    		}
+    		
     	}
     	catch(SQLiteException e)
     	{
     		//database does't exist yet.	 
     	}
  
-    	if(checkDB != null)
+    	if(_database != null)
     	{	 
-    		checkDB.close();	 
+    	    _database.close();	 
     	}
  
-    	return checkDB != null ? true : false;
+    	return _database != null ? true : false;
     }
     
     /**
@@ -109,7 +113,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     {    
         try
         {
-            myContext.deleteDatabase(DB_NAME);
+            String myPath = getCurrentDBPath();
+            myContext.deleteDatabase(myPath);
         }
         catch(SQLiteException e)
         {

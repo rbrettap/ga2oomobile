@@ -44,6 +44,10 @@ public final class Flog {
         return fCurrentLogLevel;
     }
 
+    public static boolean getInternalLogging() {
+        return fInternalLogging;
+    }
+    
     /**
      * Sets the current logging level. If the log level is set to N, logging statements greater than
      * N won't be printed to android.util.Log. Defaults to printing warnings and errors. The

@@ -1235,7 +1235,7 @@ public class Home extends ShareEvent implements LocationResult, FlurryAdListener
 						userActBL.updatePrimaryLocation(vctUserSavedLocation.get(location.getCurrentItem()).locationId);
 //						objGa2ooParsers	=	new Ga2ooParsers();
 //						objGa2ooParsers.changeUserPrimaryLocation(vctUserSavedLocation.get(location.getCurrentItem()).locationId);
-						Ga2ooJsonParsers.changeUserPrimaryLocation(vctUserSavedLocation.get(location.getCurrentItem()).locationId);
+						Ga2ooJsonParsers.getInstance().changeUserPrimaryLocation(vctUserSavedLocation.get(location.getCurrentItem()).locationId);
 						mPopupWindow.dismiss();
 					}
 				});

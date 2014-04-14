@@ -636,7 +636,7 @@ public class UpcomingEvents  extends Activity
 //						objGa2ooParsers=new Ga2ooParsers();
 					//TODO: no such metod in Ga2ooJsonPasers
 //					status=objGa2ooParsers.friendRequestResponce(AppConstants.USER_ID, objNotifications.friendRequestId, 1);
-					status = Ga2ooJsonParsers.friendRequestResponce(AppConstants.USER_ID, objNotifications.friendRequestId, 1);
+					status = Ga2ooJsonParsers.getInstance().friendRequestResponse(AppConstants.USER_ID, objNotifications.friendRequestId, 1);
 					if(status<=0)
 					{
 						Toast.makeText(UpcomingEvents.this, getResources().getString(R.string.some_problem), Toast.LENGTH_SHORT).show();
@@ -681,7 +681,7 @@ public class UpcomingEvents  extends Activity
 				@Override
 				public void onClick(View v) 
 				{
-					status = Ga2ooJsonParsers.friendRequestResponce(AppConstants.USER_ID, objNotifications.friendRequestId, -1);
+					status = Ga2ooJsonParsers.getInstance().friendRequestResponse(AppConstants.USER_ID, objNotifications.friendRequestId, -1);
 					if(status<=0)
 					{
 						Toast.makeText(UpcomingEvents.this, getResources().getString(R.string.some_problem), Toast.LENGTH_SHORT).show();

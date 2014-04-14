@@ -295,7 +295,7 @@ public class EventDetailsViewPager extends ShareEvent {
 			{
 				int duration = Toast.LENGTH_SHORT;
 				CharSequence text="";
-				int status = Ga2ooJsonParsers.addBusinessToUser(AppConstants.USER_ID,businessId);
+				int status = Ga2ooJsonParsers.getInstance().addBusinessToUser(AppConstants.USER_ID,businessId);
 				if(status>0)
 				{
 					Business tmpBusiness = new Business();
@@ -329,7 +329,7 @@ public class EventDetailsViewPager extends ShareEvent {
 				int duration = Toast.LENGTH_SHORT;
 				CharSequence text="";
 				customDialog.dismiss();
-				int status = Ga2ooJsonParsers.addEventToUser(AppConstants.USER_ID,eventId);
+				int status = Ga2ooJsonParsers.getInstance().addEventToUser(AppConstants.USER_ID,eventId);
 				if(status>0)
 				{
 					text = getResources().getString(R.string.event_successfully_added);    

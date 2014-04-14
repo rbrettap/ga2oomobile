@@ -173,7 +173,7 @@ public class Account extends Activity
 				objupdateProfile.strVisibleMode=isInVisible;
 				objupdateProfile.isActive=isDeleteAcount;
 				vctUpdateData.add(objupdateProfile);
-				int updateStatusStatus = Ga2ooJsonParsers.updateUserProfile(vctUpdateData);
+				int updateStatusStatus = Ga2ooJsonParsers.getInstance().updateUserProfile(vctUpdateData);
 				if(updateStatusStatus>0)
 				{
 					 alertDialog.setTitle(getResources().getString(R.string.success));
