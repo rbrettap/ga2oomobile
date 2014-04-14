@@ -77,7 +77,7 @@ public class EventsBusinessLayer
 	private static final String QUOTE = "'";
 	private static final String NAME = "NAME";
 	private static final String ID = "ID";
-	private static final String SUBCATEGORIES = "SUBCATEGORYES";
+	private static final String SUBCATEGORIES = "SUBCATEGORIES";
 	private static final String MAINCATEGORYNAME = "MAINCATEGORYNAME";
 	private static final String DATE_UPDATED = "DATE_UPDATED";
 	private static final String MAINCATEGORYID = "MAINCATEGORYID";
